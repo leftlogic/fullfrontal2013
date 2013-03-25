@@ -13,17 +13,32 @@
     	font-style: normal;
     }
 
+    html, body {
+      min-height: 100%;
+    }
+
     html {
       border-top: 5px solid #201d1e;
     }
 
     body {
-      border-top: 1px solid #AF0606;
+      /* http://www.colorzilla.com/gradient-editor/#a6231a+0,7c1507+44,470b0b+100;Custom */
+      background: #a6231a; /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover,  #a6231a 0%, #7c1507 44%, #470b0b 100%); /* FF3.6+ */
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#a6231a), color-stop(44%,#7c1507), color-stop(100%,#470b0b)); /* Chrome,Safari4+ */
+      background: -webkit-radial-gradient(center, ellipse cover,  #a6231a 0%,#7c1507 44%,#470b0b 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-radial-gradient(center, ellipse cover,  #a6231a 0%,#7c1507 44%,#470b0b 100%); /* Opera 12+ */
+      background: -ms-radial-gradient(center, ellipse cover,  #a6231a 0%,#7c1507 44%,#470b0b 100%); /* IE10+ */
+      background: radial-gradient(ellipse at center,  #a6231a 0%,#7c1507 44%,#470b0b 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6231a', endColorstr='#470b0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+      border-top: 1px solid #610505;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif; 
+      font-family: 'Helvetica Neue', Arial, sans-serif; 
+      font-weight: 200;
       text-align: center;
-      background: #a6231a;
+      /*background: #a6231a;*/
       font-size: 62.5%;
       color: #fff;
     }
@@ -61,20 +76,23 @@
      
     h2, p {
       letter-spacing: -0.05em;
-      text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+      text-shadow: 1px 1px 1px rgba(0,0,0,.4);
       font-size: 3.6em;
-      font-weight: bold;
-      margin-top: 0em;
     }
 
     h2 {
+      letter-spacing: -0.02em;
+      font-weight: bold;
       margin-top: 2em;
       margin-bottom: 0.2em;
     }
+    p {
+      margin-top: 2em;
+      font-size: 1.8em;
+    }
+
     .more {
       margin-top: 4em;
-      font-family: arial;
-      font-size: 1.8em;
     }
 
     a {
@@ -85,9 +103,7 @@
 
 <body> 
     <h1>F<span>ull</span><span> </span>F<span>rontal</span></h1> 
-    <h2><span>Full Frontal</span></h2>
-    <h2><span>JavaScript Conference</span></h2>
-    <p><span class="comingsoon">Returns <time datetime="2011-11-08">8th November 2013</time></span></p>
+    <h2><span>Returns <time datetime="2011-11-08">8th November 2013</time></span></h2>
 
     <p class="comingsoon">Follow us for updates <a href="https://twitter.com/fullfrontalconf">@fullfrontalconf</a></p>
     
