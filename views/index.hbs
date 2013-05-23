@@ -7,43 +7,79 @@
 
   <title>Full Frontal 2013 - JavaScript Conference</title>
 
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,300,700,800">
   <link rel="stylesheet" href="fullfrontal.css">
 </head>
 
 <body>
-    <h1>F<span>ull</span><span> </span>F<span>rontal</span></h1>
-    <h2><span>Returns <time datetime="2013-11-08">8th November 2013</time></span></h2>
 
+  <header>
 
-
-    <div id="skyline">
-
+    <div class="vevent">
+      <span class="summary">Full Frontal 2013</span>
+      <time class="dtstart" title="2013-11-08T09:00" datetime="2013-11-08T09:00">8th November 2013</time>,
+      <span class="location">Duke of York’s Picturehouse, Brighton, UK</span>
     </div>
 
+    <div class="tickets">
+      <a href="" class="buy">Buy Tickets &pound;345<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+    <div>
+
+  </header>
+
+  <section class="sessions">
+    <h2 class="section-heading" role="heading" aria-level="2">Sessions</h2>
+  </section>
+
+  <section class="alt workshops">
+    <h2 class="section-heading" role="heading" aria-level="2">Workshops</h2>
+  </section>
+
+  <section class="locations">
+    <h2 class="section-heading" role="heading" aria-level="2">Locations</h2>
+
+    {{#each locations}}
+      <section>
+        <h3 class="location-type" role="heading" aria-level="3">{{type}}</span>
+        <ul>
+          {{#each location}}
+            <li class="vcard location">
+              <a href="{{url}}" class="location-name url org fn">{{name}}</a>
+              <p class="location-detail note">{{detail}}</p>
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/each}}
 
 
+  </section>
 
-    <p class="comingsoon">Follow us for updates <a href="https://twitter.com/fullfrontalconf">@fullfrontalconf</a></p>
+  <footer>
+    <a href="https://twitter.com/https://twitter.com/fullfrontalconf" class="twitter">@fullfrontalconf</a>
 
-    <p class="more">
-      View previous years:
-      <a href="http://2012.full-frontal.org">2012</a>,
-      <a href="http://2011.full-frontal.org">2011</a>,
-      <a href="http://2010.full-frontal.org">2010</a>,
+    <p class="previously">
+      <a href="http://2012.full-frontal.org">2012</a>
+      <a href="http://2011.full-frontal.org">2011</a>
+      <a href="http://2010.full-frontal.org">2010</a>
       <a href="http://2009.full-frontal.org">2009</a>
     </p>
-    <script>
-    //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </footer>
 
-    //   ga('create', 'UA-1656750-32', 'full-frontal.org');
-    //   ga('send', 'pageview');
 
-    </script>
-    <script src="/scripts/jquery.js"></script>
-    <script src="/scripts/raphael.js"></script>
-    <script src="/scripts/fullfrontal.js"></script>
+
+  <script>
+  //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  //   ga('create', 'UA-1656750-32', 'full-frontal.org');
+  //   ga('send', 'pageview');
+
+  </script>
+  <script src="/scripts/jquery.js"></script>
+  <script src="/scripts/raphael.js"></script>
+  <script src="/scripts/fullfrontal.js"></script>
 </body>
 </html>

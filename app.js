@@ -22,7 +22,40 @@ app.configure('development', function(){
 });
 
 app.get('/', function(req, res){
-  res.render('index');
+  res.render('index', {
+    locations: [
+      {
+        type: "Conference",
+        location: [
+          {
+            name: "Duke of Yorks",
+            url: "http://dukeofyorks.com",
+            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          },
+          {
+            name: "Duke of Yorks",
+            url: "http://dukeofyorks.com",
+            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          }
+        ]
+      },
+      {
+        type: "Conference",
+        location: [
+          {
+            name: "Duke of Yorks",
+            url: "http://dukeofyorks.com",
+            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          },
+          {
+            name: "Duke of Yorks",
+            url: "http://dukeofyorks.com",
+            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          }
+        ]
+      }
+    ]
+  });
 });
 
 app.get('/sponsorship', function(req, res){
