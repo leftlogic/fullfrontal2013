@@ -4,6 +4,8 @@ var http = require('http'),
     sass = require('node-sass'),
     express = require('express');
 
+var locations = require('./data/locations');
+
 var app = express();
 
 app.configure(function(){
@@ -30,42 +32,11 @@ app.configure('development', function(){
 });
 
 app.get('/', function(req, res){
-  res.render('index', {
-    locations: [
-      {
-        type: "Conference",
-        location: [
-          {
-            name: "Duke of Yorks",
-            url: "http://dukeofyorks.com",
-            detail: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            extra: "(quote: Left Logic"
-          },
-          {
-            name: "Duke of Yorks",
-            url: "http://dukeofyorks.com",
-            detail: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            extra: "(quote: Left Logic"
-          }
-        ]
-      },
-      {
-        type: "Conference",
-        location: [
-          {
-            name: "Duke of Yorks",
-            url: "http://dukeofyorks.com",
-            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-          },
-          {
-            name: "Duke of Yorks",
-            url: "http://dukeofyorks.com",
-            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-          }
-        ]
-      }
-    ]
-  });
+  res.render('index', locations);
+});
+
+app.get('/workshop', function(req, res){
+  res.render('workshop');
 });
 
 app.get('/sponsorship', function(req, res){

@@ -1,0 +1,36 @@
+{
+  "locations": [
+    {
+      "type": "Conference",
+      "location": [
+        {
+          "name": "Duke of Yorks",
+          "url": "http://dukeofyorks.com",
+          "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "extra": "(quote: Left Logic"
+        },
+        {
+          "name": "Duke of Yorks",
+          "url": "http://dukeofyorks.com",
+          "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "extra": "(quote: Left Logic"
+        }
+      ]
+    },
+    {
+      "type": "Conference",
+      "location": [
+        {
+          "name": "Duke of Yorks",
+          "url": "http://dukeofyorks.com",
+          "detail": " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        },
+        {
+          "name": "Duke of Yorks",
+          "url": "http://dukeofyorks.com",
+          "detail": " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        }
+      ]
+    }
+  ]
+}
