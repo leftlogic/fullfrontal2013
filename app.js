@@ -23,7 +23,7 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
-hbs.registerPartials(__dirname + '/views/partials');
+//hbs.registerPartials(__dirname + '/views/partials');
 
 app.configure('development', function(){
   app.use(express.errorHandler());
