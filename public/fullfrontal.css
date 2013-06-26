@@ -25,18 +25,18 @@ a {
 .button:hover, .button:focus {
   background: #f1b212; }
 
-header {
+[role="banner"] {
   background: #a31712;
   text-align: center;
   padding: 36px 0; }
 
-header .vevent {
+[role="banner"] .vevent {
   text-transform: uppercase;
   font-weight: 300;
   font-style: italic;
   margin-bottom: 36px; }
 
-header .vevent .summary {
+[role="banner"] .vevent .summary {
   display: none; }
 
 nav {

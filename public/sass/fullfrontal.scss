@@ -39,20 +39,20 @@ a {
   background: darken($gold, 10%);
 }
 
-header {
+[role="banner"] {
   background: $red;
   text-align: center;
   padding: 36px 0;
 }
 
-header .vevent {
+[role="banner"] .vevent {
   text-transform: uppercase;
   font-weight: 300;
   font-style: italic;
   margin-bottom: 36px;
 }
 
-header .vevent .summary {
+[role="banner"] .vevent .summary {
   display: none;
 }
 

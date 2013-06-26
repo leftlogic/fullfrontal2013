@@ -23,7 +23,7 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
-//hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.configure('development', function(){
   app.use(express.errorHandler());
@@ -38,12 +38,14 @@ app.get('/', function(req, res){
           {
             name: "Duke of Yorks",
             url: "http://dukeofyorks.com",
-            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            detail: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            extra: "(quote: Left Logic"
           },
           {
             name: "Duke of Yorks",
             url: "http://dukeofyorks.com",
-            detais: " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            detail: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            extra: "(quote: Left Logic"
           }
         ]
       },

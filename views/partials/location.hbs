@@ -1,0 +1,14 @@
+<section>
+  <h3 class="type" role="heading" aria-level="3">{{type}}</span>
+  <ul>
+    {{#each location}}
+      <li class="vcard location">
+        <a href="{{url}}" class="name url org fn">{{name}}</a>
+        <div class="note">
+          <p class="detail">{{detail}}</p>
+          <p class="extra">{{extra}}</p>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</section>
