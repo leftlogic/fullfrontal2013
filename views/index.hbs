@@ -15,28 +15,37 @@
 
   <header>
 
-    <div class="vevent">
+    <nav class="extrabold">
+      <a href="#sessions">Sessions</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#locations">Locations</a>
+      <a href="#sponsors">Sponsors</a>
+    </nav>
+
+    <div class="vevent extrabold">
       <span class="summary">Full Frontal 2013</span>
       <time class="dtstart" title="2013-11-08T09:00" datetime="2013-11-08T09:00">8th November 2013</time>,
       <span class="location">Duke of York’s Picturehouse, Brighton, UK</span>
     </div>
 
     <div class="tickets">
-      <a href="" class="buy">Buy Tickets &pound;345<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
-    <div>
+      <a href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;345<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+    </div>
+
+
 
   </header>
 
   <section class="sessions">
-    <h2 class="section-heading" role="heading" aria-level="2">Sessions</h2>
+    <h2 id="sessions" class="section-heading" role="heading" aria-level="2">Sessions</h2>
   </section>
 
   <section class="alt workshops">
-    <h2 class="section-heading" role="heading" aria-level="2">Workshops</h2>
+    <h2 id="workshops" class="section-heading" role="heading" aria-level="2">Workshops</h2>
   </section>
 
   <section class="locations">
-    <h2 class="section-heading" role="heading" aria-level="2">Locations</h2>
+    <h2 id="locations" class="section-heading" role="heading" aria-level="2">Locations</h2>
 
     {{#each locations}}
       <section>
@@ -52,7 +61,10 @@
       </section>
     {{/each}}
 
+  </section>
 
+  <section class="alt sponsors">
+    <h2 id="sponsors" class="section-heading" role="heading" aria-level="2">Sponsors</h2>
   </section>
 
   <footer>
@@ -78,8 +90,5 @@
   //   ga('send', 'pageview');
 
   </script>
-  <script src="/scripts/jquery.js"></script>
-  <script src="/scripts/raphael.js"></script>
-  <script src="/scripts/fullfrontal.js"></script>
 </body>
 </html>

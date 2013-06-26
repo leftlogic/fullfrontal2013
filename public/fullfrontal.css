@@ -2,61 +2,68 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: #201d1e;
-  color: #fff;
-}
+  color: white; }
+
 a {
-  color: #f1c400;
-  text-decoration: none;
-}
+  color: #f4c342;
+  text-decoration: none; }
+
+.button, .button:active {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  background: #f4c342;
+  color: #201d1e;
+  border: 1px solid #201d1e;
+  box-shadow: 4px 4px 0px #201d1e;
+  padding: 16px 24px; }
+
+.button:hover, .button:focus {
+  background: #f1b212; }
 
 header {
-  background: #9d1d0b;
+  background: #a31712;
   text-align: center;
-  padding: 36px 0;
-}
+  padding: 36px 0; }
 
 header .vevent {
   text-transform: uppercase;
   font-weight: 300;
   font-style: italic;
-  margin-bottom: 36px;
-}
+  margin-bottom: 36px; }
 
 header .vevent .summary {
-  display: none;
-}
+  display: none; }
+
+nav {
+  margin-top: 32px; }
+
+nav a {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block; }
 
 .tickets {
-  padding: 16px;
-}
-.buy,
-.buy:active {
-  background: #f1c400;
-  color: #9d1d0b;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 32px;
-  padding: 16px;
-}
-.buy:hover,
-.buy:focus {
-  background: #FFD724;
-}
-.buy-vat {
-  font-size: 0.8em;
-}
+  padding: 16px; }
 
+.buy-vat {
+  font-size: 0.6em; }
 
 section {
   background: #201d1e;
-  color: #fff;
-}
+  color: white; }
+
 section.alt {
-  background-color: #fff;
-  color: #201d1e;
-}
+  background-color: white;
+  color: #201d1e; }
 
 .section-heading {
   font-style: italic;
@@ -64,24 +71,22 @@ section.alt {
   text-transform: uppercase;
   font-size: 46px;
   font-weight: 600;
-  letter-spacing: 5px;
-}
+  letter-spacing: 5px; }
 
 .twitter {
-  display: block;
-  text-transform: uppercase;
-  text-align: center;
-  font-style: italic;
-  font-size: 700;
-  color: #fff;
   font-size: 64px;
-}
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  color: white; }
 
 .previously {
   text-align: center;
-  font-style: italic;
-}
+  font-style: italic; }
+
 .previously a {
   font-size: 32px;
-  padding: 0 16px;
-}
+  padding: 0 16px; }
