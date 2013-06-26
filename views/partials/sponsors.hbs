@@ -1,17 +1,29 @@
 <section class="monty full-monty">
   <h3 class="type" role="heading" aria-level="3">Full Monty</span>
-  <!-- {each sponsor} -->
+  {{#each sponsors.full}}
     <section class="sponsor">
-      <img class="logo">
-      <p class="blurb"></p>
+      <a href="{{url}}" class="logo"><img src="{{img}}"></a>
+      <p class="blurb">
+        {{blurb}}
+      </p>
     </section>
-  <!-- {each sponsor} -->
+  {{/each}}
 </section>
 
 <section class="monty half-monty">
   <h3 class="type" role="heading" aria-level="3">Half Monty</span>
+  {{#each sponsors.half}}
+    <section class="sponsor">
+      <a href="{{url}}" class="logo"><img src="{{img}}"></a>
+    </section>
+  {{/each}}
 </section>
 
 <section class="monty small-monty">
   <h3 class="type" role="heading" aria-level="3">Small Monty</span>
+  {{#each sponsors.small}}
+    <section class="sponsor">
+      <a href="{{url}}" class="logo"><img src="{{img}}"></a>
+    </section>
+  {{/each}}
 </section>

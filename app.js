@@ -2,9 +2,17 @@ var http = require('http'),
     path = require('path'),
     hbs = require ('hbs'),
     sass = require('node-sass'),
-    express = require('express');
+    express = require('express'),
+    _ = require('lodash');
 
-var locations = require('./data/locations');
+var data = {},
+    locations = require('./data/locations'),
+    sessions = require('./data/sessions'),
+    sponsors = require('./data/sponsors')
+
+_.assign(data, locations, sessions, sponsors);
+
+console.log(data);
 
 var app = express();
 
@@ -32,7 +40,7 @@ app.configure('development', function(){
 });
 
 app.get('/', function(req, res){
-  res.render('index', locations);
+  res.render('index', data);
 });
 
 app.get('/workshop', function(req, res){

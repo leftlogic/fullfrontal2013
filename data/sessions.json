@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {
+      "break": false,
+      "startTime": "13:15",
+      "title": "All tomorrow browers",
+
+      "speaker": {
+        "name": "J. Linklater-Johnson",
+        "twitter": "binarytales",
+        "photo": "img.png"
+      },
+
+      "description": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we must do to address its shortcomings.",
+
+      "details": "Session By Phil Hawksworth – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team.",
+
+      "slides": "http://google.com",
+      "audio": "http://google.com",
+      "video": "http://google.com"
+
+    },
+    {
+      "break": true,
+      "startTime": "13:15",
+      "title": "All tomorrow browers"
+    }
+  ]
+}

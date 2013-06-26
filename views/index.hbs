@@ -27,7 +27,9 @@
 
   <section class="sessions">
     <h2 id="sessions" class="section-heading" role="heading" aria-level="2">Sessions</h2>
-    {{> session}}
+    {{#each sessions}}
+      {{> session}}
+    {{/each}}
   </section>
 
 

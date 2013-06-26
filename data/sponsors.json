@@ -1,0 +1,23 @@
+{
+  "sponsors": {
+    "full": [
+      {
+        "url": "http://google.com",
+        "img": "img.png",
+        "blurb": "really intresting sponsor stuff"
+      }
+    ],
+    "half": [
+      {
+        "url": "http://google.com",
+        "img": "img.png"
+      }
+    ],
+    "small": [
+      {
+        "url": "http://google.com",
+        "img": "img.png"
+      }
+    ]
+  }
+}

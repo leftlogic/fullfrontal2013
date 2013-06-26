@@ -1,29 +1,54 @@
-<section class="session break">
+<section class="session">
 
-  <header>
-    <span class="time">09:00&mdash;10:35</span>
-    <h3 class="title" role="heading" aria-level="3">All you need is body</h3>
-    <span class="name">J. Linklater-Johnson</span>
-  </header>
+  {{#if break}}
+    <header>
+      <span class="time">{{startTime}}</span>
+      <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
+    </header>
+  {{/if}}
 
-  <p class="description">
-    The Web's place in history as a flexible & fluid way to store documents is well assured.
-    But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's
-    best hope for the future is if we think about it a little differently and admit what we must
-    do to address its shortcomings.
-  </p>
+  {{#unless break}}
+    <header>
+      <span class="time">{{startTime}}</span>
+      <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
+      <span class="name">{{speaker.name}}</span>
+    </header>
 
-  <p class="details">
-    Session By Phil Hawksworth – Phil is a JavaScript developer who has been developing
-    web applications since the late 90s. These days, he’s the Technical Director for The Team.
-  </p>
+    {{#if description}}
+      <p class="description">
+        {{description}}
+      </p>
+    {{/if}}
 
-  <div class="mughot"></div>
+    {{#if details}}
+      <p class="details">
+        {{details}}
+      </p>
+    {{/if}}
 
-  <div class="links">
-    <a class="button" href="#">Download Slides</a>
-    <a class="button" href="#">Download Slides</a>
-    <a class="button" href="#">Download Slides</a>
-  </div>
+    {{#if speaker.photo}}
+    <div class="mughot">
+      <img src="{{speaker.photo}}">
+    </div>
+    {{/if}}
+
+    <div class="links">
+      {{#if speaker.twitter}}
+        <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
+      {{/if}}
+
+      {{#if slides}}
+        <a class="button" href="{{slides}}">Download Slides</a>
+      {{/if}}
+
+      {{#if audio}}
+        <a class="button" href="{{audio}}">Audio</a>
+      {{/if}}
+
+      {{#if video}}
+        <a class="button" href="{{video}}">Video</a>
+      {{/if}}
+    </div>
+  {{/unless}}
 
 </section>
