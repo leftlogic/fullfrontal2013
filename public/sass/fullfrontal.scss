@@ -98,15 +98,15 @@ nav a {
   font-size: 14px;
 }
 
-.masthead .vevent {
+.masthead .details {
   @include fonz(16px);
   letter-spacing: 2px;
   margin: 38px 20px;
 }
-.masthead .vevent .summary {
+.masthead .details{
   display: none;
 }
-.masthead .location span {
+.masthead .details .location span {
   white-space: nowrap;
 }
 
@@ -351,3 +351,5 @@ footer .blurb {
   overflow: hidden;
   background-image: url('/images/left-logic.png');
 }
+
+/** Workshop Pullout */

@@ -74,7 +74,7 @@ nav a {
 .buy-vat {
   font-size: 14px; }
 
-.masthead .vevent {
+.masthead .details {
   font-size: 16px;
   font-style: italic;
   font-weight: 800;
@@ -84,10 +84,10 @@ nav a {
   letter-spacing: 2px;
   margin: 38px 20px; }
 
-.masthead .vevent .summary {
+.masthead .details {
   display: none; }
 
-.masthead .location span {
+.masthead .details .location span {
   white-space: nowrap; }
 
 /** Sections **/
@@ -338,3 +338,5 @@ footer .blurb {
   text-indent: -100%;
   overflow: hidden;
   background-image: url('/images/left-logic.png'); }
+
+/** Workshop Pullout */

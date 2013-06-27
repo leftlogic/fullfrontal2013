@@ -1,49 +1,80 @@
+
 {{> header}}
 
-  <header role="banner">
+{{#each workshops}}
+<div id="{{slug-pullout}}" class="workshop-pullout">
+  <header class="masthead" role="banner">
 
     <nav class="extrabold" role="navigation">
-      <a href="#sessions">x</a>
-      <a href="#workshops"><</a>
-      <a href="#locations">></a>
+      <a href="#">x</a>
+      <a href="#"><</a>
+      <a href="#">></a>
     </nav>
 
-    <h1 class="logo" role="heading" aria-level="1">Mobile Web Apps</h1>
+    <h1 class="logo" role="heading" aria-level="1">{{title}}</h1>
 
-    <div class="vevent extrabold">
-      <span class="summary">Full Frontal 2013</span>
-      <time class="dtstart" title="2013-11-08T09:00" datetime="2013-11-08T09:00">8th November 2013</time>,
-      <span class="location">Duke of York’s Picturehouse, Brighton, UK</span>
+    <div class="details">
+      With {{speaker.name}}<br>
+      Conference pass included
     </div>
 
     <div class="tickets">
-      <a href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;345<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
-      <a href="http://leftlogic.stagehq.com" class="button buy">Sold Out</a>
+      <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+      <a href="{{ticket.url}}" class="button buy">Sold Out</a>
     </div>
 
   </header>
 
-  <section class="details alt">
-    <h2 id="sessions" class="section-heading" role="heading" aria-level="2">Details</h2>
+  <section class="details region alt">
+    <h2 class="section-heading" role="heading" aria-level="2">Details</h2>
 
-    <div class="mugshot"></div>
+    {{#if speaker.photo}}
+      <div class="mugshot">
+        <img src="/images/speakers/{{speaker.photo}}">
+      </div>
+    {{/if}}
 
-    <div class="time-location"></div>
+    <ul class="details">
+      <li classs"detail date">
+        <span class="type">Date</span>
+        <span class="">{{details.date}}</span>
+      </li>
+      <li classs"detail time">
+        <span class="type">Time</span>
+        <span class="">{{details.time}}</span>
+      </li>
+      <li classs"detail speaker">
+        <span class="type">Teacher</span>
+        <span class="">{{spealer.name}}</span>
+      </li>
+      <li classs"detail venue">
+        <span class="type">Venue</span>
+        <span class="">{{details.venue}}</span>
+      </li>
+    </ul>
 
-    <p class="description">
-    </p>
+    {{#if description}}
+      <p class="description">
+        {{description}}
+      </p>
+    {{/if}}
 
-    <div class="extended-description">
+    {{#if extendedDescription}}
+      <div class="extendedDescription">
+        {{extendedDescription}}
+      </div>
+    {{/if}}
 
-    </div>
+    <h3 class="section-heading" role="heading" aria-level="3">Topics</h3>
 
-    <h3 id="sessions" class="section-heading" role="heading" aria-level="2">Topics</h3>
-
-    <div class="topic">
-      <span class="title"></span>
-      <span class="description"></span>
-    </div>
+    {{#each topics}}
+      <div class="topic">
+        <span class="title">{{title}}</span>
+        <span class="description">{{description}}</span>
+      </div>
+    {{/each}}
 
   </section>
+{{/each}}
 
 {{> footer}}

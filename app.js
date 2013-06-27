@@ -38,15 +38,25 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
   res.render('index', data);
 });
 
-app.get('/workshop', function(req, res){
-  res.render('workshop');
+app.get('/workshop', function (req, res) {
+  res.render('pullout', workshops);
 });
 
-app.get('/sponsorship', function(req, res){
+app.get('/workshop/:slug', function (req, res) {
+  var workshopData = {};
+
+  _.assign(workshopData, _.filter(workshops.workshops, { 'slug': req.params.slug }));
+
+  res.render('pullout', {
+    workshops: workshopData
+  });
+});
+
+app.get('/sponsorship', function (req, res) {
   res.render('sponsorship');
 });
 

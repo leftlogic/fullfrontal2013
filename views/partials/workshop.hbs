@@ -1,4 +1,4 @@
-<section class="workshop" id="{{id}}">
+<section class="workshop" id="{{slug}}">
   {{#if speaker.photo}}
     <div class="mugshot">
       <img src="/images/speakers/{{speaker.photo}}">
@@ -11,6 +11,6 @@
   <p class="description">
     {{description}}
   </p>
-  <a class="button buy" href="#">Buy Tickets</a>
-  <a class="button sold-out" href="#">Sold Out</a>
+  <a class="button buy" href="/workshop/{{slug}}">Buy Tickets</a>
+  <a class="button sold-out" href="/workshop/{{slug}}">Sold Out</a>
 </section>
