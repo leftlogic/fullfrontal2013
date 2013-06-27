@@ -57,21 +57,68 @@ nav a {
 .buy-vat {
   font-size: 0.6em; }
 
-section {
+.region {
   background: #201d1e;
-  color: white; }
+  color: white;
+  padding: 30px 20px; }
 
-section.alt {
+.region.alt {
   background-color: white;
   color: #201d1e; }
 
 .section-heading {
+  font-size: 30px;
   font-style: italic;
+  font-weight: 800;
+  letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 46px;
-  font-weight: 600;
-  letter-spacing: 5px; }
+  margin: 0; }
+
+/** Sponsors **/
+.monty {
+  margin-top: 40px;
+  overflow: hidden;
+  padding-bottom: 4px;
+  /* Keep bottom of box-shadow */ }
+
+.monty h3 {
+  color: #afafaf;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px; }
+
+.sponsor {
+  float: left;
+  border: 1px solid #e8e8e8;
+  margin: 12px;
+  /*
+  node-sass calc() bug - see: https://github.com/andrew/node-sass/issues/112
+  width: -webkit-calc(25% - 26px);
+  width: calc(25% - 26px); /* 26 = border + margin (left & right) * /
+  */
+  width: 20%;
+  box-shadow: 4px 4px 0px #e8e8e8; }
+
+.sponsor .logo {
+  display: block;
+  width: 100%;
+  text-align: center; }
+
+
+.full-monty .sponsor {
+  width: 50%;
+  border: 1px solid #201d1e;
+  box-shadow: 4px 4px 0px #201d1e; }
+
+.full-monty .blurb {
+  padding: 40px 30px;
+  font-style: italic;
+  color: #afafaf;
+  font-weight: 300;
+  letter-spacing: 1px; }
 
 .twitter {
   font-size: 64px;

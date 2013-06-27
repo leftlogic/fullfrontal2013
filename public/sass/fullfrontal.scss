@@ -2,6 +2,8 @@ $gold: #f4c342;
 $red: #a31712;
 $black: #201d1e;
 $white: #ffffff;
+$grey: #afafaf;
+$silver: #e8e8e8;
 
 @mixin fonz($size, $weight: 700) {
   font-size: $size;
@@ -73,24 +75,70 @@ nav a {
 
 
 
-
-section {
+.region {
   background: $black;
   color: $white;
+  padding: 30px 20px
 }
-section.alt {
+.region.alt {
   background-color: $white;
   color: $black;
 }
 
 .section-heading {
-  font-style: italic;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 46px;
-  font-weight: 600;
-  letter-spacing: 5px;
+  @include fonz(30px, 800);
+  margin: 0;
 }
+
+/** Sponsors **/
+.monty {
+  margin-top: 40px;
+  overflow: hidden;
+  padding-bottom: 4px; /* Keep bottom of box-shadow */
+}
+.monty h3 {
+  color: $grey;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px
+}
+.sponsor {
+  float: left;
+  border: 1px solid $silver;
+  margin: 12px;
+  /*
+  node-sass calc() bug - see: https://github.com/andrew/node-sass/issues/112
+  width: -webkit-calc(25% - 26px);
+  width: calc(25% - 26px); /* 26 = border + margin (left & right) * /
+  */
+  width: 20%;
+  box-shadow: 4px 4px 0px $silver;
+}
+.sponsor .logo {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.sponsor .logo img {
+
+}
+.full-monty .sponsor {
+  width: 50%;
+  border: 1px solid $black;
+  box-shadow: 4px 4px 0px $black;
+}
+.full-monty .blurb {
+  padding: 40px 30px;
+  font-style: italic;
+  color: $grey;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+
+
 
 .twitter {
   @include fonz(64px);

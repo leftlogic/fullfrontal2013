@@ -25,7 +25,7 @@
   </header>
 
 
-  <section class="sessions">
+  <section class="sessions region" role="region" aria-labelledby="sessions">
     <h2 id="sessions" class="section-heading" role="heading" aria-level="2">Sessions</h2>
     {{#each sessions}}
       {{> session}}
@@ -33,13 +33,13 @@
   </section>
 
 
-  <section class="alt workshops">
+  <section class="workshops region alt" role="region" aria-labelledby="workshops">
     <h2 id="workshops" class="section-heading" role="heading" aria-level="2">Workshops</h2>
     {{> workshop}}
   </section>
 
 
-  <section class="locations">
+  <section class="locations region"role="region" aria-labelledby="locations">
     <h2 id="locations" class="section-heading" role="heading" aria-level="2">Locations</h2>
     {{#each locations}}
       {{> location}}
@@ -47,7 +47,7 @@
   </section>
 
 
-  <section class="alt sponsors">
+  <section class="sponsors region alt" role="region" aria-labelledby="sponsors">
     <h2 id="sponsors" class="section-heading" role="heading" aria-level="2">Sponsors</h2>
     {{> sponsors}}
   </section>

@@ -3,20 +3,48 @@
     "full": [
       {
         "url": "http://google.com",
-        "img": "img.png",
-        "blurb": "really intresting sponsor stuff"
+        "img": "sponsor.png",
+        "blurb": "Whether it's a smartphone or tablet app, a game, a video, a digital magazine, a website, or an online experience, chances are that it was touched by Adobe technology."
       }
     ],
     "half": [
       {
         "url": "http://google.com",
-        "img": "img.png"
+        "img": "sponsor.png"
       }
     ],
     "small": [
       {
         "url": "http://google.com",
-        "img": "img.png"
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
+      },
+      {
+        "url": "http://google.com",
+        "img": "sponsor.png"
       }
     ]
   }

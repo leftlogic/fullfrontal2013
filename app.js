@@ -12,8 +12,6 @@ var data = {},
 
 _.assign(data, locations, sessions, sponsors);
 
-console.log(data);
-
 var app = express();
 
 app.configure(function(){
