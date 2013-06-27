@@ -1,6 +1,6 @@
 {{> header}}
 
-  <header role="banner">
+  <header class="masthead" role="banner">
 
     <nav class="extrabold" role="navigation">
       <a href="#sessions">Sessions</a>
@@ -14,12 +14,15 @@
     <div class="vevent extrabold">
       <span class="summary">Full Frontal 2013</span>
       <time class="dtstart" title="2013-11-08T09:00" datetime="2013-11-08T09:00">8th November 2013</time>,
-      <span class="location">Duke of York’s Picturehouse, Brighton, UK</span>
+      <span class="location">
+        <span>Duke of York’s Picturehouse,</span>
+        <span>Brighton, UK</span>
+      </span>
     </div>
 
     <div class="tickets">
-      <a href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;345<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
-      <a href="http://leftlogic.stagehq.com" class="button buy">Sold Out</a>
+      <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;345<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+      <a id="sold-out" href="http://leftlogic.stagehq.com" class="button sold-out">Sold Out</a>
     </div>
 
   </header>

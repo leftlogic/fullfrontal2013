@@ -8,10 +8,16 @@ a {
   color: #f4c342;
   text-decoration: none; }
 
+a:hover, a:focus {
+  color: #f1b212; }
+
+a:active {
+  color: #f7d172; }
+
 .button, .button:active {
   font-size: 18px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
@@ -20,43 +26,61 @@ a {
   color: #201d1e;
   border: 1px solid #201d1e;
   box-shadow: 4px 4px 0px #201d1e;
-  padding: 16px 24px; }
+  padding: 10px 24px;
+  white-space: nowrap; }
 
 .button:hover, .button:focus {
-  background: #f1b212; }
+  background: #f1b212;
+  color: #201d1e; }
 
-[role="banner"] {
+.button:active {
+  background: #f7d172;
+  color: #201d1e; }
+
+/** Masthead **/
+.masthead {
   background: #a31712;
   text-align: center;
-  padding: 36px 0; }
-
-[role="banner"] .vevent {
-  text-transform: uppercase;
-  font-weight: 300;
-  font-style: italic;
-  margin-bottom: 36px; }
-
-[role="banner"] .vevent .summary {
-  display: none; }
+  padding: 40px 0; }
 
 nav {
-  margin-top: 32px; }
+  margin-bottom: 48px; }
 
 nav a {
   font-size: 30px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
   display: block; }
 
+.logo img {
+  vertical-align: middle; }
+
 .tickets {
   padding: 16px; }
 
 .buy-vat {
-  font-size: 0.6em; }
+  font-size: 14px; }
 
+.masthead .vevent {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 38px 0; }
+
+.masthead .vevent .summary {
+  display: none; }
+
+.masthead .location span {
+  white-space: nowrap; }
+
+/** Sections **/
 .region {
   background: #201d1e;
   color: white;
@@ -123,7 +147,7 @@ nav a {
 .twitter {
   font-size: 64px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;

@@ -5,7 +5,7 @@ $white: #ffffff;
 $grey: #afafaf;
 $silver: #e8e8e8;
 
-@mixin fonz($size, $weight: 700) {
+@mixin fonz($size, $weight: 800) {
   font-size: $size;
   font-style: italic;
   font-weight: $weight;
@@ -25,6 +25,13 @@ a {
   color: $gold;
   text-decoration: none;
 }
+a:hover,
+a:focus {
+  color: darken($gold, 10%);
+}
+a:active {
+  color: lighten($gold, 10%);
+}
 
 .button,
 .button:active {
@@ -34,47 +41,60 @@ a {
   color: $black;
   border: 1px solid $black;
   box-shadow: 4px 4px 0px $black;
-  padding: 16px 24px;
+  padding: 10px 24px;
+  white-space: nowrap;
 }
 .button:hover,
 .button:focus {
   background: darken($gold, 10%);
+  color: $black;
+}
+.button:active {
+  background: lighten($gold, 10%);
+  color: $black;
 }
 
-[role="banner"] {
+
+/** Masthead **/
+.masthead {
   background: $red;
   text-align: center;
-  padding: 36px 0;
-}
-
-[role="banner"] .vevent {
-  text-transform: uppercase;
-  font-weight: 300;
-  font-style: italic;
-  margin-bottom: 36px;
-}
-
-[role="banner"] .vevent .summary {
-  display: none;
+  padding: 40px 0;
 }
 
 nav {
-  margin-top: 32px;
+margin-bottom: 48px;
 }
 nav a {
-  @include fonz(30px, 700);
+  @include fonz(30px);
   display: block;
+}
+
+.logo img {
+  vertical-align: middle;
 }
 
 .tickets {
   padding: 16px;
 }
 .buy-vat {
-  font-size: 0.6em;
+  font-size: 14px;
+}
+
+.masthead .vevent {
+  @include fonz(16px);
+  letter-spacing: 2px;
+  margin: 38px 0;
+}
+.masthead .vevent .summary {
+  display: none;
+}
+.masthead .location span {
+  white-space: nowrap;
 }
 
 
-
+/** Sections **/
 .region {
   background: $black;
   color: $white;
@@ -86,7 +106,7 @@ nav a {
 }
 
 .section-heading {
-  @include fonz(30px, 800);
+  @include fonz(30px);
   margin: 0;
 }
 
