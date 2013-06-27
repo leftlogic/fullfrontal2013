@@ -56,6 +56,25 @@ app.get('/workshop/:slug', function (req, res) {
   });
 });
 
+
+/* API? */
+app.get('/api/all', function (req, res) {
+  res.json(data);
+});
+app.get('/api/sessions', function (req, res) {
+  res.json(sessions);
+});
+app.get('/api/locations', function (req, res) {
+  res.json(locations);
+});
+app.get('/api/sponsors', function (req, res) {
+  res.json(sponsors);
+});
+app.get('/api/workshops', function (req, res) {
+  res.json(workshops);
+});
+
+
 app.get('/sponsorship', function (req, res) {
   res.render('sponsorship');
 });
