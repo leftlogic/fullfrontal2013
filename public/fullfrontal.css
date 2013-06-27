@@ -125,7 +125,8 @@ nav a {
   list-style-type: none; }
 
 .session:last-child {
-  border-bottom: 0; }
+  border-bottom: 0;
+  padding-bottom: 0; }
 
 .session .time {
   color: #afafaf; }
@@ -205,6 +206,46 @@ nav a {
   border: 0;
   box-shadow: none;
   text-align: left; }
+
+/** Locations **/
+.locations {
+  padding: 30px 0; }
+
+.location-category {
+  border-bottom: 1px solid #877b7f;
+  padding: 10px 20px;
+  text-align: center; }
+
+.location-category:last-child {
+  border-bottom: 0; }
+
+.location-category .type {
+  color: #afafaf;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px; }
+
+.location {
+  margin-bottom: 10px; }
+
+.location:last-child {
+  margin-bottom: 0; }
+
+.location .name {
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.location .note {
+  font-style: italic;
+  font-weight: 300; }
+
+.location .note p {
+  margin: 0; }
+
+.location .extra {
+  color: #afafaf; }
 
 /** Sponsors **/
 .monty {
