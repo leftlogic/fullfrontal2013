@@ -72,7 +72,7 @@ nav a {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 38px 0; }
+  margin: 38px 20px; }
 
 .masthead .vevent .summary {
   display: none; }
@@ -144,20 +144,51 @@ nav a {
   font-weight: 300;
   letter-spacing: 1px; }
 
+/** Footer **/
+footer {
+  padding: 70px 20px;
+  text-align: center; }
+
 .twitter {
-  font-size: 64px;
+  font-size: 21px;
   font-style: italic;
   font-weight: 800;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
-  display: block;
-  color: white; }
+  color: white;
+  letter-spacing: 3px; }
+
+.twitter .at {
+  font-weight: 700; }
 
 .previously {
-  text-align: center;
-  font-style: italic; }
+  text-align: center; }
 
 .previously a {
-  font-size: 32px;
-  padding: 0 16px; }
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 7px; }
+
+footer .blurb {
+  margin: 70px 0;
+  font-size: 14px;
+  color: #877b7f;
+  text-align: left; }
+
+#left-logic {
+  text-align: center; }
+
+#left-logic {
+  display: block;
+  width: 127px;
+  height: 27px;
+  margin: 0 auto;
+  text-indent: -100%;
+  overflow: hidden;
+  background-image: url('/images/left-logic.png'); }

@@ -3,6 +3,7 @@ $red: #a31712;
 $black: #201d1e;
 $white: #ffffff;
 $grey: #afafaf;
+$darkgrey: #877b7f;
 $silver: #e8e8e8;
 
 @mixin fonz($size, $weight: 800) {
@@ -84,7 +85,7 @@ nav a {
 .masthead .vevent {
   @include fonz(16px);
   letter-spacing: 2px;
-  margin: 38px 0;
+  margin: 38px 20px;
 }
 .masthead .vevent .summary {
   display: none;
@@ -158,19 +159,42 @@ nav a {
 }
 
 
-
-
-.twitter {
-  @include fonz(64px);
-  display: block;
-  color: $white;
+/** Footer **/
+footer {
+  padding: 70px 20px;
+  text-align: center;
 }
-
+.twitter {
+  @include fonz(21px);
+  color: $white;
+  letter-spacing: 3px;
+}
+.twitter .at {
+  font-weight: 700;
+}
 .previously {
   text-align: center;
-  font-style: italic;
 }
 .previously a {
-  font-size: 32px;
-  padding: 0 16px;
+  @include fonz(20px, 700);
+  letter-spacing: 2px;
+  padding: 0 7px;
+}
+footer .blurb {
+  margin: 70px 0;
+  font-size: 14px;
+  color: $darkgrey;
+  text-align: left;
+}
+#left-logic {
+  text-align: center;
+}
+#left-logic {
+  display: block;
+  width: 127px;
+  height: 27px;
+  margin: 0 auto;
+  text-indent: -100%;
+  overflow: hidden;
+  background-image: url('/images/left-logic.png');
 }
