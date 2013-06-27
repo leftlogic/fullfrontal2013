@@ -21,11 +21,11 @@ a:active {
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
+  border: 1px solid #201d1e;
+  box-shadow: 4px 4px 0px #201d1e;
   letter-spacing: 0;
   background: #f4c342;
   color: #201d1e;
-  border: 1px solid #201d1e;
-  box-shadow: 4px 4px 0px #201d1e;
   padding: 10px 24px;
   white-space: nowrap; }
 
@@ -36,6 +36,11 @@ a:active {
 .button:active {
   background: #f7d172;
   color: #201d1e; }
+
+.sold-out, .sold-out:hover, .sold-out:focus, .sold-out:active {
+  background: #e8e8e8;
+  color: #b5b5b5;
+  cursor: default; }
 
 /** Masthead **/
 .masthead {
@@ -99,6 +104,100 @@ nav a {
   text-transform: uppercase;
   margin: 0; }
 
+/** Sessions **/
+.sessions {
+  padding-left: 0;
+  padding-right: 0; }
+
+.sessions .section-heading {
+  margin-bottom: 40px; }
+
+.session {
+  padding: 10px 20px;
+  border-bottom: 1px solid #877b7f;
+  text-align: center; }
+
+.session:last-child {
+  border-bottom: 0; }
+
+.session .time {
+  color: #afafaf; }
+
+.session .title {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+  color: #f4c342; }
+
+.session .break .title {
+  color: white; }
+
+.session .speaker {
+  font-style: italic;
+  font-weight: 300; }
+
+.session .description, .session .details {
+  text-align: left;
+  font-style: italic; }
+
+.session .description {
+  font-weight: 400; }
+
+.session .details {
+  color: #e8e8e8;
+  font-weight: 300; }
+
+.session .mugshot {
+  border: 1px solid #201d1e;
+  box-shadow: 4px 4px 0px #201d1e; }
+
+.session .mugshot img {
+  width: 100%;
+  vertical-align: middle; }
+
+.session .links .button {
+  display: block;
+  margin: 10px 0;
+  text-align: left;
+  padding: 10px; }
+
+/** Workshops **/
+.workshops .section-heading {
+  margin-bottom: 35px; }
+
+.workshop {
+  border: 1px solid #201d1e;
+  box-shadow: 4px 4px 0px #201d1e;
+  margin-bottom: 25px;
+  position: relative; }
+
+.workshop header, .workshop .description {
+  padding: 20px;
+  margin: 0; }
+
+.workshop .mugshot img {
+  width: 100%;
+  vertical-align: middle; }
+
+.workshop header {
+  text-transform: uppercase; }
+
+.workshop .speaker {
+  color: #afafaf; }
+
+.workshop .title {
+  margin: 0; }
+
+.workshop .description {
+  color: #877b7f;
+  font-style: italic; }
+
+.workshop .button {
+  display: block;
+  border: 0;
+  box-shadow: none;
+  text-align: left; }
+
 /** Sponsors **/
 .monty {
   margin-top: 40px;
@@ -115,15 +214,15 @@ nav a {
   letter-spacing: 2px; }
 
 .sponsor {
-  float: left;
   border: 1px solid #e8e8e8;
+  box-shadow: 4px 4px 0px #e8e8e8;
+  float: left;
   margin: 12px;
   /*
   node-sass calc() bug - see: https://github.com/andrew/node-sass/issues/112
   width: -webkit-calc(25% - 26px);
   width: calc(25% - 26px); /* 26 = border + margin (left & right) * /
-  */
-  box-shadow: 4px 4px 0px #e8e8e8; }
+  */ }
 
 .sponsor .logo {
   display: block;

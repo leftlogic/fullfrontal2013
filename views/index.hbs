@@ -38,7 +38,9 @@
 
   <section class="workshops region alt" role="region" aria-labelledby="workshops">
     <h2 id="workshops" class="section-heading" role="heading" aria-level="2">Workshops</h2>
-    {{> workshop}}
+    {{#each workshops}}
+      {{> workshop}}
+    {{/each}}
   </section>
 
 

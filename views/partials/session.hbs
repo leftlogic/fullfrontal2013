@@ -1,17 +1,17 @@
 <section class="session">
 
   {{#if break}}
-    <header>
-      <span class="time">{{startTime}}</span>
+    <header class="break">
+      <div class="time">{{startTime}}</div>
       <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
     </header>
   {{/if}}
 
   {{#unless break}}
     <header>
-      <span class="time">{{startTime}}</span>
+      <div class="time">{{startTime}}</div>
       <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
-      <span class="name">{{speaker.name}}</span>
+      <div class="speaker">{{speaker.name}}</div>
     </header>
 
     {{#if description}}
@@ -27,8 +27,8 @@
     {{/if}}
 
     {{#if speaker.photo}}
-    <div class="mughot">
-      <img src="{{speaker.photo}}">
+    <div class="mugshot">
+      <img src="/images/speakers/{{speaker.photo}}">
     </div>
     {{/if}}
 

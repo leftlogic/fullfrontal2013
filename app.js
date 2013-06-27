@@ -8,9 +8,10 @@ var http = require('http'),
 var data = {},
     locations = require('./data/locations'),
     sessions = require('./data/sessions'),
-    sponsors = require('./data/sponsors')
+    sponsors = require('./data/sponsors'),
+    workshops = require('./data/workshops');
 
-_.assign(data, locations, sessions, sponsors);
+_.assign(data, locations, sessions, sponsors, workshops);
 
 var app = express();
 

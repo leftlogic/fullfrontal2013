@@ -1,14 +1,16 @@
-<section class="workshop">
-  <div class="mughot"></div>
+<section class="workshop" id="{{id}}">
+  {{#if speaker.photo}}
+    <div class="mugshot">
+      <img src="/images/speakers/{{speaker.photo}}">
+    </div>
+  {{/if}}
   <header>
-    <h3 class="title" role="heading" aria-level="3">All you need is body</h3>
-    <span class="name">J. Linklater-Johnson</span>
+    <div class="speaker">{{speaker.name}}</div>
+    <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
   </header>
   <p class="description">
-    The Web's place in history as a flexible & fluid way to store documents is well assured.
-    But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's
-    best hope for the future is if we think about it a little differently and admit what we must
-    do to address its shortcomings.
+    {{description}}
   </p>
-  <a class="button" href="#">Buy Tickets</a>
+  <a class="button buy" href="#">Buy Tickets</a>
+  <a class="button sold-out" href="#">Sold Out</a>
 </section>

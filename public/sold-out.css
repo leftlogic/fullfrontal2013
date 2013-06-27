@@ -1,2 +1,9 @@
-#sold-out {display: none;}
-/* #buy { display: none; } */
+/*#sold-out {display: none;}
+#workshop1 .sold-out { display: none; }
+*/
+
+
+#buy { display: none; }
+#workshop1 .buy { display: none; }
+
+
