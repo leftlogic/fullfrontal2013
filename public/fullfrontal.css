@@ -123,17 +123,15 @@ nav a {
   width: -webkit-calc(25% - 26px);
   width: calc(25% - 26px); /* 26 = border + margin (left & right) * /
   */
-  width: 20%;
   box-shadow: 4px 4px 0px #e8e8e8; }
 
 .sponsor .logo {
   display: block;
-  width: 100%;
+  padding: 11px;
   text-align: center; }
 
 
 .full-monty .sponsor {
-  width: 50%;
   border: 1px solid #201d1e;
   box-shadow: 4px 4px 0px #201d1e; }
 

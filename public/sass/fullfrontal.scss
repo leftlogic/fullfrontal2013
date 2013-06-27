@@ -134,19 +134,17 @@ nav a {
   width: -webkit-calc(25% - 26px);
   width: calc(25% - 26px); /* 26 = border + margin (left & right) * /
   */
-  width: 20%;
   box-shadow: 4px 4px 0px $silver;
 }
 .sponsor .logo {
   display: block;
-  width: 100%;
+  padding: 11px;
   text-align: center;
 }
 .sponsor .logo img {
 
 }
 .full-monty .sponsor {
-  width: 50%;
   border: 1px solid $black;
   box-shadow: 4px 4px 0px $black;
 }
