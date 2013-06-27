@@ -1,0 +1,20 @@
+/* TEAM */
+
+Art Direction by Remy Sharp - @rem
+
+Development by Jon Linklater-Johnson - @binarytales
+
+Design by Chris Mahon - @chrismahon
+
+Illustration by Geri
+
+
+/* SITE */
+
+Handcrafted JavaScript, HTML5 and CSS3.
+
+Built on Node.js, Express, Handlebars and SASS
+
+Running on Heroku
+
+See how it's all put together on GitHub: https://github.com/leftlogic/fullfrontal2013

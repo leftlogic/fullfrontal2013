@@ -30,9 +30,11 @@
 
   <section class="sessions region" role="region" aria-labelledby="sessions">
     <h2 id="sessions" class="section-heading" role="heading" aria-level="2">Sessions</h2>
-    {{#each sessions}}
-      {{> session}}
-    {{/each}}
+    <ol>
+      {{#each sessions}}
+        {{> session}}
+      {{/each}}
+    </ol>
   </section>
 
 
@@ -46,9 +48,11 @@
 
   <section class="locations region"role="region" aria-labelledby="locations">
     <h2 id="locations" class="section-heading" role="heading" aria-level="2">Locations</h2>
+    <ul>
     {{#each locations}}
       {{> location}}
     {{/each}}
+  </ul>
   </section>
 
 
