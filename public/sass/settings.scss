@@ -1,0 +1,33 @@
+$gold: #f1c400;
+$red: #9d1d0b;
+$black: #201d1e;
+$white: #ffffff;
+$grey: #a3aaac;
+$darkgrey: #6c6265;
+$silver: #ebebeb;
+
+@mixin fonz($size, $weight: 700) {
+  font-size: $size;
+  font-style: italic;
+  font-weight: $weight;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin shadow($colour: $black) {
+  border: 1px solid $colour;
+  box-shadow: 4px 4px 0px $colour;
+}
+
+@mixin skyline($padding-bottom: 166px) {
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-bottom: $padding-bottom;
+}
+
+@mixin alt-skyline($padding-bottom: 166px) {
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
+  padding-bottom: $padding-bottom;
+}

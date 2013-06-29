@@ -1,35 +1,7 @@
-$gold: #f4c342;
-$red: #a31712;
-$black: #201d1e;
-$white: #ffffff;
-$grey: #afafaf;
-$darkgrey: #877b7f;
-$silver: #e8e8e8;
+@import "settings";
 
-@mixin fonz($size, $weight: 800) {
-  font-size: $size;
-  font-style: italic;
-  font-weight: $weight;
-  letter-spacing: 5px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@mixin shadow($colour: $black) {
-  border: 1px solid $colour;
-  box-shadow: 4px 4px 0px $colour;
-}
-
-@mixin skyline($padding-bottom: 166px) {
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
-  background-position: bottom;
-  background-repeat: repeat-x;
-  padding-bottom: $padding-bottom;
-}
-
-@mixin alt-skyline($padding-bottom: 166px) {
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
-  padding-bottom: $padding-bottom;
+html {
+  min-width: 320px;
 }
 
 body {
@@ -89,31 +61,52 @@ a:active {
   @include skyline();
   background-color: $red;
   text-align: center;
-  padding: 40px 0;
+  padding: 29px 0;
   @include skyline();
   @include alt-skyline();
 }
 
-nav {
-margin-bottom: 48px;
+.masthead nav {
+  margin-bottom: 50px;
+  @media (min-width: 640px) {
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+  }
 }
-nav a {
+.masthead nav a {
   @include fonz(30px);
   display: block;
 }
-nav a:hover,
-nav a:focus {
+.masthead nav a:hover,
+.masthead nav a:focus {
   background-color: darken($red, 3%);
 }
 
-.logo img {
+.masthead .logo {
+  margin: 0;
+  @media (min-width: 640px) {
+    width: 50%;
+    float: right;
+  }
+}
+.masthead .logo img {
   vertical-align: middle;
 }
 
-.tickets {
+.masthead .tickets {
   padding: 16px;
+  @media (min-width: 640px) {
+    padding: 16px 40px;
+  }
 }
-.buy-vat {
+.masthead .tickets .button {
+  @media (min-width: 640px) {
+    font-size: 30px;
+    display: block;
+  }
+}
+.masthead .tickets .buy-vat {
   font-size: 14px;
 }
 
@@ -121,6 +114,10 @@ nav a:focus {
   @include fonz(16px);
   letter-spacing: 2px;
   margin: 38px 20px;
+  @media (min-width: 640px) {
+    clear: both;
+    margin: 20px;
+  }
 }
 .masthead .details .summary {
   display: none;
@@ -146,6 +143,9 @@ nav a:focus {
 .section-heading {
   @include fonz(30px);
   margin: 0;
+  @media (min-width: 640px) {
+   font-size: 41px;
+  }
 }
 
 /** Sessions **/
@@ -162,19 +162,38 @@ nav a:focus {
   text-align: center;
   display: block;
   list-style-type: none;
+  overflow: hidden;
 }
 .session:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
+.session-header {
+  @media (min-width: 640px) {
+    overflow: hidden;
+    border-bottom: 1px solid hsla(0, 0%, 50%, 0.1);
+    padding-bottom: 10px;
+  }
+}
 .session .time {
   color: $grey;
+  font-weight: 300;
+  @media (min-width: 640px) {
+    width: 20%;
+    text-align: left;
+    float: left;
+  }
 }
 .session .title {
   text-transform: uppercase;
   margin: 0;
   font-weight: 600;
   color: $gold;
+  @media (min-width: 640px) {
+    text-align: left;
+    float: left;
+    margin-right: 20px
+  }
 }
 .session .break .title {
   color: $white;
@@ -182,6 +201,10 @@ nav a:focus {
 .session .speaker {
   font-style: italic;
   font-weight: 300;
+  @media (min-width: 640px) {
+    text-align: left;
+    float: left;
+  }
 }
 .session .description,
 .session .details {
@@ -195,12 +218,33 @@ nav a:focus {
   color: $silver;
   font-weight: 300;
 }
+.session .description-wrapper {
+  @media (min-width: 640px) {
+    width: 50%;
+    float: left;
+  }
+}
 .session .mugshot {
   @include shadow;
+  @media (max-width: 639px) {
+   display: none;
+  }
+  @media (min-width: 640px) {
+    margin-top: 16px;
+    width: 45%;
+    float: right;
+  }
 }
 .session .mugshot img {
   width: 100%;
   vertical-align: middle;
+}
+.session .links {
+  @media (min-width: 640px) {
+    width: 45%;
+    float: right;
+    clear: right;
+  }
 }
 .session .links .button {
   display: block;
@@ -210,22 +254,41 @@ nav a:focus {
 }
 
 /** Workshops **/
+.workshops {
+  overflow: hidden;
+}
 .workshops .section-heading {
   margin-bottom: 35px;
+}
+.workshop-wrapper {
+  @media (min-width: 640px) {
+    width: 50%;
+    float: left;
+  }
 }
 .workshop {
   @include shadow;
   margin-bottom: 25px;
   position: relative;
+  @media (min-width: 640px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .workshop header,
 .workshop .description {
   padding: 20px;
   margin: 0;
 }
+.workshop .mugshot {
+  max-height: 200px;
+  overflow: hidden;
+  background-position: 50% 40%;
+}
 .workshop .mugshot img {
   width: 100%;
   vertical-align: middle;
+  visibility: hidden;
 }
 .workshop header {
   text-transform: uppercase;
@@ -258,6 +321,7 @@ nav a:focus {
   border-bottom: 1px solid $darkgrey;
   padding: 10px 20px;
   text-align: center;
+  overflow: hidden;
 }
 .location-category:last-child {
   border-bottom: 0;
@@ -265,13 +329,29 @@ nav a:focus {
 .location-category .type {
   color: $grey;
   text-transform: uppercase;
-  font-weight: 400;
+  letter-spacing: 2px;
+  font-weight: 300;
   margin: 0;
   margin-bottom: 10px;
   font-size: 16px;
+  @media (min-width: 640px) {
+    width: 20%;
+    text-align: left;
+    float: left;
+    margin-bottom: 0;
+  }
+}
+.locations-list {
+  @media (min-width: 640px) {
+    text-align: left;
+    float: left;
+  }
 }
 .location {
   margin-bottom: 10px;
+  @media (min-width: 640px) {
+    margin-bottom: 20px;
+  }
 }
 .location:last-child {
   margin-bottom: 0;
@@ -293,45 +373,91 @@ nav a:focus {
 
 /** Sponsors **/
 .monty {
+  max-width: 1024px;
+  margin: 0 auto;
   margin-top: 40px;
   overflow: hidden;
   padding-bottom: 4px; /* Keep bottom of box-shadow */
+  clear: both;
 }
-.monty h3 {
+.monty .type {
   color: $grey;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
-  letter-spacing: 2px
+  letter-spacing: 2px;
+  margin: 0 0 30px 0;
+}
+.sponsor-wrapper {
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin-bottom: 20px;
+  @media (min-width: 446px) {
+    width: 33.3333%;
+  }
+  @media (min-width: 580px) {
+    width: 25%;
+  }
 }
 .sponsor {
+  display: inline-block;
   @include shadow($silver);
-  float: left;
-  margin: 12px;
-  /*
-  node-sass calc() bug - see: https://github.com/andrew/node-sass/issues/112
-  width: -webkit-calc(25% - 26px);
-  width: calc(25% - 26px); /* 26 = border + margin (left & right) * /
-  */
+  padding: 10px;
+  @media (min-width: 740px) {
+    padding: 30px;
+  }
+  @media (min-width: 898px) {
+    padding: 50px;
+  }
 }
-.sponsor .logo {
-  display: block;
-  padding: 11px;
-  text-align: center;
+a.sponsor:hover,
+a.sponsor:focus {
+  @include shadow($black);
 }
-.sponsor .logo img {
 
+.full-monty {
+  overflow: visible;
+}
+.full-monty .type {
+  margin-bottom: 30px;
+}
+.full-monty .sponsor-wrapper {
+  float: none;
+  width: auto;
+}
+.full-monty .sponsor-wrapper {
+  @media (min-width: 580px) {
+    width: 50%;
+    float: left;
+  }
 }
 .full-monty .sponsor {
+  display: block;
+  float: none;
+  text-align: center;
   @include shadow;
+  margin-bottom: 30px;
+  @media (min-width: 580px) {
+    margin: 0 10px 30px 10px;
+  }
+}
+@media (max-width: 580px) {
+  .full-monty .sponsor:last-child {
+    margin-bottom: 0;
+  }
 }
 .full-monty .blurb {
-  padding: 40px 30px;
+  text-align: left;
+  padding: 20px 10px;
   font-style: italic;
   color: $grey;
   font-weight: 300;
   letter-spacing: 1px;
+  @media (max-width: 440px) {
+    display: none;
+  }
 }
 
 
@@ -344,6 +470,9 @@ footer {
   @include fonz(21px);
   color: $white;
   letter-spacing: 3px;
+  @media (min-width: 640px) {
+    font-size: 40px;
+  }
 }
 .twitter .at {
   font-weight: 700;
@@ -355,9 +484,13 @@ footer {
   @include fonz(20px, 700);
   letter-spacing: 2px;
   padding: 0 7px;
+  @media (min-width: 640px) {
+    font-size: 30px;
+  }
 }
 footer .blurb {
-  margin: 70px 0;
+  max-width: 60em;
+  margin: 70px auto;
   font-size: 14px;
   color: $darkgrey;
   text-align: left;
@@ -438,9 +571,6 @@ footer .blurb {
   font-style: italic;
   font-weight: 400;
 }
-.workshop-pullout .description {
-
-}
 .workshop-pullout .extendedDescription {
   color: $darkgrey;
 }
@@ -460,13 +590,3 @@ footer .blurb {
 .workshop-pullout .topic .description {
   color: $grey;
 }
-
-
-
-
-
-
-
-
-
-

@@ -38,6 +38,45 @@
       ],
       "description": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we mustdo to address its shortcomings.",
       "extendedDescription": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we mustdo to address its shortcomings."
+    },
+    {
+      "break": true,
+      "startTime": "13:15",
+      "title": "Mobile Web Apps",
+      "slug": "mobile-web-apps",
+      "ticket": {
+        "url": "http://leftlogic.stagehq.com",
+        "price": "400"
+      },
+
+      "details": {
+        "date": "17th June",
+        "time": "9:00pm",
+        "venue": "hogwarts"
+      },
+
+      "speaker": {
+        "name": "J. Linklater-Johnson",
+        "twitter": "binarytales",
+        "photo": "speaker.jpg"
+      },
+
+      "topics" : [
+        {
+          "title": "Topic",
+          "description": "Hello there this is a nice topic"
+        },
+        {
+          "title": "Topic",
+          "description": "Hello there this is a nice topic"
+        },
+        {
+          "title": "Topic",
+          "description": "Hello there this is a nice topic"
+        }
+      ],
+      "description": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we mustdo to address its shortcomings.",
+      "extendedDescription": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we mustdo to address its shortcomings."
     }
   ]
 }

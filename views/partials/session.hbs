@@ -8,23 +8,25 @@
   {{/if}}
 
   {{#unless break}}
-    <header>
+    <header class="session-header">
       <div class="time">{{startTime}}</div>
       <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
       <div class="speaker">{{speaker.name}}</div>
     </header>
 
-    {{#if description}}
-      <p class="description">
-        {{description}}
-      </p>
-    {{/if}}
+    <div class="description-wrapper">
+      {{#if description}}
+        <p class="description">
+          {{description}}
+        </p>
+      {{/if}}
 
-    {{#if details}}
-      <p class="details">
-        {{details}}
-      </p>
-    {{/if}}
+      {{#if details}}
+        <p class="details">
+          {{details}}
+        </p>
+      {{/if}}
+    </div>
 
     {{#if speaker.photo}}
     <div class="mugshot">

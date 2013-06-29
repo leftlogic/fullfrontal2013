@@ -1,6 +1,33 @@
 {
   "locations": [
     {
+      "type": "Pub",
+      "location": [
+        {
+          "name": "The Eagle",
+          "url": "http://dukeofyorks.com"
+        }
+      ]
+    },
+    {
+      "type": "Pub",
+      "location": [
+        {
+          "name": "The Eagle",
+          "url": "http://dukeofyorks.com"
+        }
+      ]
+    },
+    {
+      "type": "Pub",
+      "location": [
+        {
+          "name": "The Eagle",
+          "url": "http://dukeofyorks.com"
+        }
+      ]
+    },
+    {
       "type": "Conference",
       "location": [
         {
