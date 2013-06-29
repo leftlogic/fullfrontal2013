@@ -1,5 +1,7 @@
 #sold-out {display: none;}
-#workshop1 .sold-out { display: none; }
+#mobile-web-apps .sold-out,
+#mobile-web-apps-pullout .sold-out { display: none; }
 
 /*#buy { display: none; }
-#workshop1 .buy { display: none; }*/
+#mobile-web-apps .buy,
+#mobile-web-apps-pullout .buy { display: none; }*/

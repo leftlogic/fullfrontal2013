@@ -86,6 +86,10 @@ nav a {
   @include fonz(30px);
   display: block;
 }
+nav a:hover,
+nav a:focus {
+  background-color: darken($red, 3%);
+}
 
 .logo img {
   vertical-align: middle;
@@ -103,7 +107,7 @@ nav a {
   letter-spacing: 2px;
   margin: 38px 20px;
 }
-.masthead .details{
+.masthead .details .summary {
   display: none;
 }
 .masthead .details .location span {
@@ -353,3 +357,96 @@ footer .blurb {
 }
 
 /** Workshop Pullout */
+.workshop-pullout .masthead {
+  padding-top: 0;
+}
+.workshop-pullout nav {
+  border-bottom: 1px solid darken($red, 3%);
+  text-align: left;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+.workshop-pullout nav a {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 300;
+  padding: 0 10px;
+  text-align: center;
+}
+.workshop-pullout .section-heading {
+  margin-bottom: 40px;
+}
+.workshop-pullout h1.section-heading {
+  color: $gold;
+}
+.workshop-pullout .mugshot {
+  @include shadow;
+}
+.workshop-pullout .mugshot img {
+  width: 100%;
+  vertical-align: middle;
+}
+.workshop-pullout .details {
+  margin-top: 20px;
+}
+.workshop-pullout .detail {
+  border-bottom: 1px solid $silver;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.workshop-pullout .detail:last-child {
+  border-bottom: 0;
+}
+.workshop-pullout .detail .type,
+.workshop-pullout .detail .data {
+  width: 40%;
+  display: block;
+  text-transform: uppercase;
+}
+.workshop-pullout .detail .type {
+  float: left;
+  color: $grey;
+  font-weight: 300;
+}
+.workshop-pullout .detail .data {
+  float: right;
+  text-align: right;
+  font-weight: 600;
+}
+.workshop-pullout .description,
+.workshop-pullout .extendedDescription {
+  font-style: italic;
+  font-weight: 400;
+}
+.workshop-pullout .description {
+
+}
+.workshop-pullout .extendedDescription {
+  color: $darkgrey;
+}
+.workshop-pullout .topics {
+  border-top: 1px solid $grey;
+  margin: 40px 0 30px 0;
+  padding-top: 30px;
+}
+.workshop-pullout .topic {
+  font-style: italic;
+  margin: 15px 0;
+}
+.workshop-pullout .topic .title,
+.workshop-pullout .topic .description {
+  display: block;
+}
+.workshop-pullout .topic .description {
+  color: $grey;
+}
+
+
+
+
+
+
+
+
+
+

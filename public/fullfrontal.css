@@ -65,6 +65,9 @@ nav a {
   text-transform: uppercase;
   display: block; }
 
+nav a:hover, nav a:focus {
+  background-color: #951510; }
+
 .logo img {
   vertical-align: middle; }
 
@@ -84,7 +87,7 @@ nav a {
   letter-spacing: 2px;
   margin: 38px 20px; }
 
-.masthead .details {
+.masthead .details .summary {
   display: none; }
 
 .masthead .details .location span {
@@ -340,3 +343,81 @@ footer .blurb {
   background-image: url('/images/left-logic.png'); }
 
 /** Workshop Pullout */
+.workshop-pullout .masthead {
+  padding-top: 0; }
+
+.workshop-pullout nav {
+  border-bottom: 1px solid #951510;
+  text-align: left;
+  padding: 0 10px;
+  margin-bottom: 40px; }
+
+.workshop-pullout nav a {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 300;
+  padding: 0 10px;
+  text-align: center; }
+
+.workshop-pullout .section-heading {
+  margin-bottom: 40px; }
+
+.workshop-pullout h1.section-heading {
+  color: #f4c342; }
+
+.workshop-pullout .mugshot {
+  border: 1px solid #201d1e;
+  box-shadow: 4px 4px 0px #201d1e; }
+
+.workshop-pullout .mugshot img {
+  width: 100%;
+  vertical-align: middle; }
+
+.workshop-pullout .details {
+  margin-top: 20px; }
+
+.workshop-pullout .detail {
+  border-bottom: 1px solid #e8e8e8;
+  overflow: hidden;
+  padding: 10px 0; }
+
+.workshop-pullout .detail:last-child {
+  border-bottom: 0; }
+
+.workshop-pullout .detail .type, .workshop-pullout .detail .data {
+  width: 40%;
+  display: block;
+  text-transform: uppercase; }
+
+.workshop-pullout .detail .type {
+  float: left;
+  color: #afafaf;
+  font-weight: 300; }
+
+.workshop-pullout .detail .data {
+  float: right;
+  text-align: right;
+  font-weight: 600; }
+
+.workshop-pullout .description, .workshop-pullout .extendedDescription {
+  font-style: italic;
+  font-weight: 400; }
+
+
+.workshop-pullout .extendedDescription {
+  color: #877b7f; }
+
+.workshop-pullout .topics {
+  border-top: 1px solid #afafaf;
+  margin: 40px 0 30px 0;
+  padding-top: 30px; }
+
+.workshop-pullout .topic {
+  font-style: italic;
+  margin: 15px 0; }
+
+.workshop-pullout .topic .title, .workshop-pullout .topic .description {
+  display: block; }
+
+.workshop-pullout .topic .description {
+  color: #afafaf; }

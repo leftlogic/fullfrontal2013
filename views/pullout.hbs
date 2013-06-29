@@ -2,16 +2,18 @@
 {{> header}}
 
 {{#each workshops}}
-<div id="{{slug-pullout}}" class="workshop-pullout">
+<div id="{{slug}}-pullout" class="workshop-pullout">
   <header class="masthead" role="banner">
 
-    <nav class="extrabold" role="navigation">
+    <nav role="navigation">
       <a href="#">x</a>
-      <a href="#"><</a>
-      <a href="#">></a>
+      <!-- TODO: I'm not sure these links make sense with only 2 workshops?
+        <a href="#"><</a>
+        <a href="#">></a>
+      -->
     </nav>
 
-    <h1 class="logo" role="heading" aria-level="1">{{title}}</h1>
+    <h1 class="section-heading" role="heading" aria-level="1">{{title}}</h1>
 
     <div class="details">
       With {{speaker.name}}<br>
@@ -19,8 +21,8 @@
     </div>
 
     <div class="tickets">
-      <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span><abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
-      <a href="{{ticket.url}}" class="button buy">Sold Out</a>
+      <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+      <a href="{{ticket.url}}" class="button sold-out">Sold Out</a>
     </div>
 
   </header>
@@ -35,22 +37,30 @@
     {{/if}}
 
     <ul class="details">
-      <li classs"detail date">
-        <span class="type">Date</span>
-        <span class="">{{details.date}}</span>
-      </li>
-      <li classs"detail time">
-        <span class="type">Time</span>
-        <span class="">{{details.time}}</span>
-      </li>
-      <li classs"detail speaker">
-        <span class="type">Teacher</span>
-        <span class="">{{spealer.name}}</span>
-      </li>
-      <li classs"detail venue">
-        <span class="type">Venue</span>
-        <span class="">{{details.venue}}</span>
-      </li>
+      {{#if details.date}}
+        <li class="detail date">
+          <span class="type">Date</span>
+          <span class="data">{{details.date}}</span>
+        </li>
+      {{/if}}
+      {{#if details.time}}
+        <li class="detail time">
+          <span class="type">Time</span>
+          <span class="data">{{details.time}}</span>
+        </li>
+      {{/if}}
+      {{#if speaker.name}}
+        <li class="detail speaker">
+          <span class="type">Teacher</span>
+          <span class="data">{{speaker.name}}</span>
+        </li>
+      {{/if}}
+      {{#if details.venue}}
+        <li class="detail venue">
+          <span class="type">Venue</span>
+          <span class="data">{{details.venue}}</span>
+        </li>
+      {{/if}}
     </ul>
 
     {{#if description}}
@@ -60,12 +70,12 @@
     {{/if}}
 
     {{#if extendedDescription}}
-      <div class="extendedDescription">
+      <p class="extendedDescription">
         {{extendedDescription}}
-      </div>
+      </p>
     {{/if}}
 
-    <h3 class="section-heading" role="heading" aria-level="3">Topics</h3>
+    <h3 class="topics section-heading" role="heading" aria-level="3">Topics</h3>
 
     {{#each topics}}
       <div class="topic">
