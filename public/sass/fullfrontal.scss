@@ -20,6 +20,18 @@ $silver: #e8e8e8;
   box-shadow: 4px 4px 0px $colour;
 }
 
+@mixin skyline($padding-bottom: 166px) {
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-bottom: $padding-bottom;
+}
+
+@mixin alt-skyline($padding-bottom: 166px) {
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
+  padding-bottom: $padding-bottom;
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -74,9 +86,12 @@ a:active {
 
 /** Masthead **/
 .masthead {
-  background: $red;
+  @include skyline();
+  background-color: $red;
   text-align: center;
   padding: 40px 0;
+  @include skyline();
+  @include alt-skyline();
 }
 
 nav {
@@ -117,13 +132,15 @@ nav a:focus {
 
 /** Sections **/
 .region {
-  background: $black;
+  background-color: $black;
   color: $white;
-  padding: 30px 20px
+  padding: 30px 20px;
+  @include skyline();
 }
 .region.alt {
   background-color: $white;
   color: $black;
+  @include alt-skyline();
 }
 
 .section-heading {
@@ -233,7 +250,9 @@ nav a:focus {
 
 /** Locations **/
 .locations {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .location-category {
   border-bottom: 1px solid $darkgrey;
@@ -359,6 +378,7 @@ footer .blurb {
 /** Workshop Pullout */
 .workshop-pullout .masthead {
   padding-top: 0;
+  @include skyline;
 }
 .workshop-pullout nav {
   border-bottom: 1px solid darken($red, 3%);

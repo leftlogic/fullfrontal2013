@@ -49,9 +49,19 @@ a:active {
 
 /** Masthead **/
 .masthead {
-  background: #a31712;
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-bottom: 166px;
+  background-color: #a31712;
   text-align: center;
-  padding: 40px 0; }
+  padding: 40px 0;
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-bottom: 166px;
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
+  padding-bottom: 166px; }
 
 nav {
   margin-bottom: 48px; }
@@ -95,13 +105,19 @@ nav a:hover, nav a:focus {
 
 /** Sections **/
 .region {
-  background: #201d1e;
+  background-color: #201d1e;
   color: white;
-  padding: 30px 20px; }
+  padding: 30px 20px;
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-bottom: 166px; }
 
 .region.alt {
   background-color: white;
-  color: #201d1e; }
+  color: #201d1e;
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
+  padding-bottom: 166px; }
 
 .section-heading {
   font-size: 30px;
@@ -212,7 +228,9 @@ nav a:hover, nav a:focus {
 
 /** Locations **/
 .locations {
-  padding: 30px 0; }
+  padding-top: 30px;
+  padding-left: 0;
+  padding-right: 0; }
 
 .location-category {
   border-bottom: 1px solid #877b7f;
@@ -344,7 +362,11 @@ footer .blurb {
 
 /** Workshop Pullout */
 .workshop-pullout .masthead {
-  padding-top: 0; }
+  padding-top: 0;
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding-bottom: 166px; }
 
 .workshop-pullout nav {
   border-bottom: 1px solid #951510;
