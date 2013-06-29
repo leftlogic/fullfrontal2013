@@ -1,3 +1,10 @@
+@-webkit-keyframes gently-floating-by {
+  from {
+    background-position: bottom, 0 bottom, 0 bottom, 0 bottom; }
+
+  to {
+    background-position: bottom, 680px bottom, 1360px bottom, 2040px bottom; } }
+
 html {
   min-width: 320px; }
 
@@ -53,18 +60,25 @@ a:active {
 /** Masthead **/
 .masthead {
   background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
-  background-position: bottom;
+  background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
   padding-bottom: 166px;
+  -webkit-animation-name: gently-floating-by;
+  -webkit-animation-duration: 120s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   background-color: #9d1d0b;
   text-align: center;
   padding: 29px 0;
   background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
-  background-position: bottom;
+  background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
   padding-bottom: 166px;
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
-  padding-bottom: 166px; }
+  -webkit-animation-name: gently-floating-by;
+  -webkit-animation-duration: 120s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'); }
 
 .masthead nav {
   margin-bottom: 50px; }
@@ -136,15 +150,18 @@ a:active {
   color: white;
   padding: 30px 20px;
   background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
-  background-position: bottom;
+  background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
-  padding-bottom: 166px; }
+  padding-bottom: 166px;
+  -webkit-animation-name: gently-floating-by;
+  -webkit-animation-duration: 120s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; }
 
 .region.alt {
   background-color: white;
   color: #201d1e;
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-black.png');
-  padding-bottom: 166px; }
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'); }
 
 .section-heading {
   font-size: 30px;
@@ -520,9 +537,13 @@ footer .blurb {
 .workshop-pullout .masthead {
   padding-top: 0;
   background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
-  background-position: bottom;
+  background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
-  padding-bottom: 166px; }
+  padding-bottom: 166px;
+  -webkit-animation-name: gently-floating-by;
+  -webkit-animation-duration: 120s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; }
 
 .workshop-pullout nav {
   border-bottom: 1px solid #8f190a;
