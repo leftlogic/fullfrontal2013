@@ -9,6 +9,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: $black;
   color: $white;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 ol, ul {
   margin: 0;
@@ -58,12 +61,18 @@ a:active {
 
 /** Masthead **/
 .masthead {
-  @include skyline();
+  position: relative;
   background-color: $red;
   text-align: center;
   padding: 29px 0;
-  @include skyline();
-  @include alt-skyline();
+  overflow: hidden;
+  @include masthead-skyline();
+  @media (min-width: 640px) {
+    padding-top: 162px;
+  }
+  @media (min-width: 1024px) {
+    padding-top: 113px;
+  }
 }
 
 .masthead nav {
@@ -71,12 +80,23 @@ a:active {
   @media (min-width: 640px) {
     width: 50%;
     float: left;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 0px;
   }
 }
 .masthead nav a {
   @include fonz(30px);
   display: block;
+  @media (min-width: 640px) {
+    text-align: right;
+    margin-right: 20px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 45px;
+    margin-right: 40px;
+  }
 }
 .masthead nav a:hover,
 .masthead nav a:focus {
@@ -88,35 +108,72 @@ a:active {
   @media (min-width: 640px) {
     width: 50%;
     float: right;
+    text-align: left;
   }
 }
 .masthead .logo img {
   vertical-align: middle;
+  @media (min-width: 640px) {
+    margin-left: 20px;
+  }
+  @media (min-width: 1024px) {
+    margin-left: 40px;
+  }
 }
 
+.masthead .details-tickets-wrapper {
+  @media (min-width: 640px) {
+    border-bottom: 1px solid darken($red, 5%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.masthead .tickets-wrapper {
+  @media (min-width: 1024px) {
+    width: 50%;
+    float: right;
+  }
+}
 .masthead .tickets {
   padding: 16px;
   @media (min-width: 640px) {
     padding: 16px 40px;
+    padding-top: 10px;
   }
+
 }
 .masthead .tickets .button {
   @media (min-width: 640px) {
     font-size: 30px;
     display: block;
   }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 .masthead .tickets .buy-vat {
   font-size: 14px;
 }
 
+.masthead .details-wrapper {
+  @media (min-width: 1024px) {
+    width: 50%;
+    float: left;
+  }
+}
 .masthead .details {
   @include fonz(16px);
   letter-spacing: 2px;
   margin: 38px 20px;
   @media (min-width: 640px) {
     clear: both;
-    margin: 20px;
+    margin: 10px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1318px) {
+    margin-top: 22px;
   }
 }
 .masthead .details .summary {
@@ -144,7 +201,10 @@ a:active {
   @include fonz(30px);
   margin: 0;
   @media (min-width: 640px) {
-   font-size: 41px;
+   font-size: 40px;
+  }
+  @media (min-width: 1024px) {
+   font-size: 60px;
   }
 }
 
@@ -166,7 +226,7 @@ a:active {
 }
 .session:last-child {
   border-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 9px;
 }
 .session-header {
   @media (min-width: 640px) {
@@ -206,10 +266,24 @@ a:active {
     float: left;
   }
 }
+
+.session .description-wrapper {
+  @media (min-width: 640px) {
+    width: 50%;
+    float: left;
+  }
+  @media (min-width: 1024px) {
+    width: 33%;
+  }
+}
+
 .session .description,
 .session .details {
   text-align: left;
   font-style: italic;
+  @media (min-width: 1024px) {
+    padding-right: 10px;
+  }
 }
 .session .description {
   font-weight: 400;
@@ -218,12 +292,7 @@ a:active {
   color: $silver;
   font-weight: 300;
 }
-.session .description-wrapper {
-  @media (min-width: 640px) {
-    width: 50%;
-    float: left;
-  }
-}
+
 .session .mugshot {
   @include shadow;
   @media (max-width: 639px) {
@@ -234,16 +303,34 @@ a:active {
     width: 45%;
     float: right;
   }
+  @media (min-width: 1024px) {
+    width: 33%;
+    float: left;
+  }
 }
 .session .mugshot img {
   width: 100%;
   vertical-align: middle;
+  @media (min-width: 1024px) {
+    max-width: 300px;
+  }
 }
-.session .links {
+.session .links-wrapper {
   @media (min-width: 640px) {
     width: 45%;
     float: right;
     clear: right;
+  }
+  @media (min-width: 1024px) {
+    width: 33%;
+    float: left;
+    clear: none;
+  }
+}
+.session .links {
+  @media (min-width: 1024px) {
+    margin-left: 20px;
+    margin-top: 15px;
   }
 }
 .session .links .button {
@@ -322,6 +409,8 @@ a:active {
   padding: 10px 20px;
   text-align: center;
   overflow: hidden;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .location-category:last-child {
   border-bottom: 0;
@@ -473,6 +562,9 @@ footer {
   @media (min-width: 640px) {
     font-size: 40px;
   }
+  @media (min-width: 1024px) {
+    font-size: 60px;
+  }
 }
 .twitter .at {
   font-weight: 700;
@@ -495,17 +587,49 @@ footer .blurb {
   color: $darkgrey;
   text-align: left;
 }
+
+
+footer .left-logic {
+  display: block;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 227px;
+  height: 47px;
+  background-image: url(/images/leftlogic.png);
+}
+footer .left-logic:hover,
+footer .left-logic:focus,
+footer .left-logic:active {
+  background-position: bottom;
+/*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 100%);*/
+}
+
+
+
 #left-logic {
   text-align: center;
 }
 #left-logic {
   display: block;
-  width: 127px;
-  height: 27px;
+  width: 226px;
+  height: 47px;
   margin: 0 auto;
-  text-indent: -100%;
+  text-indent: -200%;
   overflow: hidden;
+  background-position: top;
   background-image: url('/images/left-logic.png');
+  @media (max-width: 480px) {
+    width: 113px;
+    height: 23.5px;
+    background-size: 113px, 23.5px;
+  }
+}
+#left-logic:hover,
+#left-logic:focus,
+#left-logic:active {
+  background-position: bottom;
 }
 
 /** Workshop Pullout */

@@ -34,22 +34,24 @@
     </div>
     {{/if}}
 
-    <div class="links">
-      {{#if speaker.twitter}}
-        <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
-      {{/if}}
+    <div class="links-wrapper">
+      <div class="links">
+        {{#if speaker.twitter}}
+          <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
+        {{/if}}
 
-      {{#if slides}}
-        <a class="button" href="{{slides}}">Download Slides</a>
-      {{/if}}
+        {{#if slides}}
+          <a class="button" href="{{slides}}">Download Slides</a>
+        {{/if}}
 
-      {{#if audio}}
-        <a class="button" href="{{audio}}">Audio</a>
-      {{/if}}
+        {{#if audio}}
+          <a class="button" href="{{audio}}">Audio</a>
+        {{/if}}
 
-      {{#if video}}
-        <a class="button" href="{{video}}">Video</a>
-      {{/if}}
+        {{#if video}}
+          <a class="button" href="{{video}}">Video</a>
+        {{/if}}
+      </div>
     </div>
   {{/unless}}
 

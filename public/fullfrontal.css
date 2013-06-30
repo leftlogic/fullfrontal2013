@@ -13,6 +13,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: #201d1e;
   color: white; }
+  @media (min-width: 1024px) {
+    body {
+      font-size: 18px; } }
 
 ol, ul {
   margin: 0;
@@ -59,26 +62,26 @@ a:active {
 
 /** Masthead **/
 .masthead {
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
-  background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
-  background-repeat: repeat-x;
-  padding-bottom: 166px;
-  -webkit-animation-name: gently-floating-by;
-  -webkit-animation-duration: 120s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
+  position: relative;
   background-color: #9d1d0b;
   text-align: center;
   padding: 29px 0;
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  overflow: hidden;
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -o-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -moz-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -webkit-gradient(linear, left bottom, left top, color-stop(0, #75150a), color-stop(1, #9d1c0b));
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -webkit-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -ms-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
-  padding-bottom: 166px;
-  -webkit-animation-name: gently-floating-by;
-  -webkit-animation-duration: 120s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'); }
+  padding-bottom: 166px; }
+  @media (min-width: 640px) {
+    .masthead {
+      padding-top: 162px; } }
+  @media (min-width: 1024px) {
+    .masthead {
+      padding-top: 113px; } }
 
 .masthead nav {
   margin-bottom: 50px; }
@@ -86,7 +89,10 @@ a:active {
     .masthead nav {
       width: 50%;
       float: left;
-      margin-bottom: 30px; } }
+      margin-bottom: 0px; } }
+  @media (min-width: 1024px) {
+    .masthead nav {
+      margin-bottom: 0px; } }
 
 .masthead nav a {
   font-size: 30px;
@@ -96,6 +102,14 @@ a:active {
   text-align: center;
   text-transform: uppercase;
   display: block; }
+  @media (min-width: 640px) {
+    .masthead nav a {
+      text-align: right;
+      margin-right: 20px; } }
+  @media (min-width: 1024px) {
+    .masthead nav a {
+      font-size: 45px;
+      margin-right: 40px; } }
 
 .masthead nav a:hover, .masthead nav a:focus {
   background-color: #8f190a; }
@@ -105,24 +119,52 @@ a:active {
   @media (min-width: 640px) {
     .masthead .logo {
       width: 50%;
-      float: right; } }
+      float: right;
+      text-align: left; } }
 
 .masthead .logo img {
   vertical-align: middle; }
+  @media (min-width: 640px) {
+    .masthead .logo img {
+      margin-left: 20px; } }
+  @media (min-width: 1024px) {
+    .masthead .logo img {
+      margin-left: 40px; } }
+
+@media (min-width: 640px) {
+  .masthead .details-tickets-wrapper {
+    border-bottom: 1px solid #851809;
+    position: absolute;
+    top: 0;
+    width: 100%; } }
+
+@media (min-width: 1024px) {
+  .masthead .tickets-wrapper {
+    width: 50%;
+    float: right; } }
 
 .masthead .tickets {
   padding: 16px; }
   @media (min-width: 640px) {
     .masthead .tickets {
-      padding: 16px 40px; } }
+      padding: 16px 40px;
+      padding-top: 10px; } }
 
 @media (min-width: 640px) {
   .masthead .tickets .button {
     font-size: 30px;
     display: block; } }
+@media (min-width: 1024px) {
+  .masthead .tickets .button {
+    font-size: 18px; } }
 
 .masthead .tickets .buy-vat {
   font-size: 14px; }
+
+@media (min-width: 1024px) {
+  .masthead .details-wrapper {
+    width: 50%;
+    float: left; } }
 
 .masthead .details {
   font-size: 16px;
@@ -136,7 +178,11 @@ a:active {
   @media (min-width: 640px) {
     .masthead .details {
       clear: both;
-      margin: 20px; } }
+      margin: 10px;
+      margin-bottom: 0; } }
+  @media (min-width: 1318px) {
+    .masthead .details {
+      margin-top: 22px; } }
 
 .masthead .details .summary {
   display: none; }
@@ -149,14 +195,10 @@ a:active {
   background-color: #201d1e;
   color: white;
   padding: 30px 20px;
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png');
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
-  padding-bottom: 166px;
-  -webkit-animation-name: gently-floating-by;
-  -webkit-animation-duration: 120s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite; }
+  padding-bottom: 166px; }
 
 .region.alt {
   background-color: white;
@@ -173,7 +215,10 @@ a:active {
   margin: 0; }
   @media (min-width: 640px) {
     .section-heading {
-      font-size: 41px; } }
+      font-size: 40px; } }
+  @media (min-width: 1024px) {
+    .section-heading {
+      font-size: 60px; } }
 
 /** Sessions **/
 .sessions {
@@ -193,7 +238,7 @@ a:active {
 
 .session:last-child {
   border-bottom: 0;
-  padding-bottom: 0; }
+  padding-bottom: 9px; }
 
 @media (min-width: 640px) {
   .session-header {
@@ -232,9 +277,20 @@ a:active {
       text-align: left;
       float: left; } }
 
+@media (min-width: 640px) {
+  .session .description-wrapper {
+    width: 50%;
+    float: left; } }
+@media (min-width: 1024px) {
+  .session .description-wrapper {
+    width: 33%; } }
+
 .session .description, .session .details {
   text-align: left;
   font-style: italic; }
+  @media (min-width: 1024px) {
+    .session .description, .session .details {
+      padding-right: 10px; } }
 
 .session .description {
   font-weight: 400; }
@@ -242,11 +298,6 @@ a:active {
 .session .details {
   color: #ebebeb;
   font-weight: 300; }
-
-@media (min-width: 640px) {
-  .session .description-wrapper {
-    width: 50%;
-    float: left; } }
 
 .session .mugshot {
   border: 1px solid #201d1e;
@@ -259,16 +310,33 @@ a:active {
       margin-top: 16px;
       width: 45%;
       float: right; } }
+  @media (min-width: 1024px) {
+    .session .mugshot {
+      width: 33%;
+      float: left; } }
 
 .session .mugshot img {
   width: 100%;
   vertical-align: middle; }
+  @media (min-width: 1024px) {
+    .session .mugshot img {
+      max-width: 300px; } }
 
 @media (min-width: 640px) {
-  .session .links {
+  .session .links-wrapper {
     width: 45%;
     float: right;
     clear: right; } }
+@media (min-width: 1024px) {
+  .session .links-wrapper {
+    width: 33%;
+    float: left;
+    clear: none; } }
+
+@media (min-width: 1024px) {
+  .session .links {
+    margin-left: 20px;
+    margin-top: 15px; } }
 
 .session .links .button {
   display: block;
@@ -342,7 +410,9 @@ a:active {
   border-bottom: 1px solid #6c6265;
   padding: 10px 20px;
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 1024px;
+  margin: 0 auto; }
 
 .location-category:last-child {
   border-bottom: 0; }
@@ -494,6 +564,9 @@ footer {
   @media (min-width: 640px) {
     .twitter {
       font-size: 40px; } }
+  @media (min-width: 1024px) {
+    .twitter {
+      font-size: 60px; } }
 
 .twitter .at {
   font-weight: 700; }
@@ -521,29 +594,48 @@ footer .blurb {
   color: #6c6265;
   text-align: left; }
 
+footer .left-logic {
+  display: block;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 227px;
+  height: 47px;
+  background-image: url(/images/leftlogic.png); }
+
+footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
+  background-position: bottom;
+  /*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 100%);*/ }
+
 #left-logic {
   text-align: center; }
 
 #left-logic {
   display: block;
-  width: 127px;
-  height: 27px;
+  width: 226px;
+  height: 47px;
   margin: 0 auto;
-  text-indent: -100%;
+  text-indent: -200%;
   overflow: hidden;
+  background-position: top;
   background-image: url('/images/left-logic.png'); }
+  @media (max-width: 480px) {
+    #left-logic {
+      width: 113px;
+      height: 23.5px;
+      background-size: 113px, 23.5px; } }
+
+#left-logic:hover, #left-logic:focus, #left-logic:active {
+  background-position: bottom; }
 
 /** Workshop Pullout */
 .workshop-pullout .masthead {
   padding-top: 0;
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-white.png');
+  background-image: url('/images/skyline-white.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png');
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
-  padding-bottom: 166px;
-  -webkit-animation-name: gently-floating-by;
-  -webkit-animation-duration: 120s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite; }
+  padding-bottom: 166px; }
 
 .workshop-pullout nav {
   border-bottom: 1px solid #8f190a;

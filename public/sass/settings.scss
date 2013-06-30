@@ -30,15 +30,18 @@ $silver: #ebebeb;
 }
 
 @mixin skyline($padding-bottom: 166px) {
-  background-image: url('/images/skyline-white.png'),url('/images/clouds-white.png');
+  background-image: url('/images/skyline-white.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png');
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
   padding-bottom: $padding-bottom;
 
-  -webkit-animation-name: gently-floating-by;
-  -webkit-animation-duration: 120s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
+  // -webkit-animation-name: gently-floating-by;
+  // -webkit-animation-duration: 120s;
+  // -webkit-animation-timing-function: linear;
+  // -webkit-animation-iteration-count: infinite;
 }
 
 @mixin alt-skyline() {
@@ -46,4 +49,54 @@ $silver: #ebebeb;
                     url('/images/clouds-1.png'),
                     url('/images/clouds-2.png'),
                     url('/images/clouds-3.png');
+}
+
+
+@mixin masthead-skyline() {
+
+  background-image: url('/images/skyline-black.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png'),
+                    -o-linear-gradient(bottom, rgb(117,21,10) 0%, rgb(157,28,11) 100%);
+
+  background-image: url('/images/skyline-black.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png'),
+                    -moz-linear-gradient(bottom, rgb(117,21,10) 0%, rgb(157,28,11) 100%);
+
+  background-image: url('/images/skyline-black.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png'),
+                    -webkit-gradient(
+                      linear,
+                      left bottom,
+                      left top,
+                      color-stop(0, rgb(117,21,10)),
+                      color-stop(1, rgb(157,28,11))
+                    );
+
+  background-image: url('/images/skyline-black.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png'),
+                    -webkit-linear-gradient(bottom, rgb(117,21,10) 0%, rgb(157,28,11) 100%);
+
+  background-image: url('/images/skyline-black.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png'),
+                    -ms-linear-gradient(bottom, rgb(117,21,10) 0%, rgb(157,28,11) 100%);
+
+  background-image: url('/images/skyline-black.png'),
+                    url('/images/clouds-1.png'),
+                    url('/images/clouds-2.png'),
+                    url('/images/clouds-3.png'),
+                    linear-gradient(bottom, rgb(117,21,10) 0%, rgb(157,28,11) 100%);
+
+  background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
+  background-repeat: repeat-x;
+  padding-bottom: 166px;
 }
