@@ -249,12 +249,16 @@ a:active {
   margin: 0;
   font-weight: 600;
   color: $gold;
+}
+.session-style-speakers .session .title,
+.session-style-schedule .session .title {
   @media (min-width: 640px) {
     text-align: left;
     float: left;
     margin-right: 20px
   }
 }
+
 .session .break .title {
   color: $white;
 }
@@ -274,6 +278,17 @@ a:active {
   }
   @media (min-width: 1024px) {
     width: 33%;
+  }
+}
+
+.session-style-titles .session .description-wrapper {
+  @media (min-width: 640px) {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+  }
+  @media (min-width: 1024px) {
+    width: 50%;
   }
 }
 

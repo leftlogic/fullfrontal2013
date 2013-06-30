@@ -260,11 +260,12 @@ a:active {
   margin: 0;
   font-weight: 600;
   color: #f1c400; }
-  @media (min-width: 640px) {
-    .session .title {
-      text-align: left;
-      float: left;
-      margin-right: 20px; } }
+
+@media (min-width: 640px) {
+  .session-style-speakers .session .title, .session-style-schedule .session .title {
+    text-align: left;
+    float: left;
+    margin-right: 20px; } }
 
 .session .break .title {
   color: white; }
@@ -284,6 +285,15 @@ a:active {
 @media (min-width: 1024px) {
   .session .description-wrapper {
     width: 33%; } }
+
+@media (min-width: 640px) {
+  .session-style-titles .session .description-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    float: none; } }
+@media (min-width: 1024px) {
+  .session-style-titles .session .description-wrapper {
+    width: 50%; } }
 
 .session .description, .session .details {
   text-align: left;

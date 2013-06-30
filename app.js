@@ -11,42 +11,61 @@ var data = {},
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops');
 
-/*
-  titles = titles and descriptions only
-  speakers = titles, descriptions and available speaker information (name, photo, etc)
-  schedule = full schedule with all data and times
-*/
-var sessionMode = "titles", // titles|speakers|schedule
-    tempSessions = [];
+var sessionMode = "speakers", // titles|speakers|schedule
 
-// TODO: This section can probably be made a lot cleaner
-// with some map reduce pluck vooodoo
-if (sessionMode === "titles") {
-  _.each(sessions.sessions, function (session) {
-    if (session.break) return;
-    tempSessions.push({
-      title: session.title,
-      description: session.description
+sessions = (function (sessions, sessionMode) {
+  /*
+    titles = titles and descriptions only
+    speakers = titles, descriptions and available speaker information (name, photo, etc)
+    schedule = full schedule with all data and times
+  */
+  var tempSessions = [];
+
+  // TODO: This section can probably be made a lot cleaner
+  // with some map reduce pluck vooodoo
+  if (sessionMode === "titles") {
+    _.each(sessions.sessions, function (session) {
+      if (session.break) return;
+      tempSessions.push({
+        title: session.title,
+        description: session.description
+      });
     });
-  });
-  sessions = {
+  };
+
+  if (sessionMode === "speakers") {
+    _.each(sessions.sessions, function (session) {
+      if (session.break) return;
+      tempSessions.push({
+        title: session.title,
+        description: session.description,
+        speaker: session.speaker
+      });
+    });
+  };
+
+  if (sessionMode === "schedule") {
+    tempSessions = sessions.sessions;
+  }
+
+  return {
     sessions: tempSessions
   }
-};
+})(sessions, sessionMode);
 
-if (sessionMode === "speakers") {
-  _.each(sessions.sessions, function (session) {
-    if (session.break) return;
-    tempSessions.push({
-      title: session.title,
-      description: session.description,
-      speaker: session.speaker
-    });
-  });
-  sessions = {
-    sessions: tempSessions
+
+_.each(sessions.sessions, function (session) {
+  if ( (session.speaker && session.speaker.twitter)
+    || session.slides
+    || session.audio
+    || session.video
+  ) {
+    session.links = true;
   }
-};
+});
+
+// TODO When full schdule order session array according to 'startTime'
+// so that order in sessions.json is not important
 
 _.assign(data, locations, sessions, sponsors, workshops);
 data.sessionMode = sessionMode;
