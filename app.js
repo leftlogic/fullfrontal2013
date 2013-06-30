@@ -11,7 +11,45 @@ var data = {},
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops');
 
+/*
+  titles = titles and descriptions only
+  speakers = titles, descriptions and available speaker information (name, photo, etc)
+  schedule = full schedule with all data and times
+*/
+var sessionMode = "titles", // titles|speakers|schedule
+    tempSessions = [];
+
+// TODO: This section can probably be made a lot cleaner
+// with some map reduce pluck vooodoo
+if (sessionMode === "titles") {
+  _.each(sessions.sessions, function (session) {
+    if (session.break) return;
+    tempSessions.push({
+      title: session.title,
+      description: session.description
+    });
+  });
+  sessions = {
+    sessions: tempSessions
+  }
+};
+
+if (sessionMode === "speakers") {
+  _.each(sessions.sessions, function (session) {
+    if (session.break) return;
+    tempSessions.push({
+      title: session.title,
+      description: session.description,
+      speaker: session.speaker
+    });
+  });
+  sessions = {
+    sessions: tempSessions
+  }
+};
+
 _.assign(data, locations, sessions, sponsors, workshops);
+data.sessionMode = sessionMode;
 
 var app = express();
 
