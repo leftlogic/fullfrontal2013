@@ -216,6 +216,12 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px
 }
+.session > div {
+  display: none;
+}
+.session.open > div {
+  display: block;
+}
 .session {
   padding: 10px 20px;
   border-bottom: 1px solid $darkgrey;
@@ -231,6 +237,10 @@ a:active {
 .session-header {
   @media (min-width: 640px) {
     overflow: hidden;
+  }
+}
+.session.open .session-header {
+  @media (min-width: 640px) {
     border-bottom: 1px solid hsla(0, 0%, 50%, 0.1);
     padding-bottom: 10px;
   }
@@ -292,15 +302,14 @@ a:active {
   }
 }
 
-.session .description,
-.session .details {
+.session .description-wrapper p {
   text-align: left;
   font-style: italic;
   @media (min-width: 1024px) {
     padding-right: 10px;
   }
 }
-.session .description {
+.session .description-wrapper p {
   font-weight: 400;
 }
 .session .details {

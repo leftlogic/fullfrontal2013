@@ -1,4 +1,4 @@
-<li class="session">
+<li class="session"{{#unless break}} id="{{slug}}"{{/unless}}>
 
   {{#if break}}
     <header class="break">
@@ -16,9 +16,7 @@
 
     <div class="description-wrapper">
       {{#if description}}
-        <p class="description">
-          {{description}}
-        </p>
+        {{#markdown}}{{description}}{{/markdown}}
       {{/if}}
 
       {{#if details}}

@@ -228,6 +228,12 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px; }
 
+.session > div {
+  display: none; }
+
+.session.open > div {
+  display: block; }
+
 .session {
   padding: 10px 20px;
   border-bottom: 1px solid #6c6265;
@@ -242,7 +248,10 @@ a:active {
 
 @media (min-width: 640px) {
   .session-header {
-    overflow: hidden;
+    overflow: hidden; } }
+
+@media (min-width: 640px) {
+  .session.open .session-header {
     border-bottom: 1px solid rgba(128, 128, 128, 0.1);
     padding-bottom: 10px; } }
 
@@ -295,14 +304,14 @@ a:active {
   .session-style-titles .session .description-wrapper {
     width: 50%; } }
 
-.session .description, .session .details {
+.session .description-wrapper p {
   text-align: left;
   font-style: italic; }
   @media (min-width: 1024px) {
-    .session .description, .session .details {
+    .session .description-wrapper p {
       padding-right: 10px; } }
 
-.session .description {
+.session .description-wrapper p {
   font-weight: 400; }
 
 .session .details {

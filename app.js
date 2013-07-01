@@ -3,6 +3,8 @@ var http = require('http'),
     hbs = require ('hbs'),
     sass = require('node-sass'),
     express = require('express'),
+    slugify = require('slug'),
+    marked = require('marked'),
     _ = require('lodash');
 
 require('datejs');
@@ -24,6 +26,11 @@ sessions = (function (sessionData, sessionMode) {
   var tempSessions = [],
       sessions = sessionData.sessions,
       startTime = new Date(sessionData.startTime);
+
+  // slugify all titles
+  sessions.forEach(function (session) {
+    session.slug = slugify(session.title.toLowerCase());
+  });
 
   // TODO: This section can probably be made a lot cleaner
   // with some map reduce pluck vooodoo
@@ -102,6 +109,11 @@ app.configure(function (){
 });
 
 hbs.registerPartials(__dirname + '/views/partials');
+
+hbs.registerHelper('markdown', function (options) {
+  return marked(options.fn(this));
+});
+
 
 app.configure('development', function (){
   app.use(express.errorHandler());
