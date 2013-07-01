@@ -72,7 +72,11 @@ data.sessionMode = sessionMode;
 
 var app = express();
 
-app.configure(function(){
+app.configure('production', function () {
+  app.set('isproduction', true);
+});
+
+app.configure(function (){
   app.set('port', process.env.PORT || 3000);
   app.use(express.favicon(path.join(__dirname, 'public/favicon.ico')));
   app.set('views', __dirname + '/views');
@@ -91,7 +95,7 @@ app.configure(function(){
 
 hbs.registerPartials(__dirname + '/views/partials');
 
-app.configure('development', function(){
+app.configure('development', function (){
   app.use(express.errorHandler());
 });
 
@@ -136,6 +140,6 @@ app.get('/sponsorship', function (req, res) {
   res.render('sponsorship');
 });
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+http.createServer(app).listen(app.get('port'), function (){
+  console.log("Express server listening on http://localhost:" + app.get('port'));
 });
