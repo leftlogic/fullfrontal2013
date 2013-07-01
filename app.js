@@ -5,26 +5,30 @@ var http = require('http'),
     express = require('express'),
     _ = require('lodash');
 
+require('datejs');
+
 var data = {},
     locations = require('./data/locations'),
     sessions = require('./data/sessions'),
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops');
 
-var sessionMode = "speakers", // titles|speakers|schedule
+var sessionMode = "schedule", // titles|speakers|schedule
 
-sessions = (function (sessions, sessionMode) {
+sessions = (function (sessionData, sessionMode) {
   /*
     titles = titles and descriptions only
     speakers = titles, descriptions and available speaker information (name, photo, etc)
     schedule = full schedule with all data and times
   */
-  var tempSessions = [];
+  var tempSessions = [],
+      sessions = sessionData.sessions,
+      startTime = new Date(sessionData.startTime);
 
   // TODO: This section can probably be made a lot cleaner
   // with some map reduce pluck vooodoo
   if (sessionMode === "titles") {
-    _.each(sessions.sessions, function (session) {
+    sessions.forEach(function (session) {
       if (session.break) return;
       tempSessions.push({
         title: session.title,
@@ -34,7 +38,7 @@ sessions = (function (sessions, sessionMode) {
   };
 
   if (sessionMode === "speakers") {
-    _.each(sessions.sessions, function (session) {
+    sessions.forEach(function (session) {
       if (session.break) return;
       tempSessions.push({
         title: session.title,
@@ -42,19 +46,23 @@ sessions = (function (sessions, sessionMode) {
         speaker: session.speaker
       });
     });
-  };
+  }
 
   if (sessionMode === "schedule") {
-    tempSessions = sessions.sessions;
+    sessions.forEach(function (session) {
+      session.start = startTime.clone();
+      session.end = startTime.add({ minutes: session.duration }).clone();
+    });
+    tempSessions = sessions;
   }
 
   return {
     sessions: tempSessions
-  }
+  };
 })(sessions, sessionMode);
 
 
-_.each(sessions.sessions, function (session) {
+sessions.sessions.forEach(function (session) {
   if ( (session.speaker && session.speaker.twitter)
     || session.slides
     || session.audio
