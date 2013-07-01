@@ -2,14 +2,14 @@
 
   {{#if break}}
     <header class="break">
-      <div class="time">{{startTime}}</div>
+      <div class="time">{{start}} &mdash; {{end}}</div>
       <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
     </header>
   {{/if}}
 
   {{#unless break}}
     <header class="session-header">
-      <div class="time">{{startTime}}</div>
+      <div class="time">{{start}} &mdash; {{end}}</div>
       <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
       <div class="speaker">{{speaker.name}}</div>
     </header>

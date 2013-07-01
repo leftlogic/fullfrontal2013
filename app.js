@@ -50,8 +50,8 @@ sessions = (function (sessionData, sessionMode) {
 
   if (sessionMode === "schedule") {
     sessions.forEach(function (session) {
-      session.start = startTime.clone();
-      session.end = startTime.add({ minutes: session.duration }).clone();
+      session.start = startTime.clone().toString('HH:mm');
+      session.end = startTime.add({ minutes: session.duration }).clone().toString('HH:mm');
     });
     tempSessions = sessions;
   }
