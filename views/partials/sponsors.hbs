@@ -3,20 +3,21 @@
   <h3 class="type" role="heading" aria-level="3">Full Monty Sponsors</h3>
   {{#each sponsors.full}}
     <div class="sponsor-wrapper">
-    <section class="sponsor">
-      <a href="{{url}}" class="logo">
-        <img src="/images/sponsors/{{img}}">
-      </a>
-      <p class="blurb">
-        {{blurb}}
-      </p>
-      <p><a href="{{url}}">Find out more</a></p>
-    </section>
+      <section class="sponsor">
+        <a href="{{url}}" class="logo">
+          <img src="/images/sponsors/{{img}}">
+        </a>
+        <p class="blurb">
+          {{blurb}}
+        </p>
+        <p><a href="{{url}}">Learn more</a></p>
+      </section>
     </div>
   {{/each}}
 </section>
 {{/if}}
 
+{{#if sponsors.half.length}}
 <section class="monty half-monty">
   <h3 class="type" role="heading" aria-level="3">Half Monty Sponsors</h3>
   {{#each sponsors.half}}
@@ -27,7 +28,9 @@
     </section>
   {{/each}}
 </section>
+{{/if}}
 
+{{#if sponsors.small.length}}
 <section class="monty small-monty">
   <h3 class="type" role="heading" aria-level="3">Small Monty Sponsors</h3>
   {{#each sponsors.small}}
@@ -38,3 +41,16 @@
     </section>
   {{/each}}
 </section>
+{{/if}}
+
+{{#if sponsors.available}}
+<section class="monty half-monty">
+  <h3 class="type" role="heading" aria-level="3">Want to sponsor?</h3>
+    <section class="sponsor-wrapper">
+      <a href="{{url}}" class="sponsor">
+        <img class="logo" src="/images/sponsors/{{img}}">
+      </a>
+      <p><a href="/sponsorship">Find out how to sponsor</a></p>
+    </section>
+</section>
+{{/if}}

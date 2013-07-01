@@ -523,7 +523,8 @@ a:active {
       padding: 50px; } }
 
 .sponsor .logo img {
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 10rem; }
 
 a.sponsor:hover, a.sponsor:focus {
   border: 1px solid #201d1e;

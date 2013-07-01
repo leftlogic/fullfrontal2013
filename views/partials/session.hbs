@@ -1,4 +1,4 @@
-<li class="session"{{#unless break}} id="{{slug}}"{{/unless}}>
+<li class="session{{#unless duration}} open{{/unless}}"{{#unless break}} id="{{slug}}"{{/unless}}>
 
   {{#if break}}
     <header class="break">
@@ -9,7 +9,7 @@
 
   {{#unless break}}
     <header class="session-header">
-      <div class="time">{{start}} &mdash; {{end}}</div>
+      {{#if duration}}<div class="time">{{start}} &mdash; {{end}}</div>{{/if}}
       <h3 class="title" role="heading" aria-level="3">{{title}}</h3>
       <div class="speaker">{{speaker.name}}</div>
     </header>

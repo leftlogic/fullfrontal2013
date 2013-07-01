@@ -16,7 +16,7 @@ var data = {},
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops');
 
-app.set('mode', 'schedule'), // titles|speakers|schedule
+app.set('mode', 'titles'), // titles|speakers|schedule
 
 sessions = (function (sessionData) {
   /*

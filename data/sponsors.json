@@ -1,5 +1,6 @@
 {
   "sponsors": {
+    "available": true,
     "full": [
       {
         "url": "https://developers.google.com/live/chrome/",
@@ -9,43 +10,10 @@
     ],
     "half": [
       {
-        "url": "http://google.com",
-        "img": "sponsor.png"
+        "url": "http://www.webapplicationsuk.com/",
+        "img": "webappsuk.gif"
       }
     ],
-    "small": [
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      },
-      {
-        "url": "http://google.com",
-        "img": "sponsor.png"
-      }
-    ]
+    "small": []
   }
 }
