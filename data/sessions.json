@@ -14,7 +14,7 @@
     {
       "break": false,
       "duration": 40,
-      "title": "All tomorrows browers",
+      "title": "Flat City",
 
       "speaker": {
         "name": "J. Linklater-Johnson",
@@ -22,7 +22,7 @@
         "photo": "speaker.jpg"
       },
 
-      "description": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we must do to address its shortcomings.",
+      "description": "Software loves hierarchies: class hierarchies, object hierarchies, folder hierarchies, style hierarchies, menu hierachies. And yet, all but the most simple tree structures require levels of organizational foresight and intellectual rigour which mere humans rarely possess –and they usually end in tears. Drawing on a diverse range of web-based examples, and proposing alternatives along the way, I'll attempt to demonstrate how trees and nesting are great for birds, but mostly lousy for developers and users.",
 
       "details": "Session By Phil Hawksworth – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team.",
 
@@ -39,7 +39,7 @@
     {
       "break": false,
       "duration": 40,
-      "title": "All tomorrows browers",
+      "title": "Mobile Is Not A Thing; It Is Everything.",
 
       "speaker": {
         "name": "J. Linklater-Johnson",
@@ -47,7 +47,7 @@
         "photo": "speaker.jpg"
       },
 
-      "description": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we must do to address its shortcomings.",
+      "description": "The stratospheric rise in mobile subscribers, devices, services and apps has led to an even bigger explosion in the lack of understanding of how to design, develop and most importantly, recognize new opportunities with not only these new devices, but new use cases altogether.\n\nLet's step through the processes to help identify content strategies, design workflows and forecasting methods to unlock the true potential of mobile, not only for apps, but for the web and new channels of communication altogether.",
 
       "details": "Session By Phil Hawksworth – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team.",
 
