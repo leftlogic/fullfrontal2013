@@ -5,7 +5,8 @@ var http = require('http'),
     express = require('express'),
     slugify = require('slug'),
     marked = require('marked'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    app = express();
 
 require('datejs');
 
@@ -15,9 +16,9 @@ var data = {},
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops');
 
-var sessionMode = "schedule", // titles|speakers|schedule
+app.set('mode', 'schedule'), // titles|speakers|schedule
 
-sessions = (function (sessionData, sessionMode) {
+sessions = (function (sessionData) {
   /*
     titles = titles and descriptions only
     speakers = titles, descriptions and available speaker information (name, photo, etc)
@@ -34,7 +35,7 @@ sessions = (function (sessionData, sessionMode) {
 
   // TODO: This section can probably be made a lot cleaner
   // with some map reduce pluck vooodoo
-  if (sessionMode === "titles") {
+  if (app.settings.mode === "titles") {
     sessions.forEach(function (session) {
       if (session.break) return;
       tempSessions.push({
@@ -44,7 +45,7 @@ sessions = (function (sessionData, sessionMode) {
     });
   };
 
-  if (sessionMode === "speakers") {
+  if (app.settings.mode === "speakers") {
     sessions.forEach(function (session) {
       if (session.break) return;
       tempSessions.push({
@@ -55,7 +56,7 @@ sessions = (function (sessionData, sessionMode) {
     });
   }
 
-  if (sessionMode === "schedule") {
+  if (app.settings.mode === "schedule") {
     sessions.forEach(function (session) {
       session.start = startTime.clone().toString('HH:mm');
       session.end = startTime.add({ minutes: session.duration }).clone().toString('HH:mm');
@@ -66,7 +67,7 @@ sessions = (function (sessionData, sessionMode) {
   return {
     sessions: tempSessions
   };
-})(sessions, sessionMode);
+})(sessions);
 
 
 sessions.sessions.forEach(function (session) {
@@ -83,9 +84,6 @@ sessions.sessions.forEach(function (session) {
 // so that order in sessions.json is not important
 
 _.assign(data, locations, sessions, sponsors, workshops);
-data.sessionMode = sessionMode;
-
-var app = express();
 
 app.configure('production', function () {
   app.set('isproduction', true);
@@ -103,13 +101,12 @@ app.configure(function (){
   app.use(sass.middleware({
      src: __dirname + '/public/sass',
      dest: __dirname + '/public',
-     debug: true
+     debug: !app.settings.isproduction
   }));
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
 hbs.registerPartials(__dirname + '/views/partials');
-
 hbs.registerHelper('markdown', function (options) {
   return marked(options.fn(this));
 });

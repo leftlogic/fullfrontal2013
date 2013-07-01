@@ -522,6 +522,9 @@ a:active {
     .sponsor {
       padding: 50px; } }
 
+.sponsor .logo img {
+  max-width: 100%; }
+
 a.sponsor:hover, a.sponsor:focus {
   border: 1px solid #201d1e;
   box-shadow: 4px 4px 0px #201d1e; }

@@ -525,6 +525,9 @@ a:active {
     padding: 50px;
   }
 }
+.sponsor .logo img {
+  max-width: 100%;
+}
 a.sponsor:hover,
 a.sponsor:focus {
   @include shadow($black);

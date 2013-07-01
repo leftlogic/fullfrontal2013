@@ -1,3 +1,4 @@
+{{#if sponsors.full.length}}
 <section class="monty full-monty">
   <h3 class="type" role="heading" aria-level="3">Full Monty Sponsors</h3>
   {{#each sponsors.full}}
@@ -9,10 +10,12 @@
       <p class="blurb">
         {{blurb}}
       </p>
+      <p><a href="{{url}}">Find out more</a></p>
     </section>
     </div>
   {{/each}}
 </section>
+{{/if}}
 
 <section class="monty half-monty">
   <h3 class="type" role="heading" aria-level="3">Half Monty Sponsors</h3>
