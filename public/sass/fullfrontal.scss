@@ -87,7 +87,7 @@ a:active {
   }
 }
 .masthead nav a {
-  @include fonz(30px);
+  @include fonz(42px);
   display: block;
   @media (min-width: 640px) {
     text-align: right;
@@ -679,10 +679,13 @@ footer .left-logic:active {
   text-align: center;
 }
 .workshop-pullout .section-heading {
+  padding: 0 20px;
   margin-bottom: 40px;
 }
 .workshop-pullout h1.section-heading {
   color: $gold;
+  letter-spacing: 3px;
+  line-height: 30px;
 }
 .workshop-pullout .mugshot {
   @include shadow;
@@ -704,7 +707,6 @@ footer .left-logic:active {
 }
 .workshop-pullout .detail .type,
 .workshop-pullout .detail .data {
-  width: 40%;
   display: block;
   text-transform: uppercase;
 }
@@ -721,7 +723,7 @@ footer .left-logic:active {
 .workshop-pullout .description,
 .workshop-pullout .extendedDescription {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
 }
 .workshop-pullout .extendedDescription {
   color: $darkgrey;

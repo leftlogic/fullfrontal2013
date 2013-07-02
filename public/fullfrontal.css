@@ -95,7 +95,7 @@ a:active {
       margin-bottom: 0px; } }
 
 .masthead nav a {
-  font-size: 30px;
+  font-size: 42px;
   font-style: italic;
   font-weight: 700;
   letter-spacing: 4px;
@@ -674,10 +674,13 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
   text-align: center; }
 
 .workshop-pullout .section-heading {
+  padding: 0 20px;
   margin-bottom: 40px; }
 
 .workshop-pullout h1.section-heading {
-  color: #f1c400; }
+  color: #f1c400;
+  letter-spacing: 3px;
+  line-height: 30px; }
 
 .workshop-pullout .mugshot {
   border: 1px solid #201d1e;
@@ -699,7 +702,6 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
   border-bottom: 0; }
 
 .workshop-pullout .detail .type, .workshop-pullout .detail .data {
-  width: 40%;
   display: block;
   text-transform: uppercase; }
 
@@ -715,7 +717,7 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 
 .workshop-pullout .description, .workshop-pullout .extendedDescription {
   font-style: italic;
-  font-weight: 400; }
+  font-weight: 300; }
 
 .workshop-pullout .extendedDescription {
   color: #6c6265; }

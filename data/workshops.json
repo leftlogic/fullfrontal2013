@@ -42,8 +42,8 @@
     {
       "break": true,
       "startTime": "13:15",
-      "title": "Mobile Web Apps",
-      "slug": "mobile-web-apps",
+      "title": "Developer Tools",
+      "slug": "devtools",
       "ticket": {
         "url": "http://leftlogic.stagehq.com",
         "price": "400"

@@ -127,10 +127,8 @@ app.get('/workshop', function (req, res) {
 app.get('/workshop/:slug', function (req, res) {
   var workshopData = {};
 
-  _.assign(workshopData, _.filter(workshops.workshops, { 'slug': req.params.slug }));
-
   res.render('pullout', {
-    workshops: workshopData
+    workshops: _.filter(workshops.workshops, { 'slug': req.params.slug })
   });
 });
 
