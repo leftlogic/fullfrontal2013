@@ -2,16 +2,16 @@
 
 Art Direction by Remy Sharp - @rem
 
-Development by Jon Linklater-Johnson - @binarytales
+Development by Jon Linklater-Johnson & Remy Sharp - @binarytales & @rem
 
 Design by Chris Mahon - @chrismahon
 
-Illustration by Geri
+Illustration by Geri Cody - @hellogeri
 
 
 /* SITE */
 
-Handcrafted JavaScript, HTML5 and CSS3.
+Handcrafted JavaScript, HTML5 and CSS3 (RS - not really hand crafted when you use SASS...).
 
 Built on Node.js, Express, Handlebars and SASS
 
