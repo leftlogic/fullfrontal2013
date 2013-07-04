@@ -157,13 +157,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/workshop', function (req, res) {
-  res.render('pullout', workshops);
+  res.render('workshop-full', workshops);
 });
 
 app.get('/workshop/:slug', function (req, res) {
   var workshopData = {};
 
-  res.render('pullout', {
+  res.render('workshop-full', {
     workshops: _.filter(workshops.workshops, { 'slug': req.params.slug })
   });
 });

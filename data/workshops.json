@@ -1,47 +1,60 @@
 {
   "workshops": [
     {
-      "break": true,
-      "startTime": "13:15",
-      "title": "Mobile Web Apps",
-      "slug": "mobile-web-apps",
+      "title": "Fast and Beautiful Mobile Apps with PhoneGap",
+      "slug": "phonegap",
       "ticket": {
         "url": "http://leftlogic.stagehq.com",
         "price": "400"
       },
 
       "details": {
-        "date": "17th June",
+        "date": "7th November",
         "time": "9:00pm",
         "venue": "hogwarts"
       },
 
       "speaker": {
-        "name": "J. Linklater-Johnson",
-        "twitter": "binarytales",
-        "photo": "speaker.jpg"
+        "name": "Brian LeRoux & Christophe Coenraets",
+        "photo": "brian-and-christophe.jpg"
       },
 
       "topics" : [
         {
-          "title": "Topic",
-          "description": "Hello there this is a nice topic"
+          "title": "The PhoneGap APIs"
         },
         {
-          "title": "Topic",
-          "description": "Hello there this is a nice topic"
+          "title": "Topcoat"
         },
         {
-          "title": "Topic",
-          "description": "Hello there this is a nice topic"
+          "title": "The Single Page Architecture"
+        },
+        {
+          "title": "Client-side HTML templates"
+        },
+        {
+          "title": "Effective Touch Events"
+        },
+        {
+          "title": "Modularization Approaches"
+        },
+        {
+          "title": "Mobile Performance Optimization Techniques"
+        },
+        {
+          "title": "Comparison of  Leading JavaScript frameworks"
+        },
+        {
+          "title": "PhoneGap Plugins"
         }
+
       ],
-      "description": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we mustdo to address its shortcomings.",
-      "extendedDescription": "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's work to do, and it's looking a little out of its depth.The Web's best hope for the future is if we think about it a little differently and admit what we mustdo to address its shortcomings."
+      "description": "Tired of Hello World? In this workshop, you will learn modern strategies and best practices to build native-like mobile applications with HTML, JavaScript, and CSS. You'll also learn how to use PhoneGap to leverage the native capabilities of your device in JavaScript and to package your HTML application as a native app for distribution through the different app stores.",
+
+      "extendedDescription": "With the focus on performance and architecture, this workshop will give you the keys to fast, robust, and successful PhoneGap applications.\n\nYou will build a PhoneGap application from scratch using the Single Page Architecture, HTML templates, touch events, modularization techniques, and many performance optimization techniques. We will also compare and contrast the leading JavaScript and Mobile Frameworks, and you will use the new Topcoat CSS toolkit as the basis for your application UI."
     },
     {
-      "break": true,
-      "startTime": "13:15",
+      "soldout": false,
       "title": "Developer Tools",
       "slug": "devtools",
       "ticket": {
@@ -50,15 +63,15 @@
       },
 
       "details": {
-        "date": "17th June",
+        "date": "7th November",
         "time": "9:00pm",
-        "venue": "hogwarts"
+        "venue": "The Lighthouse, Brighton"
       },
 
       "speaker": {
-        "name": "J. Linklater-Johnson",
-        "twitter": "binarytales",
-        "photo": "speaker.jpg"
+        "name": "Remy Sharp",
+        "twitter": "rem",
+        "photo": "remy.jpg"
       },
 
       "topics" : [

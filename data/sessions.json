@@ -7,9 +7,9 @@
       "duration": 40
     },
     {
-      "break": true,
-      "title": "Opening remarks",
-      "duration": 10
+      "title": "Building Web Applications with Web Components using X-Tags",
+      "duration": 40,
+      "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap."
     },
     {
       "break": false,
@@ -41,19 +41,19 @@
       "duration": 40,
       "title": "Mobile Is Not A Thing; It Is Everything.",
 
-      "speaker": {
-        "name": "J. Linklater-Johnson",
-        "twitter": "binarytales",
-        "photo": "speaker.jpg"
-      },
-
       "description": "The stratospheric rise in mobile subscribers, devices, services and apps has led to an even bigger explosion in the lack of understanding of how to design, develop and most importantly, recognize new opportunities with not only these new devices, but new use cases altogether.\n\nLet's step through the processes to help identify content strategies, design workflows and forecasting methods to unlock the true potential of mobile, not only for apps, but for the web and new channels of communication altogether.",
 
-      "details": "Session By Phil Hawksworth – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team.",
+      "speaker": {
+        "name": false,
+        "twitter": false,
+        "photo": false
+      },
 
-      "slides": "http://google.com",
-      "audio": "http://google.com",
-      "video": "http://google.com"
+      "details": false,
+
+      "slides": false,
+      "audio": false,
+      "video": false
 
     }
   ]

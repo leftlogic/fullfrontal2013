@@ -1,62 +1,71 @@
 {
   "locations": [
     {
-      "type": "Pub",
-      "location": [
-        {
-          "name": "The Eagle",
-          "url": "http://dukeofyorks.com"
-        }
-      ]
-    },
-    {
-      "type": "Pub",
-      "location": [
-        {
-          "name": "The Eagle",
-          "url": "http://dukeofyorks.com"
-        }
-      ]
-    },
-    {
-      "type": "Pub",
-      "location": [
-        {
-          "name": "The Eagle",
-          "url": "http://dukeofyorks.com"
-        }
-      ]
-    },
-    {
       "type": "Conference",
+      "location": [{
+        "name": "Duke of Yorks",
+        "url": "http://dukeofyorkscinema.co.uk/"
+      }]
+    },
+    {
+      "type": "Workshops",
+      "location": [{
+        "name": "The Lighthouse",
+        "url": "http://goo.gl/maps/GTYX"
+      }]
+    },
+    {
+      "type": "Pre Party",
       "location": [
         {
-          "name": "Duke of Yorks",
-          "url": "http://dukeofyorks.com",
-          "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          "extra": "(quote: Left Logic"
+          "name": "The Fountainhead",
+          "url": "http://goo.gl/maps/6FH8"
+        }
+      ]
+    },
+    {
+      "type": "After Party",
+      "location": [
+        {
+          "name": "The Loft",
+          "url": "http://goo.gl/maps/xe61"
+        }
+      ]
+    },
+    {
+      "type": "Hotels",
+      "location": [
+        {
+          "name": "Jury's Inn",
+          "url": "http://brightonhotels.jurysinns.com/",
+          "detail": "£79 single, £85 double B&B",
+          "extra": "quote \"Left Logic\" for the discount"
         },
         {
-          "name": "Duke of Yorks",
-          "url": "http://dukeofyorks.com",
-          "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          "extra": "(quote: Left Logic"
+          "name": "Travellodge",
+          "url": "http://www.travelodge.co.uk/hotels/info?hotelId=18",
+          "detail": "£22.80 Thurs, £26.75 Friday"
+        },
+        {
+          "name": "My Hotel",
+          "url": "http://www.myhotels.com/my-hotel-brighton/index.html",
+          "detail": "£69/£89 Thursday, £149/£169 Friday",
+          "extra": "double standard, and superior respectively"
+        },
+        {
+          "name": "Old Ship Hotel",
+          "url": "http://www.barcelo-hotels.co.uk/hotels/southern-england/barcelo-brighton-old-ship-hotel",
+          "detail": "£77 single, £87 double",
+          "extra": "breakfast at extra cost"
         }
       ]
     },
     {
-      "type": "Conference",
+      "type": "Food",
       "location": [
-        {
-          "name": "Duke of Yorks",
-          "url": "http://dukeofyorks.com",
-          "detail": " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        },
-        {
-          "name": "Duke of Yorks",
-          "url": "http://dukeofyorks.com",
-          "detail": " Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        }
+        {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://goo.gl/s69LA"},
+        {"name": "The Open House", "detail": "good pub food", "url": "http://goo.gl/csghA"},
+        {"name": "Circus Circus", "detail": "Thai resturant & pub food", "url": "http://goo.gl/Wk7KX"}
       ]
     }
   ]
