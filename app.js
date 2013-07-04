@@ -6,6 +6,7 @@ var http = require('http'),
     slugify = require('slug'),
     marked = require('marked'),
     _ = require('lodash'),
+    fs = require('fs'),
     app = express();
 
 require('datejs');
@@ -14,9 +15,39 @@ var data = {},
     locations = require('./data/locations'),
     sessions = require('./data/sessions'),
     sponsors = require('./data/sponsors'),
-    workshops = require('./data/workshops');
+    workshops = require('./data/workshops'),
+    configFile = './data/config.json',
+    config = {};
 
-app.set('mode', 'titles'), // titles|speakers|schedule
+function updateConfig(blocking) {
+  var update = function (err, data) {
+    if (err) {
+      console.error('failed to read config', err);
+      return;
+    }
+
+    config = JSON.parse(data);
+
+    console.log('updated config');
+
+    app.set('mode', config.mode);
+    app.set('soldout', config.soldout);
+  };
+
+  if (blocking === true) {
+    try {
+      update(null, fs.readFileSync(configFile, 'utf8'));
+    } catch (e) {
+      console.error('failed to read sync config', e);
+    }
+  } else {
+    fs.readFile(configFile, 'utf8', update);
+  }
+}
+
+// watch the config which sets the mode of the site and soldout state
+fs.watch('./data/config.json', updateConfig);
+updateConfig(true); // read synchonously on boot
 
 sessions = (function (sessionData) {
   /*

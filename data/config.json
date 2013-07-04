@@ -1,0 +1,11 @@
+{
+  "soldout": {
+    "conference": false,
+    "phonegap": false,
+    "devtools": false
+  },
+  "mode": "titles",
+  "comments": {
+    "mode-options": "titles|speakers|schedule // just a comment"
+  }
+}
