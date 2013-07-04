@@ -95,7 +95,7 @@ a:active {
       margin-bottom: 0px; } }
 
 .masthead nav a {
-  font-size: 42px;
+  font-size: 32px;
   font-style: italic;
   font-weight: 700;
   letter-spacing: 4px;
@@ -235,12 +235,15 @@ a:active {
   display: block; }
 
 .session {
-  padding: 10px 20px;
+  padding: 20px 25px;
   border-bottom: 1px solid #6c6265;
   text-align: center;
   display: block;
   list-style-type: none;
   overflow: hidden; }
+  @media (min-width: 640px) {
+    .session {
+      padding: 20px 40px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -268,7 +271,8 @@ a:active {
   text-transform: uppercase;
   margin: 0;
   font-weight: 600;
-  color: #f1c400; }
+  color: #f1c400;
+  text-align: left; }
 
 @media (min-width: 640px) {
   .session-style-speakers .session .title, .session-style-schedule .session .title {
@@ -297,7 +301,7 @@ a:active {
 
 @media (min-width: 640px) {
   .session-style-titles .session .description-wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     float: none; } }
 @media (min-width: 1024px) {
@@ -713,7 +717,8 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 .workshop-pullout .detail .type {
   float: left;
   color: #a3aaac;
-  font-weight: 300; }
+  font-weight: 300;
+  position: absolute; }
 
 .workshop-pullout .detail .data {
   float: right;
@@ -744,3 +749,7 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 
 .workshop-pullout .topic .description {
   color: #a3aaac; }
+
+.button.buy:after {
+  color: rgba(32, 29, 30, 0.5);
+  content: '	'; }

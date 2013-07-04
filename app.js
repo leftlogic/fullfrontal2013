@@ -31,6 +31,10 @@ function updateConfig(blocking) {
 
     app.set('mode', config.mode);
     app.set('soldout', config.soldout);
+
+    workshops.workshops.forEach(function (workshop) {
+      workshop.soldout = config.soldout[workshop.slug];
+    });
   };
 
   if (blocking === true) {
@@ -119,6 +123,14 @@ app.configure('production', function () {
   app.set('isproduction', true);
 });
 
+app.configure('development', function () {
+  app.use(require('node-sass').middleware({
+     src: __dirname + '/public/sass',
+     dest: __dirname + '/public',
+     debug: !app.settings.isproduction
+  }));
+});
+
 app.configure(function (){
   app.set('port', process.env.PORT || 3000);
   app.use(express.favicon(path.join(__dirname, 'public/favicon.ico')));
@@ -129,14 +141,6 @@ app.configure(function (){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
-});
-
-app.configure('development', function () {
-  app.use(require('node-sass').middleware({
-     src: __dirname + '/public/sass',
-     dest: __dirname + '/public',
-     debug: !app.settings.isproduction
-  }));
 });
 
 hbs.registerPartials(__dirname + '/views/partials');

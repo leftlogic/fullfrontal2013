@@ -17,8 +17,8 @@
     </div>
 
     <div class="tickets">
-      <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
-      <a href="{{ticket.url}}" class="button sold-out">Sold Out</a>
+      {{#unless soldout}}<a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>{{/unless}}
+      {{#if soldout}}<a href="{{ticket.url}}" class="button sold-out">Sold Out</a>{{/if}}
     </div>
 
   </header>

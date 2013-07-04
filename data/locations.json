@@ -4,7 +4,7 @@
       "type": "Conference",
       "location": [{
         "name": "Duke of Yorks",
-        "url": "http://dukeofyorkscinema.co.uk/"
+        "url": "http://www.picturehouses.co.uk/cinema/Duke_Of_Yorks/"
       }]
     },
     {
@@ -49,13 +49,13 @@
         {
           "name": "My Hotel",
           "url": "http://www.myhotels.com/my-hotel-brighton/index.html",
-          "detail": "£69/£89 Thursday, £149/£169 Friday",
-          "extra": "double standard, and superior respectively"
+          "detail": "Thursday £100/£120, Friday £120/£140",
+          "extra": "standard and superior respectively, breakfast not included"
         },
         {
           "name": "Old Ship Hotel",
-          "url": "http://www.barcelo-hotels.co.uk/hotels/southern-england/barcelo-brighton-old-ship-hotel",
-          "detail": "£77 single, £87 double",
+          "url": "http://www.pumahotels.co.uk/hotels/old-ship-brighton-hotel/",
+          "detail": "Thursday £92, Friday £142",
           "extra": "breakfast at extra cost"
         }
       ]
@@ -63,9 +63,9 @@
     {
       "type": "Food",
       "location": [
-        {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://goo.gl/s69LA"},
+        {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://www.bardsleys-fishandchips.co.uk/map "},
         {"name": "The Open House", "detail": "good pub food", "url": "http://goo.gl/csghA"},
-        {"name": "Circus Circus", "detail": "Thai resturant & pub food", "url": "http://goo.gl/Wk7KX"}
+        {"name": "Circus Circus", "detail": "pub serving Thai food", "url": "http://goo.gl/VNUwb"}
       ]
     }
   ]

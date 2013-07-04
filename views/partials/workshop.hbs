@@ -13,6 +13,6 @@
     {{description}}
   </p>
   {{#unless soldout}}<a class="button buy" href="/workshop/{{slug}}">Buy Tickets</a>{{/unless}}
-  {{#if soldout}}<span class="button sold-out" href="/workshop/{{slug}}">Sold Out</span>{{/if}}
+  {{#if soldout}}<a href="/workshop/{{slug}}" class="button sold-out" href="/workshop/{{slug}}">Sold Out</a>{{/if}}
 </section>
 </div>
