@@ -1,7 +1,6 @@
 var http = require('http'),
     path = require('path'),
     hbs = require ('hbs'),
-    sass = require('node-sass'),
     express = require('express'),
     slugify = require('slug'),
     marked = require('marked'),
@@ -129,12 +128,15 @@ app.configure(function (){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(sass.middleware({
+  app.use(express.static(path.join(__dirname, 'public')));
+});
+
+app.configure('development', function () {
+  app.use(require('node-sass').middleware({
      src: __dirname + '/public/sass',
      dest: __dirname + '/public',
      debug: !app.settings.isproduction
   }));
-  app.use(express.static(path.join(__dirname, 'public')));
 });
 
 hbs.registerPartials(__dirname + '/views/partials');
