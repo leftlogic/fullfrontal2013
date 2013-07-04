@@ -7,6 +7,11 @@
       "duration": 40
     },
     {
+      "break": true,
+      "title": "Opening remarks",
+      "duration": 10
+    },
+    {
       "duration": 40,
       "title": "Pushing the Limits of Mobile Web App Performance",
       "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
@@ -17,7 +22,7 @@
         "photo": false
       },
 
-      "details": false,
+      "bio": false,
 
       "slides": false,
       "audio": false,
@@ -28,6 +33,11 @@
       "title": "Building Web Applications with Web Components using X-Tags",
       "duration": 40,
       "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap."
+    },
+    {
+      "break": true,
+      "title": "Break (30 mins)",
+      "duration": 30
     },
     {
       "break": false,
@@ -42,17 +52,12 @@
 
       "description": "Software loves hierarchies: class hierarchies, object hierarchies, folder hierarchies, style hierarchies, menu hierachies. And yet, all but the most simple tree structures require levels of organizational foresight and intellectual rigour which mere humans rarely possess—and they usually end in tears.\n\nDrawing on a diverse range of web—based examples, and proposing alternatives along the way, I'll attempt to demonstrate how trees and nesting are great for birds, but mostly lousy for developers and users.",
 
-      "details": "Session By Phil Hawksworth – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team.",
+      "bio": "Session By [Phil Hawksworth](http://hawksworx.com/) – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team. // NOTE: PHIL IS NOT SPEAKING - THIS IS DUMMY CONTENT",
 
       "slides": "http://google.com",
       "audio": "http://google.com",
       "video": "http://google.com"
 
-    },
-    {
-      "break": true,
-      "duration": 30,
-      "title": "Break (30 mins)"
     },
     {
       "break": false,
@@ -67,11 +72,51 @@
         "photo": false
       },
 
-      "details": false,
+      "bio": false,
 
       "slides": false,
       "audio": false,
       "video": false
+    },
+    {
+      "break": true,
+      "duration": 90,
+      "title": "Break (90 mins)"
+    },
+    {
+      "duration": 40,
+      "title": "JavaScript in the Real World",
+      "description": "Anything that can be written in JavaScript, will eventually be written in JavaScript.\n\nFirst client side web apps, then server side programs and now you can control hardware, embedded devices and even flying robots with JavaScript.\n\nWe'll look at how you can get started writing JavaScript for Ardunio and Raspberry Pi to read sensors and control servos and build you own JavaScript powered robots.",
+
+      "speaker": {
+        "name": false,
+        "twitter": false,
+        "photo": false
+      },
+
+      "bio": false,
+
+      "slides": false,
+      "audio": false,
+      "video": false
+    },
+    {
+      "break": true,
+      "duration": 30,
+      "title": "Break (30 mins)"
+    },
+    {
+      "break": true,
+      "duration": 20,
+      "title": "Closing remarks"
+    },
+    {
+      "break": true,
+      "start": "19:00",
+      "end": "Late",
+      "duration": 90,
+      "afterparty": true,
+      "title": "After Party"
     }
   ]
 }

@@ -74,7 +74,8 @@ sessions = (function (sessionData) {
       if (session.break) return;
       tempSessions.push({
         title: session.title,
-        description: session.description
+        description: session.description,
+        slug: session.slug
       });
     });
   };
@@ -85,15 +86,16 @@ sessions = (function (sessionData) {
       tempSessions.push({
         title: session.title,
         description: session.description,
-        speaker: session.speaker
+        speaker: session.speaker,
+        slug: session.slug
       });
     });
   }
 
   if (app.settings.mode === "schedule") {
     sessions.forEach(function (session) {
-      session.start = startTime.clone().toString('HH:mm');
-      session.end = startTime.add({ minutes: session.duration }).clone().toString('HH:mm');
+      if (!session.start) session.start = startTime.clone().toString('HH:mm');
+      if (!session.end) session.end = startTime.add({ minutes: session.duration }).clone().toString('HH:mm');
     });
     tempSessions = sessions;
   }

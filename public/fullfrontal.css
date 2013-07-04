@@ -228,22 +228,16 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px; }
 
-.session > div {
-  display: none; }
 
 .session.open > div {
   display: block; }
 
 .session {
-  padding: 20px 25px;
   border-bottom: 1px solid #6c6265;
   text-align: center;
   display: block;
   list-style-type: none;
   overflow: hidden; }
-  @media (min-width: 640px) {
-    .session {
-      padding: 20px 40px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -316,9 +310,10 @@ a:active {
       padding-right: 10px; } }
 
 .session .description-wrapper p {
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
 
-.session .details {
+.session .description-wrapper .bio p {
   color: #ebebeb;
   font-weight: 300; }
 
@@ -753,3 +748,30 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 .button.buy:after {
   color: rgba(32, 29, 30, 0.5);
   content: '	'; }
+
+.button.buy span {
+  text-align: left; }
+
+.session .session-wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px 25px;
+  overflow: hidden; }
+  @media (min-width: 640px) {
+    .session .session-wrapper {
+      padding: 20px 40px; } }
+
+.session {
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: repeat-x; }
+
+#pushing-the-limits-of-mobile-web-app-performance {
+  background-image: url(/images/backgrounds/shops.png); }
+
+#building-web-applications-with-web-components-using-x-tags {
+  background-image: url(/images/backgrounds/mountain.png);
+  background-color: #e77a24; }
+
+#flat-city {
+  background-image: url(/images/backgrounds/mountain.png);
+  background-color: #e77a24; }

@@ -55,8 +55,8 @@
     },
     {
       "soldout": false,
-      "title": "Developer Tools",
-      "slug": "devtools",
+      "title": "Debug, and Know Thy Tools",
+      "slug": "debug-and-tools",
       "ticket": {
         "url": "http://leftlogic.stagehq.com",
         "price": "400"
