@@ -7,10 +7,6 @@
 
     <nav role="navigation">
       <a href="/#workshops">×</a>
-      <!-- TODO: I'm not sure these links make sense with only 2 workshops?
-        <a href="#">&lt;</a>
-        <a href="#">&gt;</a>
-      -->
     </nav>
 
     <h1 class="section-heading" role="heading" aria-level="1">{{title}}</h1>
@@ -31,7 +27,7 @@
     <h2 class="section-heading" role="heading" aria-level="2">Details</h2>
 
     {{#if speaker.photo}}
-      <div class="mugshot">
+    <div class="mugshot" style="background-image: url(/images/speakers/{{speaker.photo}})">
         <img src="/images/speakers/{{speaker.photo}}">
       </div>
     {{/if}}
@@ -52,7 +48,7 @@
       {{#if speaker.name}}
         <li class="detail speaker">
           <span class="type">Teacher</span>
-          <span class="data">{{speaker.name}}</span>
+          <span class="data">{{#noorphan speaker.name}}{{.}}{{/noorphan}}</span>
         </li>
       {{/if}}
       {{#if details.venue}}

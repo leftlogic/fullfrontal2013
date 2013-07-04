@@ -142,6 +142,11 @@ hbs.registerHelper('markdown', function (options) {
   return marked(options.fn(this));
 });
 
+hbs.registerHelper('noorphan', function (context, options) {
+  var i = context.lastIndexOf(' ');
+  return new hbs.handlebars.SafeString(context.substr(0, i) + '&nbsp;' + context.substr(i + 1));
+});
+
 
 app.configure('development', function (){
   app.use(express.errorHandler());
