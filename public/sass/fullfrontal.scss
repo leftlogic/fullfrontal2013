@@ -216,10 +216,10 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px
 }
-.session > div {
+.session .session-body {
   display: none;
 }
-.session.open > div {
+.session.open .session-body {
   display: block;
 }
 .session {
@@ -243,6 +243,7 @@ a:active {
   }
 }
 .session.open .session-header {
+  padding-bottom: 20px;
   @media (min-width: 640px) {
     border-bottom: 1px solid hsla(0, 0%, 50%, 0.1);
     padding-bottom: 10px;
@@ -257,12 +258,19 @@ a:active {
     float: left;
   }
 }
+.session .title-wrapper {
+  @media (min-width: 640px) {
+    width: 80%;
+    text-align: left;
+    float: left;
+  }
+}
 .session .title {
   text-transform: uppercase;
   margin: 0;
   font-weight: 600;
   color: $gold;
-  text-align: left;
+  text-align: auto 100%;
 }
 .session-style-speakers .session .title,
 .session-style-schedule .session .title {
@@ -293,6 +301,7 @@ a:active {
   @media (min-width: 1024px) {
     width: 33%;
   }
+  margin-top: 10px;
 }
 
 .session-style-titles .session .description-wrapper {
@@ -304,14 +313,18 @@ a:active {
   @media (min-width: 1024px) {
     width: 50%;
   }
+  margin-top: 10px;
 }
 
 .session .description-wrapper p {
   text-align: left;
   font-style: italic;
-  @media (min-width: 1024px) {
-    padding-right: 10px;
-  }
+  padding: 0 10px 0 10px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.session .description-wrapper p:last-child {
+  margin-bottom: 0;
 }
 .session .description-wrapper p {
   font-weight: 400;
@@ -322,7 +335,6 @@ a:active {
 }
 
 .session .mugshot {
-  @include shadow;
   @media (max-width: 639px) {
    display: none;
   }
@@ -337,11 +349,10 @@ a:active {
   }
 }
 .session .mugshot img {
+  @include shadow;
   width: 100%;
   vertical-align: middle;
-  @media (min-width: 1024px) {
-    max-width: 300px;
-  }
+  max-width: 300px;
 }
 .session .links-wrapper {
   @media (min-width: 640px) {
@@ -357,7 +368,7 @@ a:active {
 }
 .session .links {
   @media (min-width: 1024px) {
-    margin-left: 20px;
+    margin-left: 5px;
     margin-top: 15px;
   }
 }
@@ -761,4 +772,35 @@ footer .left-logic:active {
 .button.buy:after {
   color: $lightblack;
   content: '〉';
+}
+
+/** Custom Background **/
+#flat-city.open {
+  background-image: url('/images/backgrounds/mountain.jpg');
+  background-size: auto 100%;
+  background-position: bottom left;
+  padding-bottom: 100px;
+  .session-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .title {
+    color: #880807;
+    font-weight: 700;
+  }
+  .time {
+    color: #ffe59d;
+  }
+  .speaker {
+    color: #ffe59d;
+  }
+  .description-wrapper {
+    // color: #452612;
+    // text-shadow: 1px 0px #fedf93;
+    background-color: rgba(231, 121, 36, 0.7);
+    padding: 10px 0 20px 0;
+  }
+  .details {
+    // color: #673c22;
+    // text-shadow: 1px 0px #fedf93;
+  }
 }

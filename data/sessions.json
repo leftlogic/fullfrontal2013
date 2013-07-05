@@ -12,7 +12,7 @@
       "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
 
       "speaker": {
-        "name": false,
+        "name": "J. Linklater-Johnson",
         "twitter": false,
         "photo": false
       },
@@ -27,7 +27,12 @@
     {
       "title": "Building Web Applications with Web Components using X-Tags",
       "duration": 40,
-      "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap."
+      "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap.",
+            "speaker": {
+        "name": "J. Linklater-Johnson",
+        "twitter": "binarytales",
+        "photo": "speaker.jpg"
+      }
     },
     {
       "break": false,
