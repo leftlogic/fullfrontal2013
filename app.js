@@ -114,9 +114,6 @@ sessions.sessions.forEach(function (session) {
   }
 });
 
-// TODO When full schdule order session array according to 'startTime'
-// so that order in sessions.json is not important
-
 _.assign(data, locations, sessions, sponsors, workshops);
 
 app.configure('production', function () {
@@ -167,8 +164,6 @@ app.get('/workshop', function (req, res) {
 });
 
 app.get('/workshop/:slug', function (req, res) {
-  var workshopData = {};
-
   res.render('workshop-full', {
     workshops: _.filter(workshops.workshops, { 'slug': req.params.slug })
   });
