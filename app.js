@@ -62,11 +62,6 @@ sessions = (function (sessionData) {
       sessions = sessionData.sessions,
       startTime = new Date(sessionData.startTime);
 
-  // slugify all titles
-  sessions.forEach(function (session) {
-    session.slug = slugify(session.title.toLowerCase());
-  });
-
   // TODO: This section can probably be made a lot cleaner
   // with some map reduce pluck vooodoo
   if (app.settings.mode === "titles") {
@@ -97,6 +92,11 @@ sessions = (function (sessionData) {
     });
     tempSessions = sessions;
   }
+
+  // slugify all titles
+  tempSessions.forEach(function (session) {
+    session.slug = slugify(session.title.toLowerCase());
+  });
 
   return {
     sessions: tempSessions
