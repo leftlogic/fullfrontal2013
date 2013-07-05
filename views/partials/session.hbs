@@ -10,8 +10,10 @@
   {{#unless break}}
     <header class="session-header">
       {{#if duration}}<div class="time">{{start}} &mdash; {{end}}</div>{{/if}}
-      <h3 class="title" role="heading" aria-level="3">{{#noorphan title}}{{.}}{{/noorphan}}</h3>
-      {{#if speaker.name}}<div class="speaker">{{speaker.name}}</div>{{/if}}
+      <div class="title-wrapper">
+        <h3 class="title" role="heading" aria-level="3">{{#noorphan title}}{{.}}{{/noorphan}}</h3>
+        {{#if speaker.name}}<div class="speaker">{{speaker.name}}</div>{{/if}}
+      </div>
     </header>
 
     <div class="description-wrapper">
@@ -37,22 +39,48 @@
       <div class="links">
         {{#if speaker.twitter}}
           <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
+    <div class="session-body">
+      <div class="description-wrapper">
+        {{#if description}}
+          {{#markdown}}{{description}}{{/markdown}}
         {{/if}}
 
-        {{#if slides}}
-          <a class="button" href="{{slides}}">Download Slides</a>
+        {{#if bio}}
+        <div class="bio">
+          {{#markdown}}{{bio}}{{/markdown}}
+        </div>
         {{/if}}
 
-        {{#if audio}}
-          <a class="button" href="{{audio}}">Audio</a>
-        {{/if}}
-
-        {{#if video}}
-          <a class="button" href="{{video}}">Video</a>
-        {{/if}}
       </div>
+
+      {{#if speaker.photo}}
+      <div class="mugshot">
+        <img src="/images/speakers/{{speaker.photo}}">
+      </div>
+      {{/if}}
+
+      {{#if links}}
+      <div class="links-wrapper">
+        <div class="links">
+          {{#if speaker.twitter}}
+            <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
+          {{/if}}
+
+          {{#if slides}}
+            <a class="button" href="{{slides}}">Download Slides</a>
+          {{/if}}
+
+          {{#if audio}}
+            <a class="button" href="{{audio}}">Audio</a>
+          {{/if}}
+
+          {{#if video}}
+            <a class="button" href="{{video}}">Video</a>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
     </div>
-    {{/if}}
   {{/unless}}
   </div>
 </li>

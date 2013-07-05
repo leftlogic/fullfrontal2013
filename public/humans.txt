@@ -11,7 +11,7 @@ Illustration by Geri Cody - @hellogeri
 
 /* SITE */
 
-Handcrafted JavaScript, HTML5 and CSS3 (RS - not really hand crafted when you use SASS...).
+Handcrafted JavaScript, HTML5 and CSS3
 
 Built on Node.js, Express, Handlebars and SASS
 
