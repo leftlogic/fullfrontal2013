@@ -6,7 +6,7 @@
   <header class="masthead" role="banner">
 
     <nav role="navigation">
-      <a href="/#workshops">×</a>
+      <a class="close" href="/#{{slug}}">×</a>
     </nav>
 
     <h1 class="section-heading" role="heading" aria-level="1">{{title}}</h1>
@@ -23,7 +23,8 @@
 
   </header>
 
-  <section class="content region alt">
+  <div class="workshop-pullout-body-wrapper">
+  <section class="workshop-pullout-body region alt">
     <h2 class="section-heading" role="heading" aria-level="2">Details</h2>
 
     {{#if speaker.photo}}
@@ -71,16 +72,20 @@
       </p>
     {{/if}}
 
-    <h3 class="topics section-heading" role="heading" aria-level="3">Topics</h3>
-
-    {{#each topics}}
-      <div class="topic">
-        <span class="title">{{title}}</span>
-        <span class="description">{{description}}</span>
-      </div>
-    {{/each}}
+    <h3 class="topics-heading section-heading" role="heading" aria-level="3">Topics</h3>
+      <div class="topics">
+      {{#each topics}}
+        <div class="topic">
+          <span class="title">{{title}}</span>
+          <span class="description">{{description}}</span>
+        </div>
+      {{/each}}
+    </div>
 
   </section>
+  </div>
 {{/each}}
 
-{{> footer}}
+</body>
+</html>
+

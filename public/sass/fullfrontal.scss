@@ -205,6 +205,7 @@ a:active {
   }
   @media (min-width: 1024px) {
    font-size: 60px;
+   line-height: 53px;
   }
 }
 
@@ -214,7 +215,7 @@ a:active {
   padding-right: 0;
 }
 .sessions .section-heading {
-  margin-bottom: 40px
+  margin-bottom: 40px;
 }
 .session .session-body {
   display: none;
@@ -241,7 +242,16 @@ a:active {
   @media (min-width: 640px) {
     overflow: hidden;
   }
+  cursor: pointer;
 }
+.session-header:hover .title,
+.session-header:focus .title {
+  color: darken($gold, 10%);
+}
+.session-header:active .title {
+  color: lighten($gold, 10%);
+}
+
 .session.open .session-header {
   padding-bottom: 20px;
   @media (min-width: 640px) {
@@ -686,6 +696,8 @@ footer .left-logic:active {
   text-align: left;
   padding: 0 10px;
   margin-bottom: 40px;
+  width: auto;
+  float: none;
 }
 .workshop-pullout nav a {
   display: inline-block;
@@ -702,6 +714,10 @@ footer .left-logic:active {
   color: $gold;
   letter-spacing: 3px;
   line-height: 30px;
+  @media (min-width: 1024px) {
+   font-size: 60px;
+   line-height: 53px;
+  }
 }
 .workshop-pullout .mugshot {
   @include shadow;
@@ -752,14 +768,20 @@ footer .left-logic:active {
   font-weight: 300;
   color: $darkgrey;
 }
-.workshop-pullout .topics {
+.workshop-pullout .topics-heading {
   border-top: 1px solid $grey;
   margin: 40px 0 30px 0;
   padding-top: 30px;
 }
+.workshop-pullout .topics {
+    overflow: hidden;
+}
 .workshop-pullout .topic {
   font-style: italic;
   margin: 15px 0;
+  width: 50%;
+  float: left;
+  text-align: center;
 }
 .workshop-pullout .topic .title,
 .workshop-pullout .topic .description {
@@ -768,10 +790,42 @@ footer .left-logic:active {
 .workshop-pullout .topic .description {
   color: $grey;
 }
+.workshop-pullout-body-wrapper {
+  background-color: $white;
+}
+.workshop-pullout-body {
+  max-width: 640px;
+  margin: 0 auto;
+}
 
 .button.buy:after {
   color: $lightblack;
   content: '〉';
+}
+#tint {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 50;
+}
+#workshop-full {
+  position: absolute;
+  min-width: 320px;
+  max-width: 640px;
+  z-index: 55;
+  .region.alt {
+    background-image: none;
+    background-color: $white;
+    padding-bottom: 20px;
+  }
+  @media (min-width: 630px) {
+    left: 50%;
+    margin-left: -320px;
+  }
 }
 
 /** Custom Background **/

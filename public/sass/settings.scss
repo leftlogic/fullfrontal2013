@@ -1,11 +1,11 @@
-$gold: #f1c400;
-$red: #9d1d0b;
+$gold: #f4c342;
+$red: #a31712;
 $black: #201d1e;
 $lightblack: transparentize($black, 0.5); //#9f820f;
 $white: #ffffff;
-$grey: #a3aaac;
-$darkgrey: #6c6265;
-$silver: #ebebeb;
+$grey: #afafaf;
+$darkgrey: #877b7f;
+$silver: #e8e8e8;
 
 @mixin fonz($size, $weight: 700) {
   font-size: $size;
