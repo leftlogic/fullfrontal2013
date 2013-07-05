@@ -16,29 +16,6 @@
       </div>
     </header>
 
-    <div class="description-wrapper">
-      {{#if description}}
-        {{#markdown}}{{description}}{{/markdown}}
-      {{/if}}
-
-      {{#if bio}}
-        <div class="bio">
-          {{#markdown}}{{bio}}{{/markdown}}
-        </div>
-      {{/if}}
-    </div>
-
-    {{#if speaker.photo}}
-    <div class="mugshot">
-      <img src="/images/speakers/{{speaker.photo}}">
-    </div>
-    {{/if}}
-
-    {{#if links}}
-    <div class="links-wrapper">
-      <div class="links">
-        {{#if speaker.twitter}}
-          <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
     <div class="session-body">
       <div class="description-wrapper">
         {{#if description}}
