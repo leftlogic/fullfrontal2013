@@ -845,8 +845,7 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 #flat-city {
   background-image: url(/images/backgrounds/mountain.png);
   background-color: #e77a24; }
-=======
->>>>>>> e27d99c0fc3061fe79d93e5eebaedc2d07fa9983
+
 /** Custom Background **/
 #flat-city.open {
   background-image: url('/images/backgrounds/mountain.jpg');
@@ -865,4 +864,3 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
   #flat-city.open .description-wrapper {
     background-color: rgba(231, 121, 36, 0.7);
     padding: 10px 0 20px 0; }
->>>>>>> 2b8c30c9b44802abcced7b7a89233dbfea047063
