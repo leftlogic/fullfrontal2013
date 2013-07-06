@@ -812,6 +812,9 @@ footer .left-logic:active {
   background-size: cover;
   background-position: bottom center;
   background-repeat: repeat-x; }
+  @media (min-width: 640px) {
+    .session-body {
+      background-size: contain; } }
 
 .bg-shops .session-body {
   background-image: url(/images/backgrounds/shops.png); }

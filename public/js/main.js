@@ -9,3 +9,9 @@ function toggle(e) {
 }
 
 sessions.on('click', toggle).on('touchstart', toggle);
+
+window.onhashchange = function () {
+  console.log('ok');
+  $('#flat-city').className = 'session open bg-' + location.hash.substring(1);
+  return false;
+}
