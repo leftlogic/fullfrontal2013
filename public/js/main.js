@@ -1,7 +1,7 @@
 var sessions = $('.session-header');
 
 function toggle(e) {
-  var session = this.parentNode;
+  var session = this.parentNode.parentNode;
   session.classList.toggle('open');
   if (session.classList.contains('open')) {
     location = '#' + session.id;

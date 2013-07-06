@@ -235,7 +235,12 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px; }
 
-.session.open .session-body {
+.session .session-body,
+.session .session-header hr {
+  display: none; }
+
+.session.open .session-body,
+.session.open .session-header hr {
   display: block;
   overflow: hidden; }
 
@@ -250,10 +255,11 @@ a:active {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px 25px;
-  padding-top: 30px; }
+  padding-top: 10px; }
   @media (min-width: 640px) {
     .session .veil {
-      padding: 20px 40px; } }
+      padding: 20px 40px;
+      padding-top: 30px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -261,16 +267,12 @@ a:active {
 
 .session-header,
 header.break {
-  padding: 15px 40px;
+  padding: 15px 30px;
   background: rgba(0, 0, 0, 0.5); }
   @media (min-width: 640px) {
     .session-header,
     header.break {
       overflow: hidden; } }
-
-@media (min-width: 640px) {
-  .session .session-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); } }
 
 .session .time {
   color: #a3aaac;
@@ -311,15 +313,14 @@ header.break {
     .session .speaker {
       display: none; } }
 
-.session .description-wrapper {
-  margin-top: 10px; }
-  @media (min-width: 640px) {
-    .session .description-wrapper {
-      width: 50%;
-      float: left; } }
-  @media (min-width: 1024px) {
-    .session .description-wrapper {
-      width: 33%; } }
+@media (min-width: 640px) {
+  .session .description-wrapper {
+    width: 50%;
+    float: left;
+    margin-top: 10px; } }
+@media (min-width: 1024px) {
+  .session .description-wrapper {
+    width: 33%; } }
 
 .session-style-titles .session .description-wrapper {
   margin-top: 10px; }
@@ -344,7 +345,7 @@ header.break {
 
 .session .description-wrapper p {
   font-weight: 400;
-  text-shadow: 1px 2px 0px black; }
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.9); }
 
 .session .description-wrapper .bio p {
   color: #ebebeb;
@@ -804,38 +805,50 @@ footer .left-logic:active {
   overflow: hidden; }
 
 .session-body {
-  background-size: contain;
+  background-size: cover;
   background-position: bottom center;
   background-repeat: repeat-x; }
 
 .bg-shops .session-body {
   background-image: url(/images/backgrounds/shops.png); }
 
-.bg-shops .session-wrapper {
+.bg-shops .session-wrapper,
+.bg-shops hr {
   background-color: #665c56; }
 
 .bg-mountains .session-body {
   background-image: url(/images/backgrounds/mountain.png); }
 
-.bg-mountains .session-wrapper {
+.bg-mountains .session-wrapper,
+.bg-mountains hr {
   background-color: #e77a24; }
 
 .bg-warehouse .session-body {
   background-image: url(/images/backgrounds/warehouse.png); }
 
-.bg-warehouse .session-wrapper {
+.bg-warehouse .session-wrapper,
+.bg-warehouse hr {
   background-color: #7f7f7f; }
 
 .bg-subway .session-body {
   background-image: url(/images/backgrounds/subway.png); }
 
-.bg-subway .session-wrapper {
+.bg-subway .session-wrapper,
+.bg-subway hr {
   background-color: #665c56; }
 
 .bg-space .session-body {
   background-image: url(/images/backgrounds/space.png); }
 
-.bg-space .session-wrapper {
+.bg-space .session-wrapper,
+.bg-space hr {
+  background-color: #c4c4c4; }
+
+.bg-bridge .session-body {
+  background-image: url(/images/backgrounds/bridge.png); }
+
+.bg-bridge .session-wrapper,
+.bg-bridge hr {
   background-color: #c4c4c4; }
 
 /** Custom Background **/
@@ -848,5 +861,10 @@ footer .left-logic:active {
     color: #ffe59d; }
   #flat-city.open .speaker {
     color: #ffe59d; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0 0 0; }
 
 /*# sourceMappingURL=fullfrontal.css.map */

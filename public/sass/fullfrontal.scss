@@ -217,10 +217,12 @@ a:active {
   margin-bottom: 40px
 }
 
-.session > div {
-  // display: none;
+.session .session-body,
+.session .session-header hr {
+  display: none;
 }
-.session.open .session-body {
+.session.open .session-body,
+.session.open .session-header hr {
   display: block;
   overflow: hidden;
 }
@@ -235,10 +237,11 @@ a:active {
   overflow: hidden;
   background: rgba(0,0,0,0.5);
   padding: 20px 25px;
+  padding-top: 10px;
   @media (min-width: 640px) {
     padding: 20px 40px;
+    padding-top: 30px;
   }
-  padding-top: 30px;
 }
 .session:last-child {
   border-bottom: 0;
@@ -246,15 +249,10 @@ a:active {
 }
 .session-header,
 header.break {
-  padding: 15px 40px;
+  padding: 15px 30px;
   background: rgba(0,0,0,0.5);
   @media (min-width: 640px) {
     overflow: hidden;
-  }
-}
-.session .session-header {
-  @media (min-width: 640px) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 .session .time {
@@ -304,11 +302,11 @@ header.break {
   @media (min-width: 640px) {
     width: 50%;
     float: left;
+    margin-top: 10px;
   }
   @media (min-width: 1024px) {
     width: 33%;
   }
-  margin-top: 10px;
 }
 
 .session-style-titles .session .description-wrapper {
@@ -335,7 +333,7 @@ header.break {
 }
 .session .description-wrapper p {
   font-weight: 400;
-  text-shadow: 1px 2px 0px black;
+  text-shadow: 1px 2px 1px rgba(0,0,0,0.9);
 }
 .session .description-wrapper .bio p {
   color: $silver;
@@ -801,7 +799,7 @@ footer .left-logic:active {
   }
 
 .session-body {
-  background-size: contain;
+  background-size: cover;
   background-position: bottom center;
   background-repeat: repeat-x;
 }
@@ -810,7 +808,8 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/shops.png);
 }
 
-.bg-shops .session-wrapper {
+.bg-shops .session-wrapper,
+.bg-shops hr {
   background-color: #665c56;
 }
 
@@ -818,7 +817,8 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/mountain.png);
 }
 
-.bg-mountains .session-wrapper {
+.bg-mountains .session-wrapper,
+.bg-mountains hr {
   background-color: #e77a24;
 }
 
@@ -826,7 +826,8 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/warehouse.png);
 }
 
-.bg-warehouse .session-wrapper {
+.bg-warehouse .session-wrapper,
+.bg-warehouse hr {
   background-color: #7f7f7f;
 }
 
@@ -834,7 +835,8 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/subway.png);
 }
 
-.bg-subway .session-wrapper {
+.bg-subway .session-wrapper,
+.bg-subway hr {
   background-color: #665c56;
 }
 
@@ -842,7 +844,17 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/space.png);
 }
 
-.bg-space .session-wrapper {
+.bg-space .session-wrapper,
+.bg-space hr {
+  background-color: #c4c4c4;
+}
+
+.bg-bridge .session-body {
+  background-image: url(/images/backgrounds/bridge.png);
+}
+
+.bg-bridge .session-wrapper,
+.bg-bridge hr {
   background-color: #c4c4c4;
 }
 
@@ -873,4 +885,10 @@ footer .left-logic:active {
     // color: #673c22;
     // text-shadow: 1px 0px #fedf93;
   }
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0 0 0;
 }
