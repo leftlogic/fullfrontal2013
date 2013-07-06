@@ -2,7 +2,7 @@ var http = require('http'),
     path = require('path'),
     hbs = require ('hbs'),
     express = require('express'),
-    slugify = require('slug'),
+    slugify = require('./slug'),
     marked = require('marked'),
     _ = require('lodash'),
     fs = require('fs'),
@@ -70,7 +70,8 @@ sessions = (function (sessionData) {
       tempSessions.push({
         title: session.title,
         description: session.description,
-        slug: session.slug
+        slug: session.slug,
+        background: session.background
       });
     });
   };
@@ -82,7 +83,8 @@ sessions = (function (sessionData) {
         title: session.title,
         description: session.description,
         speaker: session.speaker,
-        slug: session.slug
+        slug: session.slug,
+        background: session.background
       });
     });
   }
@@ -97,7 +99,7 @@ sessions = (function (sessionData) {
 
   // slugify all titles
   tempSessions.forEach(function (session) {
-    session.slug = slugify(session.title.toLowerCase());
+    session.slug = slugify(session.title);
   });
 
   return {
