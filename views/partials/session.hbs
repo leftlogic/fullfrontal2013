@@ -1,4 +1,4 @@
-<li class="session{{#unless duration}} open{{/unless}}"{{#unless break}} id="{{slug}}"{{/unless}}>
+<li class="session{{#if background}} bg-{{background}}{{/if}}{{#unless duration}} open{{/unless}}"{{#unless break}} id="{{slug}}"{{/unless}}>
   <div class="session-wrapper">
   {{#if break}}
     <header class="break">
@@ -17,43 +17,45 @@
     </header>
 
     <div class="session-body">
-      <div class="description-wrapper">
-        {{#if description}}
-          {{#markdown}}{{description}}{{/markdown}}
-        {{/if}}
+      <div class="veil">
+        <div class="description-wrapper">
+          {{#if description}}
+            {{#markdown}}{{description}}{{/markdown}}
+          {{/if}}
 
-        {{#if bio}}
-        <div class="bio">
-          {{#markdown}}{{bio}}{{/markdown}}
+          {{#if bio}}
+          <div class="bio">
+            {{#markdown}}{{bio}}{{/markdown}}
+          </div>
+          {{/if}}
+
+        </div>
+
+        {{#if speaker.photo}}
+        <div class="mugshot" style="background-image: url(/images/speakers/{{speaker.photo}})">
+          <img src="/images/speakers/{{speaker.photo}}">
         </div>
         {{/if}}
 
-      </div>
+        {{#if links}}
+        <div class="links-wrapper">
+          <div class="links">
+            {{#if speaker.twitter}}
+              <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
+            {{/if}}
 
-      {{#if speaker.photo}}
-      <div class="mugshot">
-        <img src="/images/speakers/{{speaker.photo}}">
-      </div>
-      {{/if}}
+            {{#if slides}}
+              <a class="button" href="{{slides}}">Download Slides</a>
+            {{/if}}
 
-      {{#if links}}
-      <div class="links-wrapper">
-        <div class="links">
-          {{#if speaker.twitter}}
-            <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
-          {{/if}}
+            {{#if audio}}
+              <a class="button" href="{{audio}}">Audio</a>
+            {{/if}}
 
-          {{#if slides}}
-            <a class="button" href="{{slides}}">Download Slides</a>
-          {{/if}}
-
-          {{#if audio}}
-            <a class="button" href="{{audio}}">Audio</a>
-          {{/if}}
-
-          {{#if video}}
-            <a class="button" href="{{video}}">Video</a>
-          {{/if}}
+            {{#if video}}
+              <a class="button" href="{{video}}">Video</a>
+            {{/if}}
+          </div>
         </div>
       </div>
       {{/if}}

@@ -26,13 +26,15 @@ a {
   color: #f1c400;
   text-decoration: none; }
 
-a:hover, a:focus {
-  color: #be9800; }
+a:hover,
+a:focus {
+  color: #be9b00; }
 
 a:active {
-  color: #ffd325; }
+  color: #ffd625; }
 
-.button, .button:active {
+.button,
+.button:active {
   font-size: 18px;
   font-style: italic;
   font-weight: 700;
@@ -47,15 +49,19 @@ a:active {
   padding: 10px 24px;
   white-space: nowrap; }
 
-.button:hover, .button:focus {
-  background: #be9800;
+.button:hover,
+.button:focus {
+  background: #be9b00;
   color: #201d1e; }
 
 .button:active {
-  background: #ffd325;
+  background: #ffd625;
   color: #201d1e; }
 
-.sold-out, .sold-out:hover, .sold-out:focus, .sold-out:active {
+.sold-out,
+.sold-out:hover,
+.sold-out:focus,
+.sold-out:active {
   background: #ebebeb;
   color: #b8b8b8;
   cursor: default; }
@@ -67,12 +73,12 @@ a:active {
   text-align: center;
   padding: 29px 0;
   overflow: hidden;
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -o-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -moz-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -webkit-gradient(linear, left bottom, left top, color-stop(0, #75150a), color-stop(1, #9d1c0b));
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -webkit-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), -ms-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'), linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -o-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -moz-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -webkit-gradient(linear, left bottom, left top, color-stop(0, #75150a), color-stop(1, #9d1c0b));
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -webkit-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -ms-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
   padding-bottom: 166px; }
@@ -111,8 +117,9 @@ a:active {
       font-size: 45px;
       margin-right: 40px; } }
 
-.masthead nav a:hover, .masthead nav a:focus {
-  background-color: #8f190a; }
+.masthead nav a:hover,
+.masthead nav a:focus {
+  background-color: #8f1a0a; }
 
 .masthead .logo {
   margin: 0; }
@@ -133,7 +140,7 @@ a:active {
 
 @media (min-width: 640px) {
   .masthead .details-tickets-wrapper {
-    border-bottom: 1px solid #851809;
+    border-bottom: 1px solid #851909;
     position: absolute;
     top: 0;
     width: 100%; } }
@@ -195,7 +202,7 @@ a:active {
   background-color: #201d1e;
   color: white;
   padding: 30px 20px;
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png');
+  background-image: url("/images/skyline-white.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png");
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
   padding-bottom: 166px; }
@@ -203,7 +210,7 @@ a:active {
 .region.alt {
   background-color: white;
   color: #201d1e;
-  background-image: url('/images/skyline-black.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png'); }
+  background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"); }
 
 .section-heading {
   font-size: 30px;
@@ -228,14 +235,9 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px; }
 
-<<<<<<< HEAD
-=======
-.session .session-body {
-  display: none; }
->>>>>>> 2b8c30c9b44802abcced7b7a89233dbfea047063
-
 .session.open .session-body {
-  display: block; }
+  display: block;
+  overflow: hidden; }
 
 .session {
   border-bottom: 1px solid #6c6265;
@@ -244,20 +246,31 @@ a:active {
   list-style-type: none;
   overflow: hidden; }
 
+.session .veil {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 25px;
+  padding-top: 30px; }
+  @media (min-width: 640px) {
+    .session .veil {
+      padding: 20px 40px; } }
+
 .session:last-child {
   border-bottom: 0;
-  padding-bottom: 9px; }
+  /*   padding-bottom: 9px; */ }
+
+.session-header,
+header.break {
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.5); }
+  @media (min-width: 640px) {
+    .session-header,
+    header.break {
+      overflow: hidden; } }
 
 @media (min-width: 640px) {
-  .session-header {
-    overflow: hidden; } }
-
-.session.open .session-header {
-  padding-bottom: 20px; }
-  @media (min-width: 640px) {
-    .session.open .session-header {
-      border-bottom: 1px solid rgba(128, 128, 128, 0.1);
-      padding-bottom: 10px; } }
+  .session .session-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); } }
 
 .session .time {
   color: #a3aaac;
@@ -282,7 +295,8 @@ a:active {
   text-align: auto 100%; }
 
 @media (min-width: 640px) {
-  .session-style-speakers .session .title, .session-style-schedule .session .title {
+  .session-style-speakers .session .title,
+  .session-style-schedule .session .title {
     text-align: left;
     float: left;
     margin-right: 20px; } }
@@ -293,10 +307,9 @@ a:active {
 .session .speaker {
   font-style: italic;
   font-weight: 300; }
-  @media (min-width: 640px) {
+  @media (max-width: 640px) {
     .session .speaker {
-      text-align: left;
-      float: left; } }
+      display: none; } }
 
 .session .description-wrapper {
   margin-top: 10px; }
@@ -322,7 +335,7 @@ a:active {
 .session .description-wrapper p {
   text-align: left;
   font-style: italic;
-  padding: 0 10px 0 10px;
+  padding: 0;
   margin: 0;
   margin-bottom: 20px; }
 
@@ -331,7 +344,7 @@ a:active {
 
 .session .description-wrapper p {
   font-weight: 400;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 1px 2px 0px black; }
 
 .session .description-wrapper .bio p {
   color: #ebebeb;
@@ -350,12 +363,21 @@ a:active {
     width: 33%;
     float: left; } }
 
-.session .mugshot img {
+.session .mugshot {
+  box-sizing: border-box;
   border: 1px solid #201d1e;
   box-shadow: 4px 4px 0px #201d1e;
-  width: 100%;
-  vertical-align: middle;
-  max-width: 300px; }
+  /*   max-width: 300px; */
+  background-position: 50% 50%;
+  background-size: cover; }
+  @media (min-width: 1024px) {
+    .session .mugshot {
+      margin-left: 3%;
+      margin-right: 3%; } }
+
+.session .mugshot img {
+  visibility: hidden;
+  vertical-align: middle; }
 
 @media (min-width: 640px) {
   .session .links-wrapper {
@@ -364,8 +386,8 @@ a:active {
     clear: right; } }
 @media (min-width: 1024px) {
   .session .links-wrapper {
-    width: 33%;
-    float: left;
+    width: 27%;
+    float: right;
     clear: none; } }
 
 @media (min-width: 1024px) {
@@ -401,7 +423,8 @@ a:active {
       margin-left: 10px;
       margin-right: 10px; } }
 
-.workshop header, .workshop .description {
+.workshop header,
+.workshop .description {
   padding: 20px;
   margin: 0; }
 
@@ -543,7 +566,8 @@ a:active {
   max-width: 100%;
   max-height: 10rem; }
 
-a.sponsor:hover, a.sponsor:focus {
+a.sponsor:hover,
+a.sponsor:focus {
   border: 1px solid #201d1e;
   box-shadow: 4px 4px 0px #201d1e; }
 
@@ -644,7 +668,9 @@ footer .left-logic {
   height: 47px;
   background-image: url(/images/leftlogic.png); }
 
-footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
+footer .left-logic:hover,
+footer .left-logic:focus,
+footer .left-logic:active {
   background-position: bottom;
   /*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 100%);*/ }
 
@@ -659,26 +685,28 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
   text-indent: -200%;
   overflow: hidden;
   background-position: top;
-  background-image: url('/images/left-logic.png'); }
+  background-image: url("/images/left-logic.png"); }
   @media (max-width: 480px) {
     #left-logic {
       width: 113px;
       height: 23.5px;
       background-size: 113px, 23.5px; } }
 
-#left-logic:hover, #left-logic:focus, #left-logic:active {
+#left-logic:hover,
+#left-logic:focus,
+#left-logic:active {
   background-position: bottom; }
 
 /** Workshop Pullout */
 .workshop-pullout .masthead {
   padding-top: 0;
-  background-image: url('/images/skyline-white.png'), url('/images/clouds-1.png'), url('/images/clouds-2.png'), url('/images/clouds-3.png');
+  background-image: url("/images/skyline-white.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png");
   background-position: bottom, 0 bottom, 0 bottom, 0 bottom;
   background-repeat: repeat-x;
   padding-bottom: 166px; }
 
 .workshop-pullout nav {
-  border-bottom: 1px solid #8f190a;
+  border-bottom: 1px solid #8f1a0a;
   text-align: left;
   padding: 0 10px;
   margin-bottom: 40px; }
@@ -722,7 +750,8 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 .workshop-pullout .detail:last-child {
   border-bottom: 0; }
 
-.workshop-pullout .detail .type, .workshop-pullout .detail .data {
+.workshop-pullout .detail .type,
+.workshop-pullout .detail .data {
   display: block;
   text-transform: uppercase; }
 
@@ -740,7 +769,8 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 .workshop-pullout .description {
   font-weight: 600; }
 
-.workshop-pullout .description, .workshop-pullout .extendedDescription {
+.workshop-pullout .description,
+.workshop-pullout .extendedDescription {
   font-style: italic; }
 
 .workshop-pullout .extendedDescription {
@@ -756,7 +786,8 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
   font-style: italic;
   margin: 15px 0; }
 
-.workshop-pullout .topic .title, .workshop-pullout .topic .description {
+.workshop-pullout .topic .title,
+.workshop-pullout .topic .description {
   display: block; }
 
 .workshop-pullout .topic .description {
@@ -764,52 +795,58 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
 
 .button.buy:after {
   color: rgba(32, 29, 30, 0.5);
-  content: '	'; }
+  content: '〉'; }
 
-<<<<<<< HEAD
 .button.buy span {
   text-align: left; }
 
 .session .session-wrapper {
-  background: rgba(0, 0, 0, 0.75);
-  padding: 20px 25px;
   overflow: hidden; }
-  @media (min-width: 640px) {
-    .session .session-wrapper {
-      padding: 20px 40px; } }
 
-.session {
+.session-body {
   background-size: contain;
   background-position: bottom center;
   background-repeat: repeat-x; }
 
-#pushing-the-limits-of-mobile-web-app-performance {
+.bg-shops .session-body {
   background-image: url(/images/backgrounds/shops.png); }
 
-#building-web-applications-with-web-components-using-x-tags {
-  background-image: url(/images/backgrounds/mountain.png);
+.bg-shops .session-wrapper {
+  background-color: #665c56; }
+
+.bg-mountains .session-body {
+  background-image: url(/images/backgrounds/mountain.png); }
+
+.bg-mountains .session-wrapper {
   background-color: #e77a24; }
 
-#flat-city {
-  background-image: url(/images/backgrounds/mountain.png);
-  background-color: #e77a24; }
-=======
+.bg-warehouse .session-body {
+  background-image: url(/images/backgrounds/warehouse.png); }
+
+.bg-warehouse .session-wrapper {
+  background-color: #7f7f7f; }
+
+.bg-subway .session-body {
+  background-image: url(/images/backgrounds/subway.png); }
+
+.bg-subway .session-wrapper {
+  background-color: #665c56; }
+
+.bg-space .session-body {
+  background-image: url(/images/backgrounds/space.png); }
+
+.bg-space .session-wrapper {
+  background-color: #c4c4c4; }
+
 /** Custom Background **/
 #flat-city.open {
-  background-image: url('/images/backgrounds/mountain.jpg');
   background-size: auto 100%;
-  background-position: bottom left;
-  padding-bottom: 100px; }
-  #flat-city.open .session-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  background-position: bottom left; }
   #flat-city.open .title {
-    color: #880807;
     font-weight: 700; }
   #flat-city.open .time {
     color: #ffe59d; }
   #flat-city.open .speaker {
     color: #ffe59d; }
-  #flat-city.open .description-wrapper {
-    background-color: rgba(231, 121, 36, 0.7);
-    padding: 10px 0 20px 0; }
->>>>>>> 2b8c30c9b44802abcced7b7a89233dbfea047063
+
+/*# sourceMappingURL=fullfrontal.css.map */

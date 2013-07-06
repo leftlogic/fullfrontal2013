@@ -222,6 +222,7 @@ a:active {
 }
 .session.open .session-body {
   display: block;
+  overflow: hidden;
 }
 .session {
   border-bottom: 1px solid $darkgrey;
@@ -230,20 +231,30 @@ a:active {
   list-style-type: none;
   overflow: hidden;
 }
+.session .veil {
+  overflow: hidden;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 25px;
+  @media (min-width: 640px) {
+    padding: 20px 40px;
+  }
+  padding-top: 30px;
+}
 .session:last-child {
   border-bottom: 0;
-  padding-bottom: 9px;
+/*   padding-bottom: 9px; */
 }
-.session-header {
+.session-header,
+header.break {
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.5);
   @media (min-width: 640px) {
     overflow: hidden;
   }
 }
-.session.open .session-header {
-  padding-bottom: 20px;
+.session .session-header {
   @media (min-width: 640px) {
-    border-bottom: 1px solid hsla(0, 0%, 50%, 0.1);
-    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 .session .time {
@@ -284,9 +295,8 @@ a:active {
 .session .speaker {
   font-style: italic;
   font-weight: 300;
-  @media (min-width: 640px) {
-    text-align: left;
-    float: left;
+  @media (max-width: 640px) {
+    display: none;
   }
 }
 
@@ -316,7 +326,7 @@ a:active {
 .session .description-wrapper p {
   text-align: left;
   font-style: italic;
-  padding: 0 10px 0 10px;
+  padding: 0;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -325,7 +335,7 @@ a:active {
 }
 .session .description-wrapper p {
   font-weight: 400;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  text-shadow: 1px 2px 0px black;
 }
 .session .description-wrapper .bio p {
   color: $silver;
@@ -346,11 +356,21 @@ a:active {
     float: left;
   }
 }
-.session .mugshot img {
+.session .mugshot {
+  box-sizing: border-box;
   @include shadow;
-  width: 100%;
+/*   max-width: 300px; */
+  background-position: 50% 50%;
+  background-size: cover;
+  @media (min-width: 1024px) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.session .mugshot img {
+  visibility: hidden;
   vertical-align: middle;
-  max-width: 300px;
 }
 .session .links-wrapper {
   @media (min-width: 640px) {
@@ -359,8 +379,8 @@ a:active {
     clear: right;
   }
   @media (min-width: 1024px) {
-    width: 33%;
-    float: left;
+    width: 27%;
+    float: right;
     clear: none;
   }
 }
@@ -777,45 +797,64 @@ footer .left-logic:active {
 }
 
 .session .session-wrapper {
-  background: rgba(0,0,0,0.75);
-  padding: 20px 25px;
-  @media (min-width: 640px) {
-    padding: 20px 40px;
-  }
   overflow: hidden;
-}
+  }
 
-.session {
+.session-body {
   background-size: contain;
   background-position: bottom center;
   background-repeat: repeat-x;
 }
 
-#pushing-the-limits-of-mobile-web-app-performance {
+.bg-shops .session-body {
   background-image: url(/images/backgrounds/shops.png);
 }
 
-#building-web-applications-with-web-components-using-x-tags {
+.bg-shops .session-wrapper {
+  background-color: #665c56;
+}
+
+.bg-mountains .session-body {
   background-image: url(/images/backgrounds/mountain.png);
+}
+
+.bg-mountains .session-wrapper {
   background-color: #e77a24;
 }
 
-#flat-city {
-  background-image: url(/images/backgrounds/mountain.png);
-  background-color: #e77a24;
+.bg-warehouse .session-body {
+  background-image: url(/images/backgrounds/warehouse.png);
+}
+
+.bg-warehouse .session-wrapper {
+  background-color: #7f7f7f;
+}
+
+.bg-subway .session-body {
+  background-image: url(/images/backgrounds/subway.png);
+}
+
+.bg-subway .session-wrapper {
+  background-color: #665c56;
+}
+
+.bg-space .session-body {
+  background-image: url(/images/backgrounds/space.png);
+}
+
+.bg-space .session-wrapper {
+  background-color: #c4c4c4;
 }
 
 /** Custom Background **/
 #flat-city.open {
-  background-image: url('/images/backgrounds/mountain.jpg');
   background-size: auto 100%;
   background-position: bottom left;
-  padding-bottom: 100px;
   .session-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .title {
-    color: #880807;
+    // color: #880807;
     font-weight: 700;
   }
   .time {
@@ -827,8 +866,8 @@ footer .left-logic:active {
   .description-wrapper {
     // color: #452612;
     // text-shadow: 1px 0px #fedf93;
-    background-color: rgba(231, 121, 36, 0.7);
-    padding: 10px 0 20px 0;
+    // background-color: rgba(231, 121, 36, 0.7);
+    // padding: 10px 0 20px 0;
   }
   .details {
     // color: #673c22;
