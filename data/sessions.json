@@ -12,12 +12,13 @@
       "duration": 10
     },
     {
+      "background": "space",
       "duration": 40,
-      "title": "Pushing the Limits of Mobile Web App Performance",
+      "title": "Pushing the Limits of Mobile Performance",
       "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
 
       "speaker": {
-        "name": "J. Linklater-Johnson",
+        "name": false,
         "twitter": false,
         "photo": false
       },
@@ -30,13 +31,15 @@
 
     },
     {
-      "title": "Building Web Applications with Web Components using X-Tags",
+      "background": "mountains",
+      "title": "Building with Web Components using X-Tags",
       "duration": 40,
       "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap.",
-            "speaker": {
-        "name": "J. Linklater-Johnson",
-        "twitter": "binarytales",
-        "photo": "speaker.jpg"
+
+      "speaker": {
+        "name": false,
+        "twitter": false,
+        "photo": false
       }
     },
     {
@@ -45,14 +48,14 @@
       "duration": 30
     },
     {
-      "break": false,
+      "background": "shops",
       "duration": 40,
       "title": "Flat City",
 
       "speaker": {
-        "name": "J. Linklater-Johnson",
-        "twitter": "binarytales",
-        "photo": "speaker.jpg"
+        "name": "Phil Hawksworth",
+        "twitter": "philly",
+        "photo": "remy.jpg"
       },
 
       "description": "Software loves hierarchies: class hierarchies, object hierarchies, folder hierarchies, style hierarchies, menu hierachies. And yet, all but the most simple tree structures require levels of organizational foresight and intellectual rigour which mere humans rarely possess—and they usually end in tears.\n\nDrawing on a diverse range of web—based examples, and proposing alternatives along the way, I'll attempt to demonstrate how trees and nesting are great for birds, but mostly lousy for developers and users.",
@@ -65,7 +68,7 @@
 
     },
     {
-      "break": false,
+      "background": "subway",
       "duration": 40,
       "title": "Mobile Is Not A Thing; It Is Everything.",
 
@@ -89,9 +92,10 @@
       "title": "Break (90 mins)"
     },
     {
+      "background": "warehouse",
       "duration": 40,
       "title": "JavaScript in the Real World",
-      "description": "Anything that can be written in JavaScript, will eventually be written in JavaScript.\n\nFirst client side web apps, then server side programs and now you can control hardware, embedded devices and even flying robots with JavaScript.\n\nWe'll look at how you can get started writing JavaScript for Ardunio and Raspberry Pi to read sensors and control servos and build you own JavaScript powered robots.",
+      "description": "Anything that can be written in JavaScript, will eventually be written in JavaScript. First client side web apps, then server side programs and now you can control hardware, embedded devices and even flying robots with JavaScript.\n\nWe'll look at how you can get started writing JavaScript for Ardunio and Raspberry Pi to read sensors and control servos and build you own JavaScript powered robots.",
 
       "speaker": {
         "name": false,
