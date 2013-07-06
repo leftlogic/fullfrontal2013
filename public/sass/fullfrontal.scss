@@ -360,9 +360,13 @@ header.break {
 /*   max-width: 300px; */
   background-position: 50% 50%;
   background-size: cover;
+  @media (min-width: 640px) {
+    max-height: 250px;
+  }
   @media (min-width: 1024px) {
     margin-left: 3%;
     margin-right: 3%;
+    max-height: 100%;
   }
 }
 
