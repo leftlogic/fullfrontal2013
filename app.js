@@ -124,13 +124,9 @@ app.configure('production', function () {
   app.set('isproduction', true);
 });
 
-app.configure('development', function () {
-  app.use(require('node-sass').middleware({
-     src: __dirname + '/public/sass',
-     dest: __dirname + '/public',
-     debug: !app.settings.isproduction
-  }));
-});
+// RS: run sass compile from command line to allow for devtools
+// sourcemap support: sass --watch --scss --sourcemap public/sass/fullfrontal.scss:public/fullfrontal.css
+// NOTE: requires sass 3.x - installed via gem install sass --pre as of July 6, 2013
 
 app.configure(function (){
   app.set('port', process.env.PORT || 3000);
