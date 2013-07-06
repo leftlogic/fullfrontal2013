@@ -217,17 +217,14 @@ a:active {
 .sessions .section-heading {
   margin-bottom: 40px;
 }
-.session .session-body {
-  display: none;
+
+.session > div {
+  // display: none;
 }
 .session.open .session-body {
   display: block;
 }
 .session {
-  padding: 20px 25px;
-  @media (min-width: 640px) {
-    padding: 20px 40px;
-  }
   border-bottom: 1px solid $darkgrey;
   text-align: center;
   display: block;
@@ -338,8 +335,9 @@ a:active {
 }
 .session .description-wrapper p {
   font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 }
-.session .details {
+.session .description-wrapper .bio p {
   color: $silver;
   font-weight: 300;
 }
@@ -800,7 +798,40 @@ footer .left-logic:active {
 
 .button.buy:after {
   color: $lightblack;
-  content: '〉';
+  content: '〉'; // TODO insert data image of png
+}
+
+.button.buy span {
+  text-align: left;
+}
+
+.session .session-wrapper {
+  background: rgba(0,0,0,0.75);
+  padding: 20px 25px;
+  @media (min-width: 640px) {
+    padding: 20px 40px;
+  }
+  overflow: hidden;
+}
+
+.session {
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+}
+
+#pushing-the-limits-of-mobile-web-app-performance {
+  background-image: url(/images/backgrounds/shops.png);
+}
+
+#building-web-applications-with-web-components-using-x-tags {
+  background-image: url(/images/backgrounds/mountain.png);
+  background-color: #e77a24;
+}
+
+#flat-city {
+  background-image: url(/images/backgrounds/mountain.png);
+  background-color: #e77a24;
 }
 #tint {
   display: none;

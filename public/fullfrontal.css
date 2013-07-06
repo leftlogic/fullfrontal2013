@@ -242,9 +242,6 @@ a:active {
   display: block;
   list-style-type: none;
   overflow: hidden; }
-  @media (min-width: 640px) {
-    .session {
-      padding: 20px 40px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -340,10 +337,14 @@ a:active {
   margin-bottom: 0; }
 
 .session .description-wrapper p {
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
 
 .session .details {
-  color: #e8e8e8;
+  color: #e8e8e8; }
+
+.session .description-wrapper .bio p {
+  color: #ebebeb;
   font-weight: 300; }
 
 @media (max-width: 639px) {
@@ -818,6 +819,34 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
       left: 50%;
       margin-left: -320px; } }
 
+.button.buy span {
+  text-align: left; }
+
+.session .session-wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px 25px;
+  overflow: hidden; }
+  @media (min-width: 640px) {
+    .session .session-wrapper {
+      padding: 20px 40px; } }
+
+.session {
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: repeat-x; }
+
+#pushing-the-limits-of-mobile-web-app-performance {
+  background-image: url(/images/backgrounds/shops.png); }
+
+#building-web-applications-with-web-components-using-x-tags {
+  background-image: url(/images/backgrounds/mountain.png);
+  background-color: #e77a24; }
+
+#flat-city {
+  background-image: url(/images/backgrounds/mountain.png);
+  background-color: #e77a24; }
+=======
+>>>>>>> e27d99c0fc3061fe79d93e5eebaedc2d07fa9983
 /** Custom Background **/
 #flat-city.open {
   background-image: url('/images/backgrounds/mountain.jpg');
@@ -836,3 +865,4 @@ footer .left-logic:hover, footer .left-logic:focus, footer .left-logic:active {
   #flat-city.open .description-wrapper {
     background-color: rgba(231, 121, 36, 0.7);
     padding: 10px 0 20px 0; }
+>>>>>>> 2b8c30c9b44802abcced7b7a89233dbfea047063
