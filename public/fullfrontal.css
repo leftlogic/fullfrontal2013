@@ -209,6 +209,11 @@ a:active {
   background-repeat: repeat-x;
   padding-bottom: 166px; }
 
+@media (min-width: 640px) {
+  .workshop-pullout .region {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
 .sessions.region {
   background-color: #212121;
   padding-top: 0; }
