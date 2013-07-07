@@ -76,7 +76,7 @@ a:active {
   }
 }
 
-.masthead nav {
+.masthead nav[role="navigation"] {
   margin-bottom: 50px;
   @media (min-width: 640px) {
     width: 50%;
@@ -192,9 +192,14 @@ a:active {
   padding: 30px 20px;
   @include skyline();
 }
+.sessions.region {
+  background-color: #212121;
+  padding-top: 0;
+}
 .region.alt {
   background-color: $white;
   color: $black;
+  overflow: hidden;
   @include alt-skyline();
 }
 
@@ -215,7 +220,9 @@ a:active {
   padding-right: 0;
 }
 .sessions .section-heading {
-  margin-bottom: 40px
+  padding-top: 30px;
+  background: #201d1e;
+  padding-bottom: 40px
 }
 
 .session .session-body,
@@ -227,6 +234,12 @@ a:active {
   display: block;
   overflow: hidden;
 }
+
+.session-style-titles .session.open .session-header hr {
+  margin-top: 20px;
+  width: 100%;
+}
+
 .session {
   border-bottom: 1px solid $darkgrey;
   text-align: center;
@@ -241,9 +254,7 @@ a:active {
   padding-top: 10px;
   padding-bottom: 180px;
   @media (min-width: 640px) {
-    padding: 20px 40px;
-    padding-top: 30px;
-  padding-bottom: 180px;
+    padding: 30px 30px 180px 30px;
   }
 }
 .session:last-child {
@@ -257,7 +268,17 @@ header.break {
   @media (min-width: 640px) {
     overflow: hidden;
   }
+  @media (min-width: 1024px) {
+    padding: 15px 40px;
+  }
 }
+.titles .session-header {
+  padding-bottom: 0;
+  @media (min-width: 1024px) {
+    padding-top: 30px;
+  }
+}
+
 .session .time {
   color: $grey;
   font-weight: 300;
@@ -274,6 +295,11 @@ header.break {
     float: left;
   }
 }
+
+.titles .session .title-wrapper {
+  float: none;
+}
+
 .session .title {
   text-transform: uppercase;
   margin: 0;
@@ -319,7 +345,7 @@ header.break {
     float: none;
   }
   @media (min-width: 1024px) {
-    width: 50%;
+/*     width: 50%; */
   }
   margin-top: 10px;
 }
@@ -709,6 +735,9 @@ footer .left-logic:active {
   text-align: left;
   padding: 0 10px;
   margin-bottom: 40px;
+  @media (min-width: 640px) {
+    display: block;
+  }
 }
 .workshop-pullout nav a {
   display: inline-block;
@@ -724,8 +753,33 @@ footer .left-logic:active {
 .workshop-pullout h1.section-heading {
   color: $gold;
   letter-spacing: 3px;
-  line-height: 30px;
+  line-height: 30px;  
+  @media (min-width: 640px) {
+    line-height: 60px;
+  }
 }
+
+.workshop-pullout .mugshot,
+.workshop-pullout .content .details {
+  @media (min-width: 640px) {
+    float: right;
+    width: 50%;
+  }
+}
+
+.workshop-pullout .description,
+.workshop-pullout .extendedDescription{
+  @media (min-width: 640px) {
+    width: 45%;
+  }
+}
+
+.workshop-pullout .topics {
+  @media (min-width: 640px) {
+    clear: both;
+  }
+}
+
 .workshop-pullout .mugshot {
   @include shadow;
   background-position: 50% 40%;
@@ -757,12 +811,13 @@ footer .left-logic:active {
   float: left;
   color: $grey;
   font-weight: 300;
-  position: absolute;
+  padding-right: 10px;
+/*   position: absolute; */
 }
 .workshop-pullout .detail .data {
-  float: right;
   text-align: right;
   font-weight: 600;
+  display: block;
 }
 .workshop-pullout .description {
   font-weight: 600;
@@ -779,15 +834,26 @@ footer .left-logic:active {
   border-top: 1px solid $grey;
   margin: 40px 0 30px 0;
   padding-top: 30px;
+  overflow: hidden;
 }
 .workshop-pullout .topic {
   font-style: italic;
   margin: 15px 0;
+  @media (min-width: 640px) {
+    float: left;
+    width: 50%;
+  }
 }
 .workshop-pullout .topic .title,
 .workshop-pullout .topic .description {
   display: block;
+  font-weight: 400;
 }
+
+.workshop-pullout .topic .title {
+  font-weight: 600;
+}
+
 .workshop-pullout .topic .description {
   color: $grey;
 }
@@ -800,6 +866,10 @@ footer .left-logic:active {
   right: 0;
 }
 
+.button:hover:after {
+  color: $black;
+}
+
 .button.buy span {
   text-align: left;
 }
@@ -809,7 +879,7 @@ footer .left-logic:active {
   }
 
 .session-body {
-    background-size: 100%;
+  background-size: 100%;
   background-position: bottom center;
   background-repeat: repeat-x;
   @media (min-width: 640px) {

@@ -91,15 +91,15 @@ a:active {
     .masthead {
       padding-top: 113px; } }
 
-.masthead nav {
+.masthead nav[role="navigation"] {
   margin-bottom: 50px; }
   @media (min-width: 640px) {
-    .masthead nav {
+    .masthead nav[role="navigation"] {
       width: 50%;
       float: left;
       margin-bottom: 0px; } }
   @media (min-width: 1024px) {
-    .masthead nav {
+    .masthead nav[role="navigation"] {
       margin-bottom: 0px; } }
 
 .masthead nav a {
@@ -209,9 +209,14 @@ a:active {
   background-repeat: repeat-x;
   padding-bottom: 166px; }
 
+.sessions.region {
+  background-color: #212121;
+  padding-top: 0; }
+
 .region.alt {
   background-color: white;
   color: #201d1e;
+  overflow: hidden;
   background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"); }
 
 .section-heading {
@@ -235,7 +240,9 @@ a:active {
   padding-right: 0; }
 
 .sessions .section-heading {
-  margin-bottom: 40px; }
+  padding-top: 30px;
+  background: #201d1e;
+  padding-bottom: 40px; }
 
 .session .session-body,
 .session .session-header hr {
@@ -245,6 +252,10 @@ a:active {
 .session.open .session-header hr {
   display: block;
   overflow: hidden; }
+
+.session-style-titles .session.open .session-header hr {
+  margin-top: 20px;
+  width: 100%; }
 
 .session {
   border-bottom: 1px solid #6c6265;
@@ -261,9 +272,7 @@ a:active {
   padding-bottom: 180px; }
   @media (min-width: 640px) {
     .session .veil {
-      padding: 20px 40px;
-      padding-top: 30px;
-      padding-bottom: 180px; } }
+      padding: 30px 30px 180px 30px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -277,6 +286,16 @@ header.break {
     .session-header,
     header.break {
       overflow: hidden; } }
+  @media (min-width: 1024px) {
+    .session-header,
+    header.break {
+      padding: 15px 40px; } }
+
+.titles .session-header {
+  padding-bottom: 0; }
+  @media (min-width: 1024px) {
+    .titles .session-header {
+      padding-top: 30px; } }
 
 .session .time {
   color: #a3aaac;
@@ -292,6 +311,9 @@ header.break {
     width: 80%;
     text-align: left;
     float: left; } }
+
+.titles .session .title-wrapper {
+  float: none; }
 
 .session .title {
   text-transform: uppercase;
@@ -335,7 +357,7 @@ header.break {
       float: none; } }
   @media (min-width: 1024px) {
     .session-style-titles .session .description-wrapper {
-      width: 50%; } }
+      /*     width: 50%; */ } }
 
 .session .description-wrapper p {
   text-align: left;
@@ -719,6 +741,9 @@ footer .left-logic:active {
   text-align: left;
   padding: 0 10px;
   margin-bottom: 40px; }
+  @media (min-width: 640px) {
+    .workshop-pullout nav {
+      display: block; } }
 
 .workshop-pullout nav a {
   display: inline-block;
@@ -735,6 +760,24 @@ footer .left-logic:active {
   color: #f1c400;
   letter-spacing: 3px;
   line-height: 30px; }
+  @media (min-width: 640px) {
+    .workshop-pullout h1.section-heading {
+      line-height: 60px; } }
+
+@media (min-width: 640px) {
+  .workshop-pullout .mugshot,
+  .workshop-pullout .content .details {
+    float: right;
+    width: 50%; } }
+
+@media (min-width: 640px) {
+  .workshop-pullout .description,
+  .workshop-pullout .extendedDescription {
+    width: 45%; } }
+
+@media (min-width: 640px) {
+  .workshop-pullout .topics {
+    clear: both; } }
 
 .workshop-pullout .mugshot {
   border: 1px solid #201d1e;
@@ -768,12 +811,13 @@ footer .left-logic:active {
   float: left;
   color: #a3aaac;
   font-weight: 300;
-  position: absolute; }
+  padding-right: 10px;
+  /*   position: absolute; */ }
 
 .workshop-pullout .detail .data {
-  float: right;
   text-align: right;
-  font-weight: 600; }
+  font-weight: 600;
+  display: block; }
 
 .workshop-pullout .description {
   font-weight: 600; }
@@ -789,15 +833,24 @@ footer .left-logic:active {
 .workshop-pullout .topics {
   border-top: 1px solid #a3aaac;
   margin: 40px 0 30px 0;
-  padding-top: 30px; }
+  padding-top: 30px;
+  overflow: hidden; }
 
 .workshop-pullout .topic {
   font-style: italic;
   margin: 15px 0; }
+  @media (min-width: 640px) {
+    .workshop-pullout .topic {
+      float: left;
+      width: 50%; } }
 
 .workshop-pullout .topic .title,
 .workshop-pullout .topic .description {
-  display: block; }
+  display: block;
+  font-weight: 400; }
+
+.workshop-pullout .topic .title {
+  font-weight: 600; }
 
 .workshop-pullout .topic .description {
   color: #a3aaac; }
@@ -808,6 +861,9 @@ footer .left-logic:active {
   font-style: normal;
   position: absolute;
   right: 0; }
+
+.button:hover:after {
+  color: #201d1e; }
 
 .button.buy span {
   text-align: left; }
