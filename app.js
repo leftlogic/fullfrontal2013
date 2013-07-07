@@ -31,6 +31,7 @@ function updateConfig(blocking) {
 
     app.set('mode', config.mode);
     app.set('soldout', config.soldout);
+    app.set('onsale', config.onsale);
 
     workshops.workshops.forEach(function (workshop) {
       workshop.soldout = config.soldout[workshop.slug];

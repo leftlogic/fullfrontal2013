@@ -50,7 +50,7 @@ a:active {
   white-space: nowrap;
   position: relative; }
 
-.button:hover,
+a.button:hover,
 .button:focus {
   background: #be9b00;
   color: #201d1e; }
@@ -60,12 +60,28 @@ a:active {
   color: #201d1e; }
 
 .sold-out,
-.sold-out:hover,
+a.sold-out:hover,
 .sold-out:focus,
 .sold-out:active {
   background: #ebebeb;
   color: #b8b8b8;
   cursor: default; }
+
+.button:after {
+  color: rgba(32, 29, 30, 0.3);
+  content: '〉';
+  font-style: normal;
+  position: absolute;
+  right: 0; }
+
+.button.nogo:after {
+  content: ''; }
+
+.button:hover:after {
+  color: #201d1e; }
+
+.button.buy span {
+  text-align: left; }
 
 /** Masthead **/
 .masthead {
@@ -278,17 +294,17 @@ a:active {
   background: #201d1e;
   padding-bottom: 40px; }
 
-.session .session-body,
-.session .session-header hr {
-  /*   display: none; */
-  height: 0px;
-  -webkit-transition: height 100ms ease-out; }
+.session .session-body {
+  display: none; }
 
-.session.open .session-body,
+.session .session-header hr {
+  display: none; }
+
+.session.open .session-body {
+  display: block; }
+
 .session.open .session-header hr {
-  /*   display: block; */
-  height: 100%;
-  overflow: hidden; }
+  display: block; }
 
 .session-style-titles .session.open .session-header hr {
   margin-top: 20px;
@@ -306,10 +322,13 @@ a:active {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px 25px;
   padding-top: 10px;
-  padding-bottom: 180px; }
+  padding-bottom: 180px !important; }
   @media (min-width: 640px) {
     .session .veil {
-      padding: 30px 30px 180px 30px; } }
+      padding: 30px; } }
+  @media (min-width: 1400px) {
+    .session .veil {
+      padding: 40px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -638,21 +657,39 @@ header.break {
   margin: 0 0 30px 0; }
 
 .sponsor-wrapper {
-  width: 50%;
-  float: left;
-  text-align: center;
-  margin-bottom: 20px; }
+  box-sizing: border-box;
+  padding-right: 20px; }
+  @media (min-width: 320px) {
+    .sponsor-wrapper {
+      width: 50%;
+      float: left;
+      text-align: center;
+      margin-bottom: 20px; } }
   @media (min-width: 446px) {
     .sponsor-wrapper {
-      width: 33.3333%; } }
+      /*     width: 33.3333%; */ } }
   @media (min-width: 580px) {
+    .sponsor-wrapper {
+      /*     width: 25%; */ } }
+  @media (min-width: 640px) {
+    .sponsor-wrapper {
+      width: 50%; } }
+  @media (min-width: 720px) {
     .sponsor-wrapper {
       width: 25%; } }
   @media (min-width: 1400px) {
     .sponsor-wrapper {
       width: 100%; } }
 
+@media (min-width: 720px) {
+  .half-monty .sponsor-wrapper {
+    width: 50%; } }
+@media (min-width: 1400px) {
+  .half-monty .sponsor-wrapper {
+    width: 100%; } }
+
 .sponsor {
+  box-sizing: border-box;
   display: inline-block;
   border: 1px solid #ebebeb;
   box-shadow: 4px 4px 0px #ebebeb;
@@ -669,11 +706,7 @@ header.break {
       padding: 20px;
       display: block;
       background: white;
-      overflow: hidden; }
-      .sponsor img {
-        display: block;
-        margin: 0 auto;
-        height: 80px; } }
+      overflow: hidden; } }
 
 @media (min-width: 1400px) {
   .full-monty .sponsor {
@@ -682,15 +715,19 @@ header.break {
 @media (min-width: 1400px) {
   .full-monty .sponsor .logo {
     float: left;
-    height: 100%;
-    display: block; } }
+    max-width: 100%;
+    width: 50%;
+    position: relative;
+    display: block; }
+    .full-monty .sponsor .logo img {
+      width: 100%; } }
 
-.sponsor .logo img {
+.sponsor img.logo {
   max-width: 100%;
   max-height: 10rem; }
   @media (min-width: 1400px) {
-    .sponsor .logo img {
-      float: left;
+    .sponsor img.logo {
+      /*     float: left; */
       height: 120%;
       box-sizing: border-box; } }
 
@@ -721,13 +758,16 @@ a.sponsor:focus {
   float: none;
   width: auto; }
 
-@media (min-width: 580px) {
+@media (min-width: 640px) {
   .full-monty .sponsor-wrapper {
     width: 50%;
     float: left; } }
 @media (min-width: 1400px) {
   .full-monty .sponsor-wrapper {
     width: 100%; } }
+
+.full-monty img {
+  max-width: 100%; }
 
 .full-monty .sponsor {
   display: block;
@@ -771,6 +811,12 @@ a.sponsor:focus {
 
 /** wide view **/
 @media (min-width: 1400px) {
+  .half-monty .sponsor img,
+  .small-monty .sponsor img {
+    display: block;
+    margin: 0 auto;
+    height: 80px; }
+
   .region.workshops {
     float: left; }
 
@@ -1027,19 +1073,6 @@ footer .left-logic:active {
 
 .workshop-pullout .topic .description {
   color: #a3aaac; }
-
-.button:after {
-  color: rgba(32, 29, 30, 0.3);
-  content: '〉';
-  font-style: normal;
-  position: absolute;
-  right: 0; }
-
-.button:hover:after {
-  color: #201d1e; }
-
-.button.buy span {
-  text-align: left; }
 
 .session .session-wrapper {
   overflow: hidden; }

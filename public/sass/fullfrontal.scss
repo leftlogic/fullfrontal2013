@@ -41,7 +41,7 @@ a:active {
   white-space: nowrap;
   position: relative;
 }
-.button:hover,
+a.button:hover,
 .button:focus {
   background: darken($gold, 10%);
   color: $black;
@@ -51,13 +51,34 @@ a:active {
   color: $black;
 }
 .sold-out,
-.sold-out:hover,
+a.sold-out:hover,
 .sold-out:focus,
 .sold-out:active {
   background: $silver;
   color: darken($silver, 20%);
   cursor: default;
 }
+
+.button:after {
+  color: rgba(32, 29, 30, 0.3);
+  content: '〉';
+  font-style: normal;
+  position: absolute;
+  right: 0;
+}
+
+.button.nogo:after {
+  content: '';
+}
+
+.button:hover:after {
+  color: $black;
+}
+
+.button.buy span {
+  text-align: left;
+}
+
 
 
 /** Masthead **/
@@ -257,17 +278,18 @@ a:active {
   padding-bottom: 40px
 }
 
-.session .session-body,
-.session .session-header hr {
-/*   display: none; */
-  height: 0px;
-  -webkit-transition: height 100ms ease-out;
+.session .session-body {
+  display: none;
 }
-.session.open .session-body,
+.session .session-header hr {
+  display: none;
+}
+.session.open .session-body {
+  display: block;
+}
+
 .session.open .session-header hr {
-/*   display: block; */
-  height: 100%;
-  overflow: hidden;
+  display: block;
 }
 
 .session-style-titles .session.open .session-header hr {
@@ -287,10 +309,13 @@ a:active {
   background: rgba(0,0,0,0.5);
   padding: 20px 25px;
   padding-top: 10px;
-  padding-bottom: 180px;
   @media (min-width: 640px) {
-    padding: 30px 30px 180px 30px;
+    padding: 30px;
   }
+  @media (min-width: 1400px) {
+    padding: 40px;
+  }
+  padding-bottom: 180px !important; // cascade should work here, but it didn't :(
 }
 .session:last-child {
   border-bottom: 0;
@@ -638,21 +663,42 @@ header.break {
   margin: 0 0 30px 0;
 }
 .sponsor-wrapper {
-  width: 50%;
-  float: left;
-  text-align: center;
-  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding-right: 20px;
+  @media (min-width: 320px) {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   @media (min-width: 446px) {
-    width: 33.3333%;
+/*     width: 33.3333%; */
   }
   @media (min-width: 580px) {
-    width: 25%;
+/*     width: 25%; */
+  }
+  @media (min-width: 640px) {
+    width: 50%
+  }
+  @media (min-width: 720px) {
+    width: 25%
   }
   @media (min-width: 1400px) {
     width: 100%;
   }
 }
+
+.half-monty .sponsor-wrapper {
+  @media (min-width: 720px) {
+    width: 50%
+  }
+  @media (min-width: 1400px) {
+    width: 100%;
+  }
+}
+
 .sponsor {
+  box-sizing: border-box;
   display: inline-block;
   @include shadow($silver);
   padding: 10px;
@@ -663,11 +709,6 @@ header.break {
     padding: 50px;
   }
   @media (min-width: 1400px) {
-    img {
-      display: block;
-      margin: 0 auto;
-      height: 80px;
-    }
     box-sizing: border-box;
     padding: 20px;
     display: block;
@@ -685,16 +726,22 @@ header.break {
 .full-monty .sponsor .logo {
   @media (min-width: 1400px) {
     float: left;
-    height: 100%;
+    max-width: 100%;
+    width: 50%;
+    position: relative;
     display: block;
+    
+    img {
+      width: 100%;
+    }
   }
 }
 
-.sponsor .logo img {
+.sponsor img.logo {
   max-width: 100%;
   max-height: 10rem;
   @media (min-width: 1400px) {
-    float: left;
+/*     float: left; */
     height: 120%;
     box-sizing: border-box;
   }
@@ -729,7 +776,7 @@ a.sponsor:focus {
   width: auto;
 }
 .full-monty .sponsor-wrapper {
-  @media (min-width: 580px) {
+  @media (min-width: 640px) {
     width: 50%;
     float: left;
   }
@@ -737,6 +784,11 @@ a.sponsor:focus {
     width: 100%;
   }
 }
+
+.full-monty img {
+  max-width: 100%;
+}
+
 .full-monty .sponsor {
   display: block;
   float: none;
@@ -782,6 +834,13 @@ a.sponsor:focus {
 
 /** wide view **/
 @media (min-width: 1400px) {
+  .half-monty .sponsor img,
+  .small-monty .sponsor img {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+  }
+
   .region.workshops {
     float: left;
   }
@@ -802,7 +861,7 @@ a.sponsor:focus {
     padding-bottom: 0;
     background-image: none;
   }
-  
+
   .region.locations {
     float: left;
     color: $black;
@@ -952,7 +1011,7 @@ footer .left-logic:active {
   }
 
   .workshop-pullout .content .details {
-    margin-bottom: 40px;  
+    margin-bottom: 40px;
   }
 
   .workshop-pullout .description,
@@ -1046,22 +1105,6 @@ footer .left-logic:active {
 
 .workshop-pullout .topic .description {
   color: $grey;
-}
-
-.button:after {
-  color: rgba(32, 29, 30, 0.3);
-  content: '〉';
-  font-style: normal;
-  position: absolute;
-  right: 0;
-}
-
-.button:hover:after {
-  color: $black;
-}
-
-.button.buy span {
-  text-align: left;
 }
 
 .session .session-wrapper {

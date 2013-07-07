@@ -26,10 +26,15 @@
 
       <div class="tickets-wrapper">
         <div class="tickets">
+          {{#if settings.onsale}}
           {{#unless settings.soldout.conference}}
           <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;150<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a> {{/unless}}
           {{#if settings.soldout.conference}}
           <span class="button sold-out">Sold Out</span>{{/if}}
+          {{/if}}
+          {{#unless settings.onsale}}
+          <span class="button nogo">On sale 10-July 10am</span>
+          {{/unless}}
         </div>
       </div>
 
@@ -45,8 +50,8 @@
       {{/each}}
     </ol>
   </section>
-  
-  <section class="wide-wrapper">  
+
+  <section class="wide-wrapper">
     <section class="workshops region alt" role="region" aria-labelledby="workshops">
       <h2 id="workshops" class="section-heading" role="heading" aria-level="2">Workshops</h2>
       {{#each workshops}}

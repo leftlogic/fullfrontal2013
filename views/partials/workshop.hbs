@@ -12,7 +12,11 @@
   <p class="description">
     {{description}}
   </p>
+  {{#if settings.onsale}}
   {{#unless soldout}}<a class="button buy" href="/workshop/{{slug}}">Buy Tickets</a>{{/unless}}
   {{#if soldout}}<a href="/workshop/{{slug}}" class="button sold-out" href="/workshop/{{slug}}">Sold Out</a>{{/if}}
+  {{/if}}
+  {{#unless settings.onsale}}<a class="button buy" href="/workshop/{{slug}}">Find out more</a>{{/unless}}
+
 </section>
 </div>
