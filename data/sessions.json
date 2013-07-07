@@ -18,12 +18,12 @@
       "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
 
       "speaker": {
-        "name": false,
+        "name": "Andrew Grieve",
         "twitter": false,
-        "photo": false
+        "photo": "agrieve.jpg"
       },
 
-      "bio": false,
+      "bio": "",
 
       "slides": false,
       "audio": false,
@@ -37,8 +37,8 @@
       "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap.",
 
       "speaker": {
-        "name": false,
-        "twitter": false,
+        "name": "Angelina Fabbro",
+        "twitter": "angelinamagnum",
         "photo": false
       }
     },
@@ -53,18 +53,18 @@
       "title": "Flat City",
 
       "speaker": {
-        "name": "Phil Hawksworth",
-        "twitter": "philly",
-        "photo": "remy.jpg"
+        "name": "Angus Croll",
+        "twitter": "angustweets",
+        "photo": ""
       },
 
       "description": "Software loves hierarchies: class hierarchies, object hierarchies, folder hierarchies, style hierarchies, menu hierachies. And yet, all but the most simple tree structures require levels of organizational foresight and intellectual rigour which mere humans rarely possess—and they usually end in tears.\n\nDrawing on a diverse range of web—based examples, and proposing alternatives along the way, I'll attempt to demonstrate how trees and nesting are great for birds, but mostly lousy for developers and users.",
 
-      "bio": "Session By [Phil Hawksworth](http://hawksworx.com/) – Phil is a JavaScript developer who has been developing web applications since the late 90s. These days, he’s the Technical Director for The Team. // NOTE: PHIL IS NOT SPEAKING - THIS IS DUMMY CONTENT",
+      "bio": "",
 
-      "slides": "http://google.com",
-      "audio": "http://google.com",
-      "video": "http://google.com"
+      "slides": false,
+      "audio": false,
+      "video": false
 
     },
     {
@@ -75,8 +75,8 @@
       "description": "The stratospheric rise in mobile subscribers, devices, services and apps has led to an even bigger explosion in the lack of understanding of how to design, develop and most importantly, recognize new opportunities with not only these new devices, but new use cases altogether.\n\nLet's step through the processes to help identify content strategies, design workflows and forecasting methods to unlock the true potential of mobile, not only for apps, but for the web and new channels of communication altogether.",
 
       "speaker": {
-        "name": false,
-        "twitter": false,
+        "name": "Joe McCann",
+        "twitter": "joemccann",
         "photo": false
       },
 
@@ -98,8 +98,8 @@
       "description": "Anything that can be written in JavaScript, will eventually be written in JavaScript. First client side web apps, then server side programs and now you can control hardware, embedded devices and even flying robots with JavaScript.\n\nWe'll look at how you can get started writing JavaScript for Ardunio and Raspberry Pi to read sensors and control servos and build you own JavaScript powered robots.",
 
       "speaker": {
-        "name": false,
-        "twitter": false,
+        "name": "Andrew Nesbitt",
+        "twitter": "teabass",
         "photo": false
       },
 
@@ -108,7 +108,7 @@
       "slides": false,
       "audio": false,
       "video": false,
-      
+
       "next": "subway, space"
     },
     {
@@ -128,6 +128,13 @@
       "duration": 90,
       "afterparty": true,
       "title": "After Party"
+    },
+    {
+      "break": false,
+      "background": "subway",
+      "title": "More to come – submit your proposal",
+      "description": "Want to speak at Full Frontal 2013? We'd love to give you the platform to speak to hundreds of developers and designers, so what are you waiting for, [get in touch](mailto:events@leftlogic.com?subject=FF2013%20Speaking%20Proposal)! Remy's interested in the idea break the browser—make of that what you will."
     }
+
   ]
 }
