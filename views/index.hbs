@@ -37,7 +37,6 @@
 
   </header>
 
-
   <section class="sessions region session-style-{{settings.mode}}" role="region" aria-labelledby="sessions">
     <h2 id="sessions" class="section-heading" role="heading" aria-level="2">Sessions</h2>
     <ol>
@@ -46,23 +45,23 @@
       {{/each}}
     </ol>
   </section>
+  
+  <section class="wide-wrapper">  
+    <section class="workshops region alt" role="region" aria-labelledby="workshops">
+      <h2 id="workshops" class="section-heading" role="heading" aria-level="2">Workshops</h2>
+      {{#each workshops}}
+        {{> workshop}}
+      {{/each}}
+    </section>
 
-
-  <section class="workshops region alt" role="region" aria-labelledby="workshops">
-    <h2 id="workshops" class="section-heading" role="heading" aria-level="2">Workshops</h2>
-    {{#each workshops}}
-      {{> workshop}}
-    {{/each}}
-  </section>
-
-
-  <section class="locations region"role="region" aria-labelledby="locations">
-    <h2 id="locations" class="section-heading" role="heading" aria-level="2">Locations</h2>
-    <ul>
-    {{#each locations}}
-      {{> location}}
-    {{/each}}
-  </ul>
+    <section class="locations region"role="region" aria-labelledby="locations">
+      <h2 id="locations" class="section-heading" role="heading" aria-level="2">Locations</h2>
+      <ul>
+      {{#each locations}}
+        {{> location}}
+      {{/each}}
+    </ul>
+    </section>
   </section>
 
 
