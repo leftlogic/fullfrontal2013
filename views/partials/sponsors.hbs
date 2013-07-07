@@ -7,10 +7,10 @@
         <a href="{{url}}" class="logo">
           <img src="/images/sponsors/{{img}}">
         </a>
-        <p class="blurb">
-          {{blurb}}
-        </p>
-        <p><a href="{{url}}">Learn more</a></p>
+        <div class="blurb">
+          {{#markdown}}{{blurb}}{{/markdown}}
+          <p><a href="{{url}}">Learn more</a></p>
+        </div>
       </section>
     </div>
   {{/each}}

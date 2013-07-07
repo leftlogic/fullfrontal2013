@@ -118,6 +118,10 @@ a:active {
     .masthead nav a {
       font-size: 45px;
       margin-right: 40px; } }
+  @media (min-width: 1400px) {
+    .masthead nav a {
+      font-size: 60px;
+      margin-right: 40px; } }
 
 .masthead nav a:hover,
 .masthead nav a:focus {
@@ -139,6 +143,9 @@ a:active {
   @media (min-width: 1024px) {
     .masthead .logo img {
       margin-left: 40px; } }
+  @media (min-width: 1400px) {
+    .masthead .logo img {
+      width: 75%; } }
 
 @media (min-width: 640px) {
   .masthead .details-tickets-wrapper {
@@ -151,6 +158,9 @@ a:active {
   .masthead .tickets-wrapper {
     width: 50%;
     float: right; } }
+@media (min-width: 1400px) {
+  .masthead .tickets-wrapper {
+    width: 33%; } }
 
 .masthead .tickets {
   padding: 16px; }
@@ -166,6 +176,9 @@ a:active {
 @media (min-width: 1024px) {
   .masthead .tickets .button {
     font-size: 18px; } }
+@media (min-width: 1400px) {
+  .masthead .tickets .button {
+    font-size: 28px; } }
 
 .masthead .tickets .buy-vat {
   font-size: 14px; }
@@ -192,6 +205,14 @@ a:active {
   @media (min-width: 1318px) {
     .masthead .details {
       margin-top: 22px; } }
+  @media (min-width: 1400px) {
+    .masthead .details {
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-align: center;
+      text-transform: uppercase; } }
 
 .masthead .details .summary {
   display: none; }
@@ -259,11 +280,14 @@ a:active {
 
 .session .session-body,
 .session .session-header hr {
-  display: none; }
+  /*   display: none; */
+  height: 0px;
+  -webkit-transition: height 100ms ease-out; }
 
 .session.open .session-body,
 .session.open .session-header hr {
-  display: block;
+  /*   display: block; */
+  height: 100%;
   overflow: hidden; }
 
 .session-style-titles .session.open .session-header hr {
@@ -291,6 +315,9 @@ a:active {
   border-bottom: 0;
   /*   padding-bottom: 9px; */ }
 
+.session-header {
+  cursor: pointer; }
+
 .session-header,
 header.break {
   padding: 15px 30px;
@@ -304,11 +331,11 @@ header.break {
     header.break {
       padding: 15px 40px; } }
 
-.titles .session-header {
+.titles .open .session-header {
   padding-bottom: 0; }
   @media (min-width: 1024px) {
-    .titles .session-header {
-      padding-top: 30px; } }
+    .titles .open .session-header {
+      padding-top: 15px; } }
 
 .session .time {
   color: #a3aaac;
@@ -495,6 +522,9 @@ header.break {
 
 .workshop header {
   text-transform: uppercase; }
+  @media (min-width: 1400px) {
+    .workshop header {
+      font-size: 0.9rem; } }
 
 .workshop .speaker {
   color: #a3aaac; }
@@ -506,6 +536,9 @@ header.break {
   color: #6c6265;
   padding-top: 0;
   font-style: italic; }
+  @media (min-width: 1400px) {
+    .workshop .description {
+      font-size: 1rem; } }
 
 .workshop .button {
   display: block;
@@ -615,6 +648,9 @@ header.break {
   @media (min-width: 580px) {
     .sponsor-wrapper {
       width: 25%; } }
+  @media (min-width: 1400px) {
+    .sponsor-wrapper {
+      width: 100%; } }
 
 .sponsor {
   display: inline-block;
@@ -629,12 +665,25 @@ header.break {
       padding: 50px; } }
   @media (min-width: 1400px) {
     .sponsor {
+      box-sizing: border-box;
+      padding: 20px;
+      display: block;
       background: white;
-      overflow: hidden; } }
+      overflow: hidden; }
+      .sponsor img {
+        display: block;
+        margin: 0 auto;
+        height: 80px; } }
 
 @media (min-width: 1400px) {
   .full-monty .sponsor {
     padding: 20px 50px; } }
+
+@media (min-width: 1400px) {
+  .full-monty .sponsor .logo {
+    float: left;
+    height: 100%;
+    display: block; } }
 
 .sponsor .logo img {
   max-width: 100%;
@@ -642,7 +691,7 @@ header.break {
   @media (min-width: 1400px) {
     .sponsor .logo img {
       float: left;
-      width: 50%;
+      height: 120%;
       box-sizing: border-box; } }
 
 a.sponsor:hover,
@@ -888,13 +937,14 @@ footer .left-logic:active {
   .workshop-pullout .mugshot,
   .workshop-pullout .content .details {
     float: right;
-    width: 50%; } }
+    width: 50%; }
 
-@media (min-width: 640px) {
+  .workshop-pullout .content .details {
+    margin-bottom: 40px; }
+
   .workshop-pullout .description,
   .workshop-pullout .extendedDescription {
     width: 45%; } }
-
 @media (min-width: 640px) {
   .workshop-pullout .topics {
     clear: both; } }
@@ -955,6 +1005,9 @@ footer .left-logic:active {
   margin: 40px 0 30px 0;
   padding-top: 30px;
   overflow: hidden; }
+  @media (min-width: 640px) {
+    .workshop-pullout .topics {
+      clear: both; } }
 
 .workshop-pullout .topic {
   font-style: italic;
@@ -1002,49 +1055,49 @@ footer .left-logic:active {
 .bg-shops .session-body {
   background-image: url(/images/backgrounds/shops.png); }
 
-.bg-shops .session-wrapper,
+.bg-shops.open .session-wrapper,
 .bg-shops hr {
   background-color: #665c56; }
 
 .bg-mountains .session-body {
   background-image: url(/images/backgrounds/mountain.png); }
 
-.bg-mountains .session-wrapper,
+.bg-mountains.open .session-wrapper,
 .bg-mountains hr {
   background-color: #e77a24; }
 
 .bg-warehouse .session-body {
   background-image: url(/images/backgrounds/warehouse.png); }
 
-.bg-warehouse .session-wrapper,
+.bg-warehouse.open .session-wrapper,
 .bg-warehouse hr {
   background-color: #7f7f7f; }
 
 .bg-subway .session-body {
   background-image: url(/images/backgrounds/subway.png); }
 
-.bg-subway .session-wrapper,
+.bg-subway.open .session-wrapper,
 .bg-subway hr {
   background-color: #665c56; }
 
 .bg-space .session-body {
   background-image: url(/images/backgrounds/space.png); }
 
-.bg-space .session-wrapper,
+.bg-space.open .session-wrapper,
 .bg-space hr {
   background-color: #c4c4c4; }
 
 .bg-bridge .session-body {
   background-image: url(/images/backgrounds/bridge.png); }
 
-.bg-bridge .session-wrapper,
+.bg-bridge.open .session-wrapper,
 .bg-bridge hr {
   background-color: #4fb0db; }
 
 .bg-fence .session-body {
   background-image: url(/images/backgrounds/fence.png); }
 
-.bg-fence .session-wrapper,
+.bg-fence.open .session-wrapper,
 .bg-fence hr {
   background-color: #4fb0db; }
 

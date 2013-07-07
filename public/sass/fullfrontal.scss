@@ -98,6 +98,10 @@ a:active {
     font-size: 45px;
     margin-right: 40px;
   }
+  @media (min-width: 1400px) {
+    font-size: 60px;
+    margin-right: 40px;
+  }
 }
 .masthead nav a:hover,
 .masthead nav a:focus {
@@ -120,6 +124,9 @@ a:active {
   @media (min-width: 1024px) {
     margin-left: 40px;
   }
+  @media (min-width: 1400px) {
+    width: 75%;
+  }
 }
 
 .masthead .details-tickets-wrapper {
@@ -135,6 +142,9 @@ a:active {
   @media (min-width: 1024px) {
     width: 50%;
     float: right;
+  }
+  @media (min-width: 1400px) {
+    width: 33%;
   }
 }
 .masthead .tickets {
@@ -152,6 +162,9 @@ a:active {
   }
   @media (min-width: 1024px) {
     font-size: 18px;
+  }
+  @media (min-width: 1400px) {
+    font-size: 28px;
   }
 }
 .masthead .tickets .buy-vat {
@@ -175,6 +188,9 @@ a:active {
   }
   @media (min-width: 1318px) {
     margin-top: 22px;
+  }
+  @media (min-width: 1400px) {
+    @include fonz(32px);
   }
 }
 .masthead .details .summary {
@@ -243,11 +259,14 @@ a:active {
 
 .session .session-body,
 .session .session-header hr {
-  display: none;
+/*   display: none; */
+  height: 0px;
+  -webkit-transition: height 100ms ease-out;
 }
 .session.open .session-body,
 .session.open .session-header hr {
-  display: block;
+/*   display: block; */
+  height: 100%;
   overflow: hidden;
 }
 
@@ -277,6 +296,11 @@ a:active {
   border-bottom: 0;
 /*   padding-bottom: 9px; */
 }
+
+.session-header {
+  cursor: pointer;
+}
+
 .session-header,
 header.break {
   padding: 15px 30px;
@@ -288,10 +312,10 @@ header.break {
     padding: 15px 40px;
   }
 }
-.titles .session-header {
+.titles .open .session-header {
   padding-bottom: 0;
   @media (min-width: 1024px) {
-    padding-top: 30px;
+    padding-top: 15px;
   }
 }
 
@@ -494,6 +518,9 @@ header.break {
 }
 .workshop header {
   text-transform: uppercase;
+  @media (min-width: 1400px) {
+    font-size: 0.9rem;
+  }
 }
 .workshop .speaker {
   color: $grey;
@@ -505,6 +532,9 @@ header.break {
   color: $darkgrey;
   padding-top: 0;
   font-style: italic;
+  @media (min-width: 1400px) {
+    font-size: 1rem;
+  }
 }
 .workshop .button {
   display: block;
@@ -618,6 +648,9 @@ header.break {
   @media (min-width: 580px) {
     width: 25%;
   }
+  @media (min-width: 1400px) {
+    width: 100%;
+  }
 }
 .sponsor {
   display: inline-block;
@@ -630,6 +663,14 @@ header.break {
     padding: 50px;
   }
   @media (min-width: 1400px) {
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 80px;
+    }
+    box-sizing: border-box;
+    padding: 20px;
+    display: block;
     background: $white;
     overflow: hidden;
   }
@@ -641,12 +682,20 @@ header.break {
   }
 }
 
+.full-monty .sponsor .logo {
+  @media (min-width: 1400px) {
+    float: left;
+    height: 100%;
+    display: block;
+  }
+}
+
 .sponsor .logo img {
   max-width: 100%;
   max-height: 10rem;
   @media (min-width: 1400px) {
     float: left;
-    width: 50%;
+    height: 120%;
     box-sizing: border-box;
   }
 }
@@ -895,17 +944,19 @@ footer .left-logic:active {
   }
 }
 
-.workshop-pullout .mugshot,
-.workshop-pullout .content .details {
-  @media (min-width: 640px) {
+@media (min-width: 640px) {
+  .workshop-pullout .mugshot,
+  .workshop-pullout .content .details {
     float: right;
     width: 50%;
   }
-}
 
-.workshop-pullout .description,
-.workshop-pullout .extendedDescription{
-  @media (min-width: 640px) {
+  .workshop-pullout .content .details {
+    margin-bottom: 40px;  
+  }
+
+  .workshop-pullout .description,
+  .workshop-pullout .extendedDescription{
     width: 45%;
   }
 }
@@ -971,6 +1022,9 @@ footer .left-logic:active {
   margin: 40px 0 30px 0;
   padding-top: 30px;
   overflow: hidden;
+  @media (min-width: 640px) {
+    clear: both;
+  }
 }
 .workshop-pullout .topic {
   font-style: italic;
@@ -1027,7 +1081,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/shops.png);
 }
 
-.bg-shops .session-wrapper,
+.bg-shops.open .session-wrapper,
 .bg-shops hr {
   background-color: #665c56;
 }
@@ -1036,7 +1090,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/mountain.png);
 }
 
-.bg-mountains .session-wrapper,
+.bg-mountains.open .session-wrapper,
 .bg-mountains hr {
   background-color: #e77a24;
 }
@@ -1045,7 +1099,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/warehouse.png);
 }
 
-.bg-warehouse .session-wrapper,
+.bg-warehouse.open .session-wrapper,
 .bg-warehouse hr {
   background-color: #7f7f7f;
 }
@@ -1054,7 +1108,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/subway.png);
 }
 
-.bg-subway .session-wrapper,
+.bg-subway.open .session-wrapper,
 .bg-subway hr {
   background-color: #665c56;
 }
@@ -1063,7 +1117,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/space.png);
 }
 
-.bg-space .session-wrapper,
+.bg-space.open .session-wrapper,
 .bg-space hr {
   background-color: #c4c4c4;
 }
@@ -1072,7 +1126,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/bridge.png);
 }
 
-.bg-bridge .session-wrapper,
+.bg-bridge.open .session-wrapper,
 .bg-bridge hr {
   background-color: #4fb0db;
 }
@@ -1081,7 +1135,7 @@ footer .left-logic:active {
   background-image: url(/images/backgrounds/fence.png);
 }
 
-.bg-fence .session-wrapper,
+.bg-fence.open .session-wrapper,
 .bg-fence hr {
   background-color: #4fb0db;
 }
