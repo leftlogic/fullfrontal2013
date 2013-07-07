@@ -54,7 +54,7 @@ $silver: #ebebeb;
 
 
 @mixin masthead-skyline() {
-
+  background-image: url("/images/skyline-black.png"); // backup for IE9
   background-image: url('/images/skyline-black.png'),
                     url('/images/clouds-1.png'),
                     url('/images/clouds-2.png'),

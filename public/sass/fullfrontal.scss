@@ -39,6 +39,7 @@ a:active {
   color: $black;
   padding: 10px 24px;
   white-space: nowrap;
+  position: relative;
 }
 .button:hover,
 .button:focus {
@@ -238,9 +239,11 @@ a:active {
   background: rgba(0,0,0,0.5);
   padding: 20px 25px;
   padding-top: 10px;
+  padding-bottom: 180px;
   @media (min-width: 640px) {
     padding: 20px 40px;
     padding-top: 30px;
+  padding-bottom: 180px;
   }
 }
 .session:last-child {
@@ -789,9 +792,12 @@ footer .left-logic:active {
   color: $grey;
 }
 
-.button.buy:after {
-  color: $lightblack;
-  content: '〉'; // TODO insert data image of png
+.button:after {
+  color: rgba(32, 29, 30, 0.3);
+  content: '〉';
+  font-style: normal;
+  position: absolute;
+  right: 0;
 }
 
 .button.buy span {
@@ -803,7 +809,7 @@ footer .left-logic:active {
   }
 
 .session-body {
-  background-size: cover;
+    background-size: 100%;
   background-position: bottom center;
   background-repeat: repeat-x;
   @media (min-width: 640px) {
@@ -864,6 +870,16 @@ footer .left-logic:active {
 .bg-bridge hr {
   background-color: #4fb0db;
 }
+
+.bg-fence .session-body {
+  background-image: url(/images/backgrounds/fence.png);
+}
+
+.bg-fence .session-wrapper,
+.bg-fence hr {
+  background-color: #4fb0db;
+}
+
 
 /** Custom Background **/
 #flat-city.open {

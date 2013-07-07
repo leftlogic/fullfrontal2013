@@ -47,7 +47,8 @@ a:active {
   background: #f1c400;
   color: #201d1e;
   padding: 10px 24px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  position: relative; }
 
 .button:hover,
 .button:focus {
@@ -73,6 +74,7 @@ a:active {
   text-align: center;
   padding: 29px 0;
   overflow: hidden;
+  background-image: url("/images/skyline-black.png");
   background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -o-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
   background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -moz-linear-gradient(bottom, #75150a 0%, #9d1c0b 100%);
   background-image: url("/images/skyline-black.png"), url("/images/clouds-1.png"), url("/images/clouds-2.png"), url("/images/clouds-3.png"), -webkit-gradient(linear, left bottom, left top, color-stop(0, #75150a), color-stop(1, #9d1c0b));
@@ -255,11 +257,13 @@ a:active {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px 25px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-bottom: 180px; }
   @media (min-width: 640px) {
     .session .veil {
       padding: 20px 40px;
-      padding-top: 30px; } }
+      padding-top: 30px;
+      padding-bottom: 180px; } }
 
 .session:last-child {
   border-bottom: 0;
@@ -798,9 +802,12 @@ footer .left-logic:active {
 .workshop-pullout .topic .description {
   color: #a3aaac; }
 
-.button.buy:after {
-  color: rgba(32, 29, 30, 0.5);
-  content: '〉'; }
+.button:after {
+  color: rgba(32, 29, 30, 0.3);
+  content: '〉';
+  font-style: normal;
+  position: absolute;
+  right: 0; }
 
 .button.buy span {
   text-align: left; }
@@ -809,7 +816,7 @@ footer .left-logic:active {
   overflow: hidden; }
 
 .session-body {
-  background-size: cover;
+  background-size: 100%;
   background-position: bottom center;
   background-repeat: repeat-x; }
   @media (min-width: 640px) {
@@ -856,6 +863,13 @@ footer .left-logic:active {
 
 .bg-bridge .session-wrapper,
 .bg-bridge hr {
+  background-color: #4fb0db; }
+
+.bg-fence .session-body {
+  background-image: url(/images/backgrounds/fence.png); }
+
+.bg-fence .session-wrapper,
+.bg-fence hr {
   background-color: #4fb0db; }
 
 /** Custom Background **/
