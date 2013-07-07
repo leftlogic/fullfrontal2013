@@ -12,7 +12,7 @@
       "duration": 10
     },
     {
-      "background": "space",
+      "background": "bridge",
       "duration": 40,
       "title": "Pushing the Limits of Mobile Performance",
       "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
@@ -48,7 +48,7 @@
       "duration": 30
     },
     {
-      "background": "shops",
+      "background": "fence",
       "duration": 40,
       "title": "Flat City",
 
@@ -68,7 +68,7 @@
 
     },
     {
-      "background": "subway",
+      "background": "shops",
       "duration": 40,
       "title": "Mobile Is Not A Thing; It Is Everything.",
 
@@ -107,7 +107,9 @@
 
       "slides": false,
       "audio": false,
-      "video": false
+      "video": false,
+      
+      "next": "subway, space"
     },
     {
       "break": true,

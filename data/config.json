@@ -4,7 +4,7 @@
     "phonegap": false,
     "devtools": false
   },
-  "mode": "schedule",
+  "mode": "titles",
   "comments": {
     "mode-options": "titles|speakers|schedule // just a comment"
   }
