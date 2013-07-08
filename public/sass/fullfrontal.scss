@@ -139,14 +139,15 @@ a.sold-out:hover,
 }
 .masthead .logo img {
   vertical-align: middle;
+  max-width: 75%;
   @media (min-width: 640px) {
-    margin-left: 20px;
+/*     margin-left: 20px; */
   }
   @media (min-width: 1024px) {
-    margin-left: 40px;
+/*     margin-left: 40px; */
   }
   @media (min-width: 1400px) {
-    width: 75%;
+/*     width: 75%; */
   }
 }
 

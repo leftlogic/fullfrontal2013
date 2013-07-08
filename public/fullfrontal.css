@@ -152,16 +152,17 @@ a.sold-out:hover,
       text-align: left; } }
 
 .masthead .logo img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 75%; }
   @media (min-width: 640px) {
     .masthead .logo img {
-      margin-left: 20px; } }
+      /*     margin-left: 20px; */ } }
   @media (min-width: 1024px) {
     .masthead .logo img {
-      margin-left: 40px; } }
+      /*     margin-left: 40px; */ } }
   @media (min-width: 1400px) {
     .masthead .logo img {
-      width: 75%; } }
+      /*     width: 75%; */ } }
 
 @media (min-width: 640px) {
   .masthead .details-tickets-wrapper {
