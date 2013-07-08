@@ -12,6 +12,10 @@
       {
         "url": "http://www.webapplicationsuk.com/",
         "img": "webappsuk.gif"
+      },
+      {
+        "url": "http://developer.blackberry.com/",
+        "img": "blackberry.gif"
       }
     ],
     "small": []
