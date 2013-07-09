@@ -23,6 +23,11 @@
         "img": "blackberry.gif"
       }
     ],
-    "small": []
+    "small": [
+    {
+        "url": "http://p.ota.to/",
+        "img": "potato.gif"
+
+    }]
   }
 }
