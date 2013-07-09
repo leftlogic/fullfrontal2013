@@ -824,7 +824,7 @@ a.sponsor:focus {
   }
 }
 .full-monty .sponsor p:last-child {
-  @media (min-child: 1400px) {
+  @media (min-width: 1400px) {
     clear: both;
     text-align: center;
   }
@@ -1212,7 +1212,7 @@ hr {
 
 #show-menu {
   display: none;
-  margin: 0 0 14px 0;
+  margin: 14px 0 14px 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
@@ -1220,6 +1220,8 @@ hr {
   color: $gold;
 }
 
-.hasjs #show-menu {
-  display: block;
+@media (max-width: 321px) {
+  .hasjs #show-menu {
+    display: block;
+  }  
 }

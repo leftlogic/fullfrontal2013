@@ -802,7 +802,7 @@ a.sponsor:focus {
       margin: 0 10px;
       min-height: 0; } }
 
-@media (min-child: 1400px) {
+@media (min-width: 1400px) {
   .full-monty .sponsor p:last-child {
     clear: both;
     text-align: center; } }
@@ -1167,7 +1167,8 @@ hr {
   font-size: 14px;
   color: #f1c400; }
 
-.hasjs #show-menu {
-  display: block; }
+@media (max-width: 321px) {
+  .hasjs #show-menu {
+    display: block; } }
 
 /*# sourceMappingURL=fullfrontal.css.map */
