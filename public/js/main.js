@@ -24,7 +24,7 @@
 
   for (var i = 0; i < sessions.length; i++) {
     sessions[i].onclick=toggle; // yeah, what?
-    sessions[i].ontouchstart=toggle;
+    // didn't add touch because it made scrolling suddenly open the sessions
   }
 
   var session = $(window.location.hash)[0];
