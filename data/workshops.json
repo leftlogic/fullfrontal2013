@@ -16,7 +16,8 @@
 
       "speaker": {
         "name": "Brian LeRoux & Christophe Coenraets",
-        "photo": "brian-and-christophe.jpg"
+        "photo": "phonegap.jpg",
+        "photo2": "brian-and-christophe.jpg"
       },
 
       "topics" : [
@@ -71,7 +72,7 @@
       "speaker": {
         "name": "Remy Sharp",
         "twitter": "rem",
-        "photo": "remy.jpg"
+        "photo": "remy-devtools.jpg"
       },
 
       "topics" : [
