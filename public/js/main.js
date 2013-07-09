@@ -1,5 +1,6 @@
 (function () {
-  /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+  // only scroll the front page
+  location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
     if (!pageYOffset) window.scrollTo(0, 230);
   }, 1000);
 
