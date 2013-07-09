@@ -2,7 +2,7 @@
 
 html {
   min-width: 320px;
-  
+
   @media (min-width: 1640px) {
     max-width: 1440px;
     margin: 0 auto;
@@ -732,7 +732,7 @@ header.break {
   @media (min-width: 1400px) {
     padding: 20px 50px;
   }
-  
+
   p {
     margin: 20px;
     margin-top: 0;
@@ -1223,5 +1223,28 @@ hr {
 @media (max-width: 321px) {
   .hasjs #show-menu {
     display: block;
-  }  
+  }
 }
+
+@media (min-width: 640px) {
+  .masthead nav a {
+    font-size: 40px;
+  }
+
+  .masthead .logo img {
+    max-width: 230px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masthead nav a {
+    font-size: 60px;
+    margin-right: 40px;
+    padding: 5px 0;
+  }
+
+  .masthead .logo img {
+    max-width: 380px;
+  }
+}
+

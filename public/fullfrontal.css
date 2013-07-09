@@ -1160,7 +1160,7 @@ hr {
 
 #show-menu {
   display: none;
-  margin: 0 0 14px 0;
+  margin: 14px 0 14px 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
@@ -1170,5 +1170,19 @@ hr {
 @media (max-width: 321px) {
   .hasjs #show-menu {
     display: block; } }
+@media (min-width: 640px) {
+  .masthead nav a {
+    font-size: 40px; }
+
+  .masthead .logo img {
+    max-width: 230px; } }
+@media (min-width: 1024px) {
+  .masthead nav a {
+    font-size: 60px;
+    margin-right: 40px;
+    padding: 5px 0; }
+
+  .masthead .logo img {
+    max-width: 380px; } }
 
 /*# sourceMappingURL=fullfrontal.css.map */
