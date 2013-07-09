@@ -38,8 +38,9 @@
         {
           "name": "Jury's Inn",
           "url": "http://brightonhotels.jurysinns.com/",
-          "detail": "£79 single, £85 double B&B",
-          "extra": "quote \"Left Logic\" for the discount"
+          "detail": "£68 Thurs, £80 Friday",
+          "extra": "next to Train station & close to venue",
+          "extra-discount-disabled": "quote \"Left Logic\" for the discount"
         },
         {
           "name": "Travellodge",
@@ -50,13 +51,13 @@
           "name": "My Hotel",
           "url": "http://www.myhotels.com/my-hotel-brighton/index.html",
           "detail": "Thursday £100/£120, Friday £120/£140",
-          "extra": "standard and superior respectively, breakfast not included"
+          "extra": "standard and superior respectively"
         },
         {
           "name": "Old Ship Hotel",
           "url": "http://www.pumahotels.co.uk/hotels/old-ship-brighton-hotel/",
           "detail": "Thursday £92, Friday £142",
-          "extra": "breakfast at extra cost"
+          "extra": "close to after party venue"
         }
       ]
     },
