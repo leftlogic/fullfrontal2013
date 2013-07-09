@@ -4,8 +4,13 @@
     "full": [
       {
         "url": "https://developers.google.com/live/chrome/",
-        "img": "chrome.gif",
-        "blurb": "Google’s mission is to organise the world’s information and make it universally accessible and useful."
+        "img": "chrome.png",
+        "blurb": "Google’s mission is to organise the world’s information and make it universally accessible and useful. [Find out more](https://developers.google.com/live/chrome/)."
+      },
+      {
+        "url": "http://www.adobe.com/products/creativecloud.html",
+        "img": "adobe.gif",
+        "blurb": "Discover new ways to work with Adobe Creative Cloud. All the tools you love, totally reimagined. Plus, new apps and more connected tools and services. Get started with a free [Creative Cloud Membership](http://www.adobe.com/products/creativecloud.html)."
       }
     ],
     "half": [

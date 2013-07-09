@@ -719,8 +719,14 @@ header.break {
 }
 
 .full-monty .sponsor {
+  padding: 0;
   @media (min-width: 1400px) {
     padding: 20px 50px;
+  }
+  
+  p {
+    margin: 20px;
+    margin-top: 0;
   }
 }
 
@@ -764,6 +770,7 @@ a.sponsor:focus {
 
 .full-monty {
   overflow: visible;
+
   @media (min-width: 1400px) {
     float: left;
     width: 50%;
@@ -799,8 +806,12 @@ a.sponsor:focus {
   @media (min-width: 580px) {
     margin: 0 10px 30px 10px;
   }
+  @media (min-width: 640px) {
+    min-height: 350px;
+  }
   @media (min-width: 1400px) {
     margin: 0 10px;
+    min-height: 0;
   }
 }
 .full-monty .sponsor p:last-child {
@@ -816,7 +827,7 @@ a.sponsor:focus {
 }
 .full-monty .blurb {
   text-align: left;
-  padding: 20px 10px;
+  padding: 0px 10px 20px 10px;
   font-style: italic;
   color: $grey;
   font-weight: 300;
@@ -826,7 +837,6 @@ a.sponsor:focus {
   }
   @media (min-width: 1400px) {
     float: right;
-    width: 50%;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 10px;
@@ -869,6 +879,7 @@ a.sponsor:focus {
     padding: 0 2.5%;
     margin: 0;
     width: 50%;
+    padding: 30px 20px;
   }
   .wide-wrapper {
     overflow: hidden;

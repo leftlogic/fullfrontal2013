@@ -709,9 +709,14 @@ header.break {
       background: white;
       overflow: hidden; } }
 
-@media (min-width: 1400px) {
-  .full-monty .sponsor {
-    padding: 20px 50px; } }
+.full-monty .sponsor {
+  padding: 0; }
+  @media (min-width: 1400px) {
+    .full-monty .sponsor {
+      padding: 20px 50px; } }
+  .full-monty .sponsor p {
+    margin: 20px;
+    margin-top: 0; }
 
 @media (min-width: 1400px) {
   .full-monty .sponsor .logo {
@@ -780,9 +785,13 @@ a.sponsor:focus {
   @media (min-width: 580px) {
     .full-monty .sponsor {
       margin: 0 10px 30px 10px; } }
+  @media (min-width: 640px) {
+    .full-monty .sponsor {
+      min-height: 350px; } }
   @media (min-width: 1400px) {
     .full-monty .sponsor {
-      margin: 0 10px; } }
+      margin: 0 10px;
+      min-height: 0; } }
 
 @media (min-child: 1400px) {
   .full-monty .sponsor p:last-child {
@@ -794,7 +803,7 @@ a.sponsor:focus {
     margin-bottom: 0; } }
 .full-monty .blurb {
   text-align: left;
-  padding: 20px 10px;
+  padding: 0px 10px 20px 10px;
   font-style: italic;
   color: #a3aaac;
   font-weight: 300;
@@ -805,7 +814,6 @@ a.sponsor:focus {
   @media (min-width: 1400px) {
     .full-monty .blurb {
       float: right;
-      width: 50%;
       box-sizing: border-box;
       padding-left: 30px;
       padding-right: 10px; } }
@@ -841,7 +849,8 @@ a.sponsor:focus {
     color: #201d1e;
     padding: 0 2.5%;
     margin: 0;
-    width: 50%; }
+    width: 50%;
+    padding: 30px 20px; }
 
   .wide-wrapper {
     overflow: hidden;

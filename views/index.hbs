@@ -27,14 +27,14 @@
       <div class="tickets-wrapper">
         <div class="tickets">
           {{#if settings.onsale}}
-          {{#unless settings.soldout.conference}}
-          <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;150<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a> {{/unless}}
-          {{#if settings.soldout.conference}}
-          <span class="button sold-out">Sold Out</span>{{/if}}
-          {{/if}}
-          {{#unless settings.onsale}}
+            {{#if settings.soldout.conference}}
+          <span class="button sold-out">Sold Out</span>
+            {{else}}
+          <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;150<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+            {{/if}}
+          {{else}}
           <span class="button nogo">On sale 10-July 10am</span>
-          {{/unless}}
+          {{/if}}
         </div>
       </div>
 
@@ -115,11 +115,8 @@
     </p>
 
     <p class="blurb">
-      Full Frontal is run by Left Logic, a team of front end development specialists
-      based in Brighton (UK). We’re one of the few web-development agencies that actively
-      define the Internet, instead of the other way around. Our work is influenced by You.
-      Your needs and the needs of your clients drive our design and build process, ensuring
-      your website is finely tuned to your business conditions.
+      Full Frontal is run by Left Logic, a small team of developers based in Brighton (UK),
+      specialising in Node based applications and bleeding edge front end technology.
     </p>
 
     <a id="left-logic" href="http://leftlogic.com">Left Logic</a>
