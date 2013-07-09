@@ -2,6 +2,14 @@
 
 html {
   min-width: 320px;
+  
+  @media (min-width: 1640px) {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: $black;
+    border: 100px solid $red;
+    border-top: 0;
+  }
 }
 
 body {
@@ -147,7 +155,7 @@ a.sold-out:hover,
 /*     margin-left: 40px; */
   }
   @media (min-width: 1400px) {
-/*     width: 75%; */
+    max-width: 420px;
   }
 }
 

@@ -7,6 +7,13 @@
 
 html {
   min-width: 320px; }
+  @media (min-width: 1640px) {
+    html {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: #201d1e;
+      border: 100px solid #9d1d0b;
+      border-top: 0; } }
 
 body {
   margin: 0;
@@ -162,7 +169,7 @@ a.sold-out:hover,
       /*     margin-left: 40px; */ } }
   @media (min-width: 1400px) {
     .masthead .logo img {
-      /*     width: 75%; */ } }
+      max-width: 420px; } }
 
 @media (min-width: 640px) {
   .masthead .details-tickets-wrapper {
