@@ -1,4 +1,8 @@
 (function () {
+  /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+    if (!pageYOffset) window.scrollTo(0, 230);
+  }, 1000);
+
   var $ = function (s) {
     try {
       return document.querySelectorAll(s);

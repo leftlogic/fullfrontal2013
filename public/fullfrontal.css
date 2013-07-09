@@ -1158,4 +1158,16 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin: 20px 0 0 0; }
 
+#show-menu {
+  display: none;
+  margin: 0 0 14px 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #f1c400; }
+
+.hasjs #show-menu {
+  display: block; }
+
 /*# sourceMappingURL=fullfrontal.css.map */
