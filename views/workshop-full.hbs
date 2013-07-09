@@ -17,11 +17,16 @@
     </div>
 
     <div class="tickets">
-      {{#if settings.onsale}}
-      {{#unless soldout}}<a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>{{/unless}}
-      {{#if soldout}}<a href="{{ticket.url}}" class="button sold-out">Sold Out</a>{{/if}}
+      {{#log settings}}{{/log}}
+      {{#if ../settings.onsale}}
+        {{#if soldout}}
+          <a href="{{ticket.url}}" class="button sold-out">Sold Out</a>
+        {{else}}
+          <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+        {{/if}}
+      {{else}}
+        <span class="button nogo">On sale 10-July 10am</span>
       {{/if}}
-      {{#unless settings.onsale}}<span class="button nogo">On sale 10-July 10am</span>{{/unless}}
     </div>
 
   </header>

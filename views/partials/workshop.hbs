@@ -12,11 +12,14 @@
   <p class="description">
     {{description}}
   </p>
+  {{! note: due to an issue in node hbs, settings isn't available here, so it's always false }}
   {{#if settings.onsale}}
-  {{#unless soldout}}<a class="button buy" href="/workshop/{{slug}}">Buy Tickets</a>{{/unless}}
-  {{#if soldout}}<a href="/workshop/{{slug}}" class="button sold-out" href="/workshop/{{slug}}">Sold Out</a>{{/if}}
-  {{/if}}
-  {{#unless settings.onsale}}<a class="button buy" href="/workshop/{{slug}}">Find out more</a>{{/unless}}
+    {{#if soldout}}
+      <a href="/workshop/{{slug}}" class="button sold-out" href="/workshop/{{slug}}">Sold Out</a>
+    {{else}}
+      <a class="button buy" href="/workshop/{{slug}}">Buy Tickets</a>
+    {{/if}}
+  {{else}}<a class="button buy" href="/workshop/{{slug}}">Find out more</a>{{/if}}
 
 </section>
 </div>

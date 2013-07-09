@@ -151,6 +151,10 @@ hbs.registerHelper('noorphan', function (context, options) {
   return new hbs.handlebars.SafeString(context.substr(0, i) + '&nbsp;' + context.substr(i + 1));
 });
 
+hbs.registerHelper('log', function (context) {
+  console.log(context);
+});
+
 
 app.configure('development', function (){
   app.use(express.errorHandler());

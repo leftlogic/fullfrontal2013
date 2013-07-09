@@ -338,7 +338,7 @@ a.sold-out:hover,
 .session-header,
 header.break {
   padding: 15px 30px;
-  background: rgba(0,0,0,0.5);
+  background: $black;
   @media (min-width: 640px) {
     overflow: hidden;
   }
@@ -346,7 +346,9 @@ header.break {
     padding: 15px 40px;
   }
 }
-.titles .open .session-header {
+.titles .open .session-header,
+.speakers .open .session-header {
+  background: rgba(0,0,0,0.5);
   padding-bottom: 0;
   @media (min-width: 1024px) {
     padding-top: 15px;
@@ -460,7 +462,6 @@ header.break {
 .session .mugshot {
   box-sizing: border-box;
   @include shadow;
-/*   max-width: 300px; */
   background-position: 50% 50%;
   background-size: cover;
   @media (min-width: 640px) {
