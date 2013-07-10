@@ -1,5 +1,5 @@
 {
-  "onsale": false,
+  "onsale": true,
   "soldout": {
     "conference": false,
     "phonegap": false,
