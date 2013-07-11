@@ -4,7 +4,7 @@
     "conference": true,
     "workshops": false,
     "phonegap": false,
-    "debug-and-tools": false
+    "debug-and-tools": true
   },
   "mode": "speakers",
   "comments": {
