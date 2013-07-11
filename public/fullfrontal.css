@@ -1194,5 +1194,20 @@ hr {
 
   .masthead .logo img {
     max-width: 380px; } }
+.masthead .details-tickets-wrapper {
+  right: 0;
+  max-width: 1400px;
+  margin: auto; }
+
+.sessions.region {
+  background-color: #201d1e; }
+
+.sessions.region ol {
+  max-width: 1400px;
+  margin: auto; }
+
+.wide-wrapper {
+  max-width: 1400px;
+  margin: auto; }
 
 /*# sourceMappingURL=fullfrontal.css.map */
