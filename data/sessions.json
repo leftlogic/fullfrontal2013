@@ -88,10 +88,10 @@
       "speaker": {
         "name": "Joe McCann",
         "twitter": "joemccann",
-        "photo": "joe.jpg"
+        "photo": "happy-joe.jpg"
       },
 
-      "bio": false,
+      "bio": "Joe McCann is the Director of Creative Technology at Mother, an award-winning creative agency in New York City and he is also a Managing Director and Partner at The Node Firm, a global collective of Node.js experts and enthusiasts.\n\nJoe's experience in various industries is widespread: from music and live events, to fashion, to Wall Street and even real estate, the perspective he brings to the mobile, design and software engineering industries is extremely rare and unique. Joe advises a number of technology startups and has spoken at conferences all over the world including SXSW, Adobe Phonegap Day (Amsterdam), Android Only (Stockholm),  PulsoConf (Bogota, Colombia), Morningstar Financial Developers Conference (Chicago) and many, many more.",
       
       "links": [
         { "@joemccann": "http://twitter.com/joemccann" },

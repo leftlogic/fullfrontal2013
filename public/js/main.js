@@ -36,5 +36,13 @@
   if (session && session.id === window.location.hash.substring(1)) {
     session.classList.toggle('open');
   }
+  
+  var joe = $('#mobile-is-not-a-thing-it-is-everything .mugshot')[0];
+  if (joe) { // is on the page, then let's play
+    joe.addEventListener('click', function () {
+      window.location = '/images/speakers/am-i-wearing-a-dress.gif';
+    }, true);
+  }
+  
 
 })();
