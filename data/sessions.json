@@ -14,24 +14,7 @@
     {
       "background": "bridge",
       "duration": 40,
-      "title": "Pushing the Limits of Mobile Performance",
-      "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
 
-      "speaker": {
-        "name": "Andrew Grieve",
-        "twitter": false,
-        "photo": "agrieve.jpg"
-      },
-
-      "bio": "Andrew is a developer at Google who has worked on several mobile web projects, including Gmail and Google Docs. More recently, he's been leading a team working full-time on Cordova Android & iOS ports, both as part of the \"make the web better\" initiative, as well as a part of the Chrome Apps team",
-
-      "slides": false,
-      "audio": false,
-      "video": false
-
-    },
-    {
-      "background": "mountains",
       "title": "Building with Web Components using X-Tags",
       "duration": 40,
       "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap.",
@@ -43,9 +26,28 @@
       
       "links": [
         { "@angelinamagnum": "http://twitter.com/angelinamagnum" },
+        { "github": "https://github.com/afabbro" },
         { "realityhacking.net": "http://realityhacking.net/" }
-      ]
+      ],
 
+      "slides": false,
+      "audio": false,
+      "video": false
+
+    },
+    {
+      "background": "mountains",
+      "title": "Pushing the Limits of Mobile Performance",
+      "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
+
+      "speaker": {
+        "name": "Andrew Grieve",
+        "twitter": false,
+        "photo": "agrieve.jpg"
+      },
+
+      "bio": "Andrew is a developer at Google who has worked on several mobile web projects, including Gmail and Google Docs. More recently, he's been leading a team working full-time on Cordova Android & iOS ports, both as part of the \"make the web better\" initiative, as well as a part of the Chrome Apps team",
+      "links": []
     },
     {
       "break": true,
