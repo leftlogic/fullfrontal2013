@@ -1,4 +1,4 @@
-<li class="session{{#if background}} bg-{{background}}{{/if}}"{{#unless break}} id="{{slug}}"{{/unless}}>
+ <li class="session{{#if background}} bg-{{background}}{{/if}}"{{#unless break}} id="{{slug}}"{{/unless}}>
   <div class="session-wrapper">
   {{#if break}}
     <header class="break">
@@ -9,7 +9,7 @@
 
   {{#unless break}}
     <header class="session-header">
-      {{#if duration}}<div class="time">{{start}} &mdash; {{end}}</div>{{/if}}
+      {{#if start}}<div class="time">{{start}} &mdash; {{end}}</div>{{/if}}
       <div class="title-wrapper">
         <h3 class="title" role="heading" aria-level="3">{{#noorphan title}}{{.}}{{/noorphan}}</h3>
         {{#if speaker.name}}<div class="speaker">{{speaker.name}}</div>{{/if}}
@@ -40,10 +40,11 @@
         {{#if links}}
         <div class="links-wrapper">
           <div class="links">
-            {{#if speaker.twitter}}
-              <a class="button" href="http://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a>
-            {{/if}}
-
+          
+            {{#each links}}
+              {{#link this}}.{{/link}}
+            {{/each}}
+                        
             {{#if slides}}
               <a class="button" href="{{slides}}">Download Slides</a>
             {{/if}}

@@ -80,6 +80,8 @@ sessions = (function (sessionData) {
   if (app.settings.mode === "speakers") {
     sessions.forEach(function (session) {
       if (session.break) return;
+      tempSessions.push(session);
+      /*
       tempSessions.push({
         title: session.title,
         description: session.description,
@@ -87,6 +89,7 @@ sessions = (function (sessionData) {
         slug: session.slug,
         background: session.background
       });
+      */
     });
   }
 
@@ -110,6 +113,7 @@ sessions = (function (sessionData) {
 
 
 sessions.sessions.forEach(function (session) {
+  return;
   if ( (session.speaker && session.speaker.twitter)
     || session.slides
     || session.audio
@@ -153,6 +157,19 @@ hbs.registerHelper('noorphan', function (context, options) {
 
 hbs.registerHelper('log', function (context) {
   console.log(context);
+});
+
+hbs.registerHelper('link', function () {
+  console.log(this);
+  var text = Object.keys(this)[0];
+  var url = this[text];
+  text = hbs.handlebars.Utils.escapeExpression(text);
+  url  = hbs.handlebars.Utils.escapeExpression(url);
+
+  var result = '<a class="button" href="' + url + '">' + text + '</a>';
+
+  return new hbs.handlebars.SafeString(result);
+
 });
 
 

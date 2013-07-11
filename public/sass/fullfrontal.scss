@@ -174,7 +174,7 @@ a.sold-out:hover,
     float: right;
   }
   @media (min-width: 1400px) {
-    width: 33%;
+    width: 35%;
   }
 }
 .masthead .tickets {
@@ -299,6 +299,14 @@ a.sold-out:hover,
 
 .session.open .session-header hr {
   display: block;
+  clear: both;
+}
+
+.speakers .session.open .session-header hr {
+  margin-top: 40px;
+  @media (max-width: 641px) {
+    margin-top: 10px;
+  }
 }
 
 .session-style-titles .session.open .session-header hr {
@@ -321,8 +329,8 @@ a.sold-out:hover,
   @media (min-width: 640px) {
     padding: 30px;
   }
-  @media (min-width: 1400px) {
-    padding: 40px;
+  @media (min-width: 1024px) {
+    padding: 40px; 
   }
   padding-bottom: 180px !important; // cascade should work here, but it didn't :(
 }
@@ -337,7 +345,7 @@ a.sold-out:hover,
 
 .session-header,
 header.break {
-  padding: 15px 30px;
+  padding: 15px 25px;
   background: $black;
   @media (min-width: 640px) {
     overflow: hidden;
@@ -470,13 +478,16 @@ header.break {
   @media (min-width: 1024px) {
     margin-left: 3%;
     margin-right: 3%;
-    max-height: 100%;
+    max-height: none;
   }
 }
 
 .session .mugshot img {
   visibility: hidden;
   vertical-align: middle;
+  @media (min-width: 1024px) {
+    max-height: 65%;
+  }
 }
 .session .links-wrapper {
   @media (min-width: 640px) {

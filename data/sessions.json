@@ -23,7 +23,7 @@
         "photo": "agrieve.jpg"
       },
 
-      "bio": "",
+      "bio": "Andrew is a developer at Google who has worked on several mobile web projects, including Gmail and Google Docs. More recently, he's been leading a team working full-time on Cordova Android & iOS ports, both as part of the \"make the web better\" initiative, as well as a part of the Chrome Apps team",
 
       "slides": false,
       "audio": false,
@@ -38,9 +38,14 @@
 
       "speaker": {
         "name": "Angelina Fabbro",
-        "twitter": "angelinamagnum",
-        "photo": false
-      }
+        "photo": "angelina.jpg"
+      },
+      
+      "links": [
+        { "@angelinamagnum": "http://twitter.com/angelinamagnum" },
+        { "realityhacking.net": "http://realityhacking.net/" }
+      ]
+
     },
     {
       "break": true,
@@ -55,13 +60,19 @@
       "speaker": {
         "name": "Angus Croll",
         "twitter": "angustweets",
-        "photo": ""
+        "photo": "angus.jpg"
       },
 
       "description": "Software loves hierarchies: class hierarchies, object hierarchies, folder hierarchies, style hierarchies, menu hierachies. And yet, all but the most simple tree structures require levels of organizational foresight and intellectual rigour which mere humans rarely possess—and they usually end in tears.\n\nDrawing on a diverse range of web—based examples, and proposing alternatives along the way, I'll attempt to demonstrate how trees and nesting are great for birds, but mostly lousy for developers and users.",
 
-      "bio": "",
+      "bio": "Angus is a displaced Brit who now works for Twitter’s web platform team in San Francisco, and is one of the principal authors and maintainers of Twitter's Flight web framework. He's obsessed with JavaScript and literature in equal measure, and is a passionate advocate for the greater involvement of artists and creative thinkers in software.",
 
+      "links": [
+        { "@angustweets": "http://twitter.com/angustweets" },
+        { "github": "http://github.com/angus-c" },
+        { "anguscroll.com": "http://anguscroll.com" }
+      ],
+      
       "slides": false,
       "audio": false,
       "video": false
@@ -81,6 +92,12 @@
       },
 
       "bio": false,
+      
+      "links": [
+        { "@joemccann": "http://twitter.com/joemccann" },
+        { "github": "https://github.com/joemccann" },
+        { "subprint.com": "http://subprint.com/blog" }
+      ],
 
       "slides": false,
       "audio": false,
@@ -103,7 +120,13 @@
         "photo": "andrewnesbitt.jpg"
       },
 
-      "bio": false,
+      "bio": "Andrew is a passionate full stack developer. He spends most of his days programming in Ruby, playing with Node.js, contributing to open source projects and organising local developer user groups. He also aspires to one day take over the world with a fleet of JavaScript powered quadcopters.",
+      
+      "links": [
+        { "@teabass": "http://twitter.com/teabass" },
+        { "github": "http://github.com/andrew" },
+        { "nesbitt.io": "http://nesbitt.io/" }
+      ],
 
       "slides": false,
       "audio": false,

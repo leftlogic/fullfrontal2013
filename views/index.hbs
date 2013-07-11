@@ -30,7 +30,11 @@
         <div class="tickets">
           {{#if settings.onsale}}
             {{#if settings.soldout.conference}}
-          <span class="button sold-out">Sold Out</span>
+              {{#if settings.soldout.workshop}}
+                <span class="button sold-out">Sold Out</span>
+              {{else}}
+                <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets</a>
+              {{/if}}
             {{else}}
           <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;150<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
             {{/if}}
