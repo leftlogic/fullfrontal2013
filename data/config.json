@@ -2,8 +2,8 @@
   "onsale": true,
   "soldout": {
     "conference": true,
-    "workshops": false,
-    "phonegap": false,
+    "workshops": true,
+    "phonegap": true,
     "debug-and-tools": true
   },
   "mode": "speakers",
