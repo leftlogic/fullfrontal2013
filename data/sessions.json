@@ -23,7 +23,7 @@
         "name": "Angelina Fabbro",
         "photo": "angelina.jpg"
       },
-      
+
       "links": [
         { "@angelinamagnum": "http://twitter.com/angelinamagnum" },
         { "github": "https://github.com/afabbro" },
@@ -74,7 +74,7 @@
         { "github": "http://github.com/angus-c" },
         { "anguscroll.com": "http://anguscroll.com" }
       ],
-      
+
       "slides": false,
       "audio": false,
       "video": false
@@ -94,9 +94,9 @@
       },
 
       "bio": "Joe McCann is the Director of Creative Technology at Mother, an award-winning creative agency in New York City and he is also a Managing Director and Partner at The Node Firm, a global collective of Node.js experts and enthusiasts.\n\nJoe's experience in various industries is widespread: from music and live events, to fashion, to Wall Street and even real estate, the perspective he brings to the mobile, design and software engineering industries is extremely rare and unique. Joe advises a number of technology startups and has spoken at conferences all over the world including SXSW, Adobe Phonegap Day (Amsterdam), Android Only (Stockholm),  PulsoConf (Bogota, Colombia), Morningstar Financial Developers Conference (Chicago) and many, many more.",
-      
+
       "links": [
-        { "@joemccann": "http://twitter.com/joemccann" },
+        { "@joemccann": "https://twitter.com/joemccann" },
         { "github": "https://github.com/joemccann" },
         { "subprint.com": "http://subprint.com/blog" }
       ],
@@ -123,11 +123,31 @@
       },
 
       "bio": "Andrew is a passionate full stack developer. He spends most of his days programming in Ruby, playing with Node.js, contributing to open source projects and organising local developer user groups. He also aspires to one day take over the world with a fleet of JavaScript powered quadcopters.",
-      
+
       "links": [
         { "@teabass": "http://twitter.com/teabass" },
         { "github": "http://github.com/andrew" },
         { "nesbitt.io": "http://nesbitt.io/" }
+      ],
+
+      "slides": false,
+      "audio": false,
+      "video": false
+    },
+    {
+      "background": "subway",
+      "duration": 40,
+      "title": "Our web development workflow is completely broken",
+      "description": "With the introduction of HTML5 the way we look at the browser has completely changed, but what has happen to our development workflow?\n\nIn this talk I take you through the history of web tooling and challenge the assumptions our current generation of tooling is build upon. You will realize that your web development workflow is completely broken, and that you over the years, have been making it gradually worse and more complex by adding more tools to the chain.\n\nIt's time to rethink our tooling.",
+      "speaker": {
+        "name": "Kenneth Auchenberg",
+        "twitter": "auchenberg",
+        "photo": "kenneth.jpg"
+      },
+
+      "links": [
+        { "@auchenberg": "http://twitter.com/auchenberg" },
+        { "kenneth.io": "http://kenneth.io/" }
       ],
 
       "slides": false,

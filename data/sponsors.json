@@ -21,6 +21,10 @@
       {
         "url": "http://developer.blackberry.com/",
         "img": "blackberry.gif"
+      },
+      {
+        "url": "http://mozilla.org/",
+        "img": "mozilla.gif"
       }
     ],
     "small": [
