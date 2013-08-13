@@ -25,6 +25,10 @@
       {
         "url": "http://mozilla.org/",
         "img": "mozilla.gif"
+      },
+      {
+        "url": "http://modern.IE",
+        "img": "microsoft.gif"
       }
     ],
     "small": [
