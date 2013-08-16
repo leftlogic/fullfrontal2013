@@ -1,0 +1,44 @@
+{
+  "soldout": false,
+  "title": "Side View",
+  "slug": "sideview",
+  "ticket": {
+    "url": "https://leftlogic.stagehq.com/events/2412",
+    "price": "55"
+  },
+
+  "details": {
+    "date": "7th November",
+    "time": "10am - 4pm",
+    "venue": "The Old Courthouse, Brighton"
+  },
+
+  "sessions": [{
+    "name": "Steve Workman",
+    "twitter": "steveworkman",
+    "title": "The web at 32\""
+  }, {
+    "name": "Westley Knight",
+    "twitter": "meteoracle",
+    "title": "Life Behind The Curve"
+  },{
+    "name": "Flurin Egger",
+    "twitter": "flurin",
+    "title": "10 browser API's you'll want to know about"
+  },{
+    "name": "Alex Feyerke",
+    "twitter": "espylaub",
+    "title": "I have a Dreamcode: Build Apps, not Backends",
+    "abstract": "As frontend devs, we're a bit stuck: we usually focus on building just one half of a web experience, and we're dependent on others to provide us with the other half: the backend. Or we become both-end devs and do everything ourselves, often stretching our expertise quite thin.\n\nBut lo! On the horizon, a new trend appears, and it's called noBackend. It bears the promise of rapid, frontend-centric app development, abstracting away all the recurring pain and hassle that comes with backend development into simple front-end libraries, with barely a need to ever come in contact with the server-side. Some of them go a step further, not merely exposing the backend to the front, but understanding the frontend devs as users, and designing the APIs directly to their needs.\n\nThis will be a talk about the noBackend/\"Backend as a Service\"-paradigm of web application development, and how it is a natural extension of the concept of user-centered library/API/service design. I believe that these noBackend services will be a hugely empowering and equalizing force in the very near future, and I'd like to show why it's so great, how it works and who's currently doing what in this area. There will also be a little bit of live-coding to round it all off."
+  },{
+    "name": "Shaun Dunne",
+    "twitter": "shaundunne",
+    "title": "Grunt your Way to Glory",
+    "abstract": "What is Grunt, Why should you care and how can you use it FTW! I'd rather write my build scripts in a way that makes sense to me as a front end developer, that is why I love Grunt and I want to show everyone that build scripts dont have to be colossal XML files or written in Ruby syntax. They can be written in JavaScript and leverage Node to do awesome things easily"
+  },{
+    "name": "Paul Verbeek",
+    "twitter": "hierow",
+    "title": "Developing Developers",
+    "abstract": "One of our bigger problems at the moment is finding good developers. But instead of finding the best of the best, we should find the motivated and make them the best. How can you be a great coach, and help new developers trancend even your own skills?\n\nIn my presentation I'm going to talk about finding developers (or other people) who have the potential to be great JavaScript developers.\n\nI'm going to try to make people enthousiastic about coaching or being coached. And I'll explain how you can help everybody learn by doing things like commenting your code and contributing to the community."
+  }]
+}

@@ -330,7 +330,7 @@ a.sold-out:hover,
     padding: 30px;
   }
   @media (min-width: 1024px) {
-    padding: 40px; 
+    padding: 40px;
   }
   padding-bottom: 180px !important; // cascade should work here, but it didn't :(
 }
@@ -1279,3 +1279,15 @@ hr {
   max-width: 1400px;
   margin: auto;
 }
+
+// html {
+//   // -webkit-transform-style: preserve-3d;
+//   -webkit-transform: perspective( 10000px ) rotateY(0deg) translateZ(0px);
+//   // -webkit-transition: transform .500ms ease-in-out;
+//   -webkit-transition: all 300ms ease-in;
+// }
+
+// html:hover {
+//   -webkit-transform: perspective( 10000px ) rotateY(-65deg) translateZ(200px);
+//   // -webkit-transform: rotateY(180deg);
+// }

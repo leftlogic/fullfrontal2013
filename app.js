@@ -15,6 +15,7 @@ var data = {},
     sessions = require('./data/sessions'),
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops'),
+    sideview = require('./data/sideview'),
     configFile = './data/config.json',
     config = {};
 
@@ -183,6 +184,11 @@ app.get('/', function (req, res) {
 
 app.get('/workshop', function (req, res) {
   res.render('workshop-full', workshops);
+});
+
+
+app.get('/sideview', function (req, res) {
+  res.render('sideview', sideview);
 });
 
 app.get('/workshop/:slug', function (req, res) {

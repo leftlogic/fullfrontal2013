@@ -1,0 +1,89 @@
+{{> header}}
+
+<div id="{{slug}}" class="workshop-pullout">
+  <header class="masthead" role="banner">
+
+    <nav>
+      <a href="/#workshops">×</a>
+    </nav>
+
+    <h1 class="section-heading" role="heading" aria-level="1">{{title}}</h1>
+
+    <div class="details">
+      A new event from the makers of Full Frontal.
+    </div>
+
+
+    <div class="tickets">
+      {{#if settings.onsale}}
+        {{#if soldout}}
+          <a href="{{ticket.url}}" class="button sold-out">Sold Out</a>
+        {{else}}
+          <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+        {{/if}}
+      {{else}}
+        <span class="button nogo">On sale 20-August 10am</span>
+      {{/if}}
+    </div>
+
+  </header>
+
+  <section class="content region alt">
+    <h2 class="section-heading" role="heading" aria-level="2">Details</h2>
+
+    {{#if speaker.photo}}
+    <div class="mugshot" style="background-image: url(/images/speakers/{{speaker.photo}})">
+        <img src="/images/speakers/{{speaker.photo}}">
+      </div>
+    {{/if}}
+
+    <ul class="details">
+      {{#if details.date}}
+        <li class="detail date">
+          <span class="type">Date</span>
+          <span class="data">{{details.date}}</span>
+        </li>
+      {{/if}}
+      {{#if details.time}}
+        <li class="detail time">
+          <span class="type">Time</span>
+          <span class="data">{{details.time}}</span>
+        </li>
+      {{/if}}
+      {{#if speaker.name}}
+        <li class="detail speaker">
+          <span class="type">Teacher</span>
+          <span class="data">{{#noorphan speaker.name}}{{.}}{{/noorphan}}</span>
+        </li>
+      {{/if}}
+      {{#if details.venue}}
+        <li class="detail venue">
+          <span class="type">Venue</span>
+          <span class="data">{{details.venue}}</span>
+        </li>
+      {{/if}}
+    </ul>
+
+    <p class="description">
+      Full Frontal is an amazing day, but each year we've yearned for more. So this year, we're putting on an extra event: Side View. It's a supplementary event to Full Frontal, on the following day made up of 6 speakers talking about a wide range of developer topics.
+    </p>
+
+    <p class="extendedDescription">
+
+    </p>
+
+    <h3 class="topics section-heading" role="heading" aria-level="3">Sessions</h3>
+
+    {{#each sessions}}
+      <div class="topic">
+        <a href="http://twitter.com/{{twitter}}"><img class="avatar" src="http://twitter.com/api/users/profile_image/{{twitter}}"></a>
+        <span class="title">{{title}}</span>
+        <a href="http://twitter.com/{{twitter}}"><span class="who">{{name}}</span></a>
+      </div>
+    {{/each}}
+
+  </section>
+</div>
+
+
+{{> footer}}
