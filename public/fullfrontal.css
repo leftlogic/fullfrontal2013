@@ -1163,6 +1163,13 @@ footer .left-logic:active {
 .bg-fence hr {
   background-color: #4fb0db; }
 
+.bg-street .session-body {
+  background-image: url(/images/backgrounds/street.png); }
+
+.bg-street.open .session-wrapper,
+.bg-street hr {
+  background-color: #100d0a; }
+
 hr {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);

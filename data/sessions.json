@@ -152,9 +152,7 @@
 
       "slides": false,
       "audio": false,
-      "video": false,
-
-      "next": "subway, space"
+      "video": false
     },
     {
       "break": true,
@@ -175,11 +173,34 @@
       "title": "After Party"
     },
     {
-      "break": false,
+      "background": "street",
+      "duration": 40,
+      "title": "Stunning visuals with Maths and...no JavaScript?",
+      "description": "Everybody has probably seen mathematical visualizations that were created using JavaScript. However, one thing that not everybody may know is that some of them can be perfectly replicated using nothing but HTML and CSS.\n\nThis talk is going to deconstruct some examples, explain the mathematical reasoning behind, reveal a few lesser known things about certain CSS properties and show how using a preprocessor can help with keeping these demos extremely customizable while actually writing very little code.",
+      "speaker": {
+        "name": "Ana Tudor",
+        "twitter": "thebabydino",
+        "photo": "ana.jpg"
+      },
+      
+      "bio": "Loves maths, especially geometry. Enjoys playing with code. Passionate about experimenting & learning new things. Fascinated by astrophysics and science in general. Huge fan of technological advance & its applications in all fields. Shows an interest in motor sports, drawing, classic cartoons, rock music, cuddling toys and animals with sharp claws & big teeth. Dreams about owning a real tiger.",
+
+      "links": [
+        { "@thebabydino": "http://twitter.com/thebabydino" },
+        { "about.me/thebabydino": "http://about.me/thebabydino/" }
+      ],
+
+      "slides": false,
+      "audio": false,
+      "video": false,
+
+      "next": "space"
+    },
+    {
+      "break": true,
       "background": "subway",
       "title": "More to come – submit your proposal",
       "description": "Want to speak at Full Frontal 2013? We'd love to give you the platform to speak to hundreds of developers and designers, so what are you waiting for, [get in touch](mailto:events@leftlogic.com?subject=FF2013%20Speaking%20Proposal)! Remy's interested in the idea break the browser—make of that what you will."
     }
-
   ]
 }
