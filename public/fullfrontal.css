@@ -1103,6 +1103,28 @@ footer .left-logic:active {
 .workshop-pullout .topic .description {
   color: #a3aaac; }
 
+#sideview .headline .avatarlink {
+  float: left;
+  margin-right: 10px; }
+
+#sideview .topic:nth-child(2n) {
+  clear: left; }
+
+#sideview .headline {
+  overflow: hidden; }
+  @media (max-width: 640px) {
+    #sideview .headline {
+      margin-top: 40px;
+      border-top: 1px solid #efefef;
+      padding-top: 40px; } }
+
+#sideview .abstract {
+  font-size: 14px;
+  line-height: 20px; }
+  @media (min-width: 640px) {
+    #sideview .abstract {
+      margin-right: 40px; } }
+
 .session .session-wrapper {
   overflow: hidden; }
 
