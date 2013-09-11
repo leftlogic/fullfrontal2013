@@ -15,14 +15,14 @@
 
 
     <div class="tickets">
-      {{#if settings.onsale}}
+      {{#if onsale}}
         {{#if soldout}}
           <a href="{{ticket.url}}" class="button sold-out">Sold Out</a>
         {{else}}
           <a href="{{ticket.url}}" class="button buy">Buy Tickets &pound;{{ticket.price}}<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
         {{/if}}
       {{else}}
-        <span class="button nogo">On sale 20-August 10am</span>
+        <span class="button nogo">On sale 25-September 10am</span>
       {{/if}}
     </div>
 
@@ -65,6 +65,10 @@
         <li class="detail venue">
           <span class="type">Cost</span>
           <span class="data">£50+VAT</span>
+        </li>
+        <li class="detail venue">
+          <span class="type">Seats</span>
+          <span class="data">150</span>
         </li>
         <li class="detail">
           <span class="type">Sponsored by</span>
