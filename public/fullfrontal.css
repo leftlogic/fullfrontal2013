@@ -983,8 +983,7 @@ footer .left-logic:active {
 .workshop-pullout nav {
   border-bottom: 1px solid #8f1a0a;
   text-align: left;
-  padding: 0 10px;
-  margin-bottom: 40px; }
+  padding: 0 10px; }
   @media (min-width: 640px) {
     .workshop-pullout nav {
       display: block; } }
@@ -998,7 +997,8 @@ footer .left-logic:active {
 
 .workshop-pullout .section-heading {
   padding: 0 20px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  margin-top: 40px; }
 
 .workshop-pullout h1.section-heading {
   color: #f1c400;

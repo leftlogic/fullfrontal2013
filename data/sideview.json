@@ -1,6 +1,6 @@
 {
   "soldout": false,
-  "onsale": false,
+  "onsale": true,
   "title": "Side View",
   "slug": "sideview",
   "ticket": {
