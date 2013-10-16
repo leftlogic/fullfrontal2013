@@ -1,4 +1,4 @@
- <li class="session{{#if background}} bg-{{background}}{{/if}}"{{#unless break}} id="{{slug}}"{{/unless}}>
+ <li {{#if date}}data-date="{{date}}"{{/if}} class="session{{#if background}} bg-{{background}}{{/if}}"{{#unless break}} id="{{slug}}"{{/unless}}>
   <div class="session-wrapper">
   {{#if break}}
     <header class="break">
@@ -32,7 +32,7 @@
         </div>
 
         {{#if speaker.photo}}
-        <div class="mugshot" style="background-image: url(/images/speakers/{{speaker.photo}})">
+        <div class="mugshot" {{#if speaker.alt}}title="{{speaker.alt}}" {{/if}}style="background-image: url(/images/speakers/{{speaker.photo}})">
           <img src="/images/speakers/{{speaker.photo}}">
         </div>
         {{/if}}
@@ -40,11 +40,11 @@
         {{#if links}}
         <div class="links-wrapper">
           <div class="links">
-          
+
             {{#each links}}
               {{#link this}}.{{/link}}
             {{/each}}
-                        
+
             {{#if slides}}
               <a class="button" href="{{slides}}">Download Slides</a>
             {{/if}}

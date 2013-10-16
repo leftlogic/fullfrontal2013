@@ -96,6 +96,7 @@ sessions = (function (sessionData) {
 
   if (app.settings.mode === "schedule") {
     sessions.forEach(function (session) {
+      session.date = startTime.getTime();
       if (!session.start) session.start = startTime.clone().toString('HH:mm');
       if (!session.end) session.end = startTime.add({ minutes: session.duration }).clone().toString('HH:mm');
     });

@@ -302,7 +302,8 @@ a.sold-out:hover,
   clear: both;
 }
 
-.speakers .session.open .session-header hr {
+.speakers .session.open .session-header hr,
+.schedule .session.open .session-header hr{
   margin-top: 40px;
   @media (max-width: 641px) {
     margin-top: 10px;
@@ -321,6 +322,20 @@ a.sold-out:hover,
   list-style-type: none;
   overflow: hidden;
 }
+
+.session.now header {
+  position: relative;
+}
+
+.session.now header:before {
+  content: '►';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  line-height: 58px;
+  color: #999;
+}
+
 .session .veil {
   overflow: hidden;
   background: rgba(0,0,0,0.5);
@@ -333,6 +348,11 @@ a.sold-out:hover,
     padding: 40px;
   }
   padding-bottom: 180px !important; // cascade should work here, but it didn't :(
+}
+.session.open .veil {
+  @media (min-width: 1024px) {
+/*     padding-top: 20px; */
+  }
 }
 .session:last-child {
   border-bottom: 0;
@@ -355,7 +375,8 @@ header.break {
   }
 }
 .titles .open .session-header,
-.speakers .open .session-header {
+.speakers .open .session-header,
+.schedule .open .session-header{
   background: rgba(0,0,0,0.5);
   padding-bottom: 0;
   @media (min-width: 1024px) {
@@ -454,10 +475,18 @@ header.break {
 }
 
 .session .mugshot {
-  @media (max-width: 639px) {
-   display: none;
+  @media (max-width: 519px) {
+/*    display: none; */
+    margin-top: 16px;
+    width: 100%;
+    height: 200px;
+  }
+  @media (min-width: 520px) {
+    margin-top: 16px;
+    height: 300px;
   }
   @media (min-width: 640px) {
+    height: auto;
     margin-top: 16px;
     width: 45%;
     float: right;
@@ -512,6 +541,12 @@ header.break {
   margin: 10px 0;
   text-align: left;
   padding: 10px;
+/*   @media (max-width: 400px) { */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    padding-right: 20px;
+/*   } */
 }
 
 /** Workshops **/
@@ -1222,6 +1257,10 @@ footer .left-logic:active {
 .bg-space.open .session-wrapper,
 .bg-space hr {
   background-color: #c4c4c4;
+}
+
+.bg-space.open .session-header {
+  background-color: #626262;
 }
 
 .bg-bridge .session-body {

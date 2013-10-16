@@ -1,8 +1,8 @@
 (function () {
   // only scroll the front page
   location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-    if (!pageYOffset) window.scrollTo(0, 230);
-  }, 1000);
+    if (!pageYOffset) window.scrollTo(0, 290);
+  }, 750);
 
   var $ = function (s) {
     try {
@@ -36,13 +36,36 @@
   if (session && session.id === window.location.hash.substring(1)) {
     session.classList.toggle('open');
   }
-  
+
   var joe = $('#mobile-is-not-a-thing-it-is-everything .mugshot')[0];
   if (joe) { // is on the page, then let's play
     joe.addEventListener('click', function () {
       window.location = '/images/speakers/am-i-wearing-a-dress.gif';
     }, true);
   }
-  
+
+  // if today is conference day, then scroll the current session in to view
+  if (!window.location.hash) setTimeout(function () {
+    var today = moment(),
+        isConfDay = moment().isSame('2013-11-08');
+
+    if (isConfDay) {
+      // find the current session
+      var sessions = $('.session'),
+          i = 0,
+          length = sessions.length,
+          best = sessions[0];
+
+      for (; i < length; i++) {
+        if (moment(sessions[i].getAttribute('data-date') * 1).isBefore(today, 'minute')) {
+          best = sessions[i];
+        }
+      }
+
+      best.className += ' now open';
+      best.scrollIntoView(true);
+    }
+
+  }, 100);
 
 })();
