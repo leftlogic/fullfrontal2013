@@ -216,6 +216,11 @@ app.get('/api/workshops', function (req, res) {
   res.json(workshops);
 });
 
+app.get('/details', function (req, res) {
+  fs.readFile('public/details.html', 'utf8', function (err, data) {
+    res.send(data);
+  });
+});
 
 app.get('/sponsorship', function (req, res) {
   res.render('sponsorship');
