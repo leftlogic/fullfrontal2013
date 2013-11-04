@@ -19,26 +19,26 @@
     "twitter": "steveworkman",
     "title": "Are You Browsing Comfortably",
     "abstract": "The Responsive Web Design trend was triggered by the need to make the web presentable on small, handheld devices. Now, the Internet is encroaching on every aspect of our lives, and it won’t be long before it takes over large screens too.\n\nHow much of manufacturers’ internet TVs claims are true? Will the next generation of consoles bring the Internet to the living room, or will ChromeCast be the gateway to the large screen future, and where do web developers fit in?\n\nLets make a web site that is suitable for the sofa"
+  },{
+    "name": "Flurin Egger",
+    "twitter": "flurin",
+    "title": "Taming the browsers of tomorrow",
+    "abstract": "Modern browsers are advanced pieces of software, and have been evolving at lightning speed ever since we've left IE6 in the dirt and moved on to FireFox and Chrome. But what's new today will be old tomorrow, and not everything that is new is necessarily better. Nevertheless, it's very exciting to see the common browser slowly break out of it's boundaries to evolve into an OS.\n\nIn this talk we'll have a look at the API's that future versions of browsers will bring us, and what we would be able to do with them. Some of these API's we'll analyse in depth to see what their real life application would look like. And while we're exploring these cutting edge technologies, we will also reflect on what they will mean for the web and for us as web developers."
+  }, {
+    "name": "Shaun Dunne",
+    "twitter": "shaundunne",
+    "title": "Grunt your Way to Glory",
+    "abstract": "What is Grunt, Why should you care and how can you use it FTW! I'd rather write my build scripts in a way that makes sense to me as a front end developer, that is why I love Grunt and I want to show everyone that build scripts dont have to be colossal XML files or written in Ruby syntax. They can be written in JavaScript and leverage Node to do awesome things easily"
   }, {
     "name": "Westley Knight",
     "twitter": "westleyknight",
     "title": "Life Behind The Curve",
     "abstract": "Or how to keep up with all things web.\n\nWhen you work in the web everyday, there's so much going on. New technologies seem to emerge on a daily basis, articles appear about new techniques and workflows, and then there's the constant flow of information from Twitter. In my talk, I aim to share my experiences in trying to keep up to date, and look to provide some perspective on what we can achieve, where our focus should be, and that we don't all have to constantly try to be ahead of the curve."
   },{
-    "name": "Flurin Egger",
-    "twitter": "flurin",
-    "title": "Taming the browsers of tomorrow",
-    "abstract": "Modern browsers are advanced pieces of software, and have been evolving at lightning speed ever since we've left IE6 in the dirt and moved on to FireFox and Chrome. But what's new today will be old tomorrow, and not everything that is new is necessarily better. Nevertheless, it's very exciting to see the common browser slowly break out of it's boundaries to evolve into an OS.\n\nIn this talk we'll have a look at the API's that future versions of browsers will bring us, and what we would be able to do with them. Some of these API's we'll analyse in depth to see what their real life application would look like. And while we're exploring these cutting edge technologies, we will also reflect on what they will mean for the web and for us as web developers."
-  },{
     "name": "Alex Feyerke",
     "twitter": "espylaub",
     "title": "I have a Dreamcode: Build Apps, not Backends",
     "abstract": "As frontend devs, we're a bit stuck: we usually focus on building just one half of a web experience, and we're dependent on others to provide us with the other half: the backend. Or we become both-end devs and do everything ourselves, often stretching our expertise quite thin.\n\nBut lo! On the horizon, a new trend appears, and it's called noBackend. It bears the promise of rapid, frontend-centric app development, abstracting away all the recurring pain and hassle that comes with backend development into simple front-end libraries, with barely a need to ever come in contact with the server-side. Some of them go a step further, not merely exposing the backend to the front, but understanding the frontend devs as users, and designing the APIs directly to their needs.\n\nThis will be a talk about the noBackend/\"Backend as a Service\"-paradigm of web application development, and how it is a natural extension of the concept of user-centered library/API/service design. I believe that these noBackend services will be a hugely empowering and equalizing force in the very near future, and I'd like to show why it's so great, how it works and who's currently doing what in this area. There will also be a little bit of live-coding to round it all off."
-  },{
-    "name": "Shaun Dunne",
-    "twitter": "shaundunne",
-    "title": "Grunt your Way to Glory",
-    "abstract": "What is Grunt, Why should you care and how can you use it FTW! I'd rather write my build scripts in a way that makes sense to me as a front end developer, that is why I love Grunt and I want to show everyone that build scripts dont have to be colossal XML files or written in Ruby syntax. They can be written in JavaScript and leverage Node to do awesome things easily"
   },{
     "name": "Paul Verbeek",
     "twitter": "hierow",

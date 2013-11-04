@@ -1275,4 +1275,25 @@ hr {
   max-width: 1400px;
   margin: auto; }
 
+#sideview .sponsors {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+#sideview .sponsors a {
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  flex: 1 auto; }
+
+#sideview .sponsors img {
+  margin: 0 auto;
+  display: block;
+  max-height: 200px; }
+
 /*# sourceMappingURL=fullfrontal.css.map */
