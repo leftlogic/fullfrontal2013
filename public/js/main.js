@@ -1,9 +1,4 @@
 (function () {
-  // only scroll the front page
-  location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-    if (!pageYOffset) window.scrollTo(0, 290);
-  }, 750);
-
   var $ = function (s) {
     try {
       return document.querySelectorAll(s);
@@ -44,28 +39,36 @@
     }, true);
   }
 
-  // if today is conference day, then scroll the current session in to view
-  if (!window.location.hash) setTimeout(function () {
-    var today = moment(),
-        isConfDay = moment().isSame('2013-11-08');
+  var today = moment(),
+      best = null,
+      isConfDay = moment().startOf('day').isSame('2013-11-08');
 
-    if (isConfDay) {
-      // find the current session
-      var sessions = $('.session'),
-          i = 0,
-          length = sessions.length,
-          best = sessions[0];
+  if (isConfDay) {
+    // find the current session
+    var sessions = $('.session'),
+        i = 0,
+        length = sessions.length,
+        best = sessions[0];
 
-      for (; i < length; i++) {
-        if (moment(sessions[i].getAttribute('data-date') * 1).isBefore(today, 'minute')) {
-          best = sessions[i];
-        }
+    for (; i < length; i++) {
+      if (moment(sessions[i].getAttribute('data-date') * 1 - (5 * 1000 * 60)).isBefore(today, 'minute')) {
+        best = sessions[i];
       }
-
-      best.className += ' now open';
-      best.scrollIntoView(true);
     }
 
-  }, 100);
+    best.className += ' now open';
+  }
+
+  // if today is conference day, then scroll the current session in to view
+  if (isConfDay && best && !window.location.hash) {
+    setTimeout(function () {
+      best.scrollIntoView(true);
+    }, 750);
+  } else {
+    // only scroll the front page
+    location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+      if (!pageYOffset) window.scrollTo(0, 290);
+    }, 750);
+  }
 
 })();
