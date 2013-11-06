@@ -126,6 +126,7 @@ sessions.sessions.forEach(function (session) {
 });
 
 _.assign(data, locations, sessions, sponsors, workshops);
+data.offline = true;
 
 app.configure('production', function () {
   app.set('isproduction', true);
