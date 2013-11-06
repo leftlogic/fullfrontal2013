@@ -544,7 +544,7 @@ header.break {
 /*   @media (max-width: 400px) { */
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; 
+    white-space: nowrap;
     padding-right: 20px;
 /*   } */
 }
@@ -1307,7 +1307,7 @@ hr {
   color: $gold;
 }
 
-@media (max-width: 321px) {
+@media (max-width: 361px) {
   .hasjs #show-menu {
     display: block;
   }
@@ -1360,7 +1360,7 @@ hr {
   position: relative;
   height: 200px;
   overflow: hidden;
-  
+
     display: -webkit-flex;
     display: -moz-flex;
     display: flex;

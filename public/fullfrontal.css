@@ -1242,7 +1242,7 @@ hr {
   font-size: 14px;
   color: #f1c400; }
 
-@media (max-width: 321px) {
+@media (max-width: 361px) {
   .hasjs #show-menu {
     display: block; } }
 @media (min-width: 640px) {
