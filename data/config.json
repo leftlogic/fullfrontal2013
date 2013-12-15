@@ -7,7 +7,7 @@
     "debug-and-tools": true,
     "sideview": false
   },
-  "mode": "schedule",
+  "mode": "speakers",
   "comments": {
     "mode-options": "titles|speakers|schedule // just a comment"
   }

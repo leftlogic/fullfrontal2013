@@ -32,9 +32,9 @@
         { "anguscroll.com": "http://anguscroll.com" }
       ],
 
-      "slides": false,
-      "audio": false,
-      "video": false
+      "slides": "https://speakerdeck.com/anguscroll/es6-uncensored",
+      "audio": "http://media.full-frontal.org/2013/1-croll.mp3",
+      "video": "http://www.youtube.com/watch?v=9WJ8pQHhOm8&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=1"
 
     },
 {
@@ -57,9 +57,9 @@
         { "nesbitt.io": "http://nesbitt.io/" }
       ],
 
-      "slides": false,
-      "audio": false,
-      "video": false
+      "slides": "https://speakerdeck.com/andrew/javascript-in-the-real-world",
+      "audio": "http://media.full-frontal.org/2013/2-nesbitt.mp3",
+      "video": "http://www.youtube.com/watch?v=C7wWakRMAUY&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=2"
     },
     {
       "break": true,
@@ -87,9 +87,9 @@
         { "subprint.com": "http://subprint.com/blog" }
       ],
 
-      "slides": false,
-      "audio": false,
-      "video": false
+      "slides": "http://www.slideshare.net/joemccann/mobile-is-not-a-thing-it-is-everything",
+      "audio": "http://media.full-frontal.org/2013/3-mccann.mp3",
+      "video": "http://www.youtube.com/watch?v=8OSo5PyiSAQ&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=3"
     },
     {
       "duration": 40,
@@ -99,12 +99,20 @@
 
       "speaker": {
         "name": "Andrew Grieve",
-        "twitter": false,
+        "twitter": "grieveandrew",
         "photo": "agrieve.jpg"
       },
 
       "bio": "Andrew is a developer at Google who has worked on several mobile web projects, including Gmail and Google Docs. More recently, he's been leading a team working full-time on Cordova Android & iOS ports, both as part of the \"make the web better\" initiative, as well as a part of the Chrome Apps team",
-      "links": []
+
+      "links": [
+        { "@GrieveAndrew": "http://twitter.com/grieveandrew" }
+      ],
+
+      "slides": "https://docs.google.com/presentation/d/1onNCD7APXOwbG58hvXdlogLDXbpId-KDeOLqr8xJ79Y/pub?start=false&loop=false&delayms=3000",
+      "audio": "http://media.full-frontal.org/2013/4-grieve.mp3",
+      "video": false
+
     },
     {
       "break": true,
@@ -127,8 +135,8 @@
         { "kenneth.io": "http://kenneth.io/" }
       ],
 
-      "slides": false,
-      "audio": false,
+      "slides": "http://auchenberg.github.io/presentations/fullfrontal-our-web-development-workflow-is-completely-broken/",
+      "audio": "http://media.full-frontal.org/2013/5-auchenberg.mpg",
       "video": false
     },
 
@@ -150,8 +158,8 @@
         { "about.me/thebabydino": "http://about.me/thebabydino/" }
       ],
 
-      "slides": false,
-      "audio": false,
+      "slides": "http://f773873.5minfork.com/",
+      "audio": "http://media.full-frontal.org/2013/6-tudor.mp3",
       "video": false
     },
     {
@@ -179,8 +187,8 @@
         { "realityhacking.net": "http://realityhacking.net/" }
       ],
 
-      "slides": false,
-      "audio": false,
+      "slides": "http://afabbro.github.io/jsconfcolombia-2013-mobile-apps-with-brick/",
+      "audio": "http://media.full-frontal.org/2013/7-fabbro.mp3",
       "video": false
 
     },
@@ -206,8 +214,8 @@
         { "clearleft.com": "http://clearleft.com" }
       ],
 
-      "slides": false,
-      "audio": false,
+      "slides": "https://speakerdeck.com/adactio/time",
+      "audio": "http://media.full-frontal.org/2013/8-keith.mp3",
       "video": false
     },
     {

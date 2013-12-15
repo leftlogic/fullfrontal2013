@@ -1,4 +1,4 @@
- <li {{#if date}}data-date="{{date}}"{{/if}} class="session{{#if background}} bg-{{background}}{{/if}}"{{#unless break}} id="{{slug}}"{{/unless}}>
+ <li {{#if date}}data-date="{{date}}"{{/if}} class="session{{#if background}} open bg-{{background}}{{/if}}"{{#unless break}} id="{{slug}}"{{/unless}}>
   <div class="session-wrapper">
   {{#if break}}
     <header class="break">
@@ -41,12 +41,8 @@
         <div class="links-wrapper">
           <div class="links">
 
-            {{#each links}}
-              {{#link this}}.{{/link}}
-            {{/each}}
-
             {{#if slides}}
-              <a class="button" href="{{slides}}">Download Slides</a>
+              <a class="button" href="{{slides}}">Slides</a>
             {{/if}}
 
             {{#if audio}}
@@ -56,6 +52,12 @@
             {{#if video}}
               <a class="button" href="{{video}}">Video</a>
             {{/if}}
+
+            <hr>
+            {{#each links}}
+              {{#link this}}.{{/link}}
+            {{/each}}
+
           </div>
         </div>
       </div>
