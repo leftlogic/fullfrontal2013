@@ -111,7 +111,7 @@
 
       "slides": "https://docs.google.com/presentation/d/1onNCD7APXOwbG58hvXdlogLDXbpId-KDeOLqr8xJ79Y/pub?start=false&loop=false&delayms=3000",
       "audio": "http://media.full-frontal.org/2013/4-grieve.mp3",
-      "video": false
+      "video": "http://www.youtube.com/watch?v=LILdJS7y8Rw&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=4"
 
     },
     {
@@ -137,7 +137,7 @@
 
       "slides": "http://auchenberg.github.io/presentations/fullfrontal-our-web-development-workflow-is-completely-broken/",
       "audio": "http://media.full-frontal.org/2013/5-auchenberg.mpg",
-      "video": false
+      "video": "http://www.youtube.com/watch?v=ctwEcZC_mmI&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=5"
     },
 
     {
@@ -160,7 +160,7 @@
 
       "slides": "http://f773873.5minfork.com/",
       "audio": "http://media.full-frontal.org/2013/6-tudor.mp3",
-      "video": false
+      "video": "http://www.youtube.com/watch?v=GeBM8qaJXCE&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=6"
     },
     {
       "break": true,
@@ -189,7 +189,7 @@
 
       "slides": "http://afabbro.github.io/jsconfcolombia-2013-mobile-apps-with-brick/",
       "audio": "http://media.full-frontal.org/2013/7-fabbro.mp3",
-      "video": false
+      "video": "http://www.youtube.com/watch?v=dW2ib0bkxGQ&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=7"
 
     },
     {
@@ -216,7 +216,7 @@
 
       "slides": "https://speakerdeck.com/adactio/time",
       "audio": "http://media.full-frontal.org/2013/8-keith.mp3",
-      "video": false
+      "video": "http://www.youtube.com/watch?v=pguQjFFgB68&list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI&index=8"
     },
     {
       "break": true,

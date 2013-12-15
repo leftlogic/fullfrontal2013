@@ -29,18 +29,22 @@
 
       <div class="tickets-wrapper">
         <div class="tickets">
-          {{#if settings.onsale}}
-            {{#if settings.soldout.conference}}
-              {{#if settings.soldout.workshops}}
-                <span class="button sold-out nogo">Sold Out</span>
+          {{#if settings.videos}}
+            <a id="buy" href="{{settings.videos}}" class="button buy">Watch now</a>
+          {{else}}
+            {{#if settings.onsale}}
+              {{#if settings.soldout.conference}}
+                {{#if settings.soldout.workshops}}
+                  <span class="button sold-out nogo">Sold Out</span>
+                {{else}}
+                  <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets</a>
+                {{/if}}
               {{else}}
-                <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets</a>
+            <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;150<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
               {{/if}}
             {{else}}
-          <a id="buy" href="http://leftlogic.stagehq.com" class="button buy">Buy Tickets &pound;150<span> <abbr class="buy-vat" title="plus Value Added Tax">+VAT</abbr></a>
+            <span class="button nogo">On sale 10-July 10am</span>
             {{/if}}
-          {{else}}
-          <span class="button nogo">On sale 10-July 10am</span>
           {{/if}}
         </div>
       </div>

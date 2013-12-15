@@ -1,5 +1,6 @@
 {
   "onsale": true,
+  "videos": "http://www.youtube.com/playlist?list=PLXmT1r4krsTrjhwBWKLzxdNjb9ZCb_cFI",
   "soldout": {
     "conference": true,
     "workshops": true,
