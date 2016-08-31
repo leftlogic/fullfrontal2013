@@ -10,6 +10,13 @@ var http = require('http'),
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 
+app.disable('x-powered-by');
+
+app.use((req, res, next) => {
+  res.setHeader('x-powered-by', 'ffconf');
+  next();
+});
+
 require('datejs');
 
 var data = {},
@@ -227,3 +234,4 @@ if (module.parent) {
     console.log("Express server listening on http://localhost:" + app.get('port'));
   });
 }
+
