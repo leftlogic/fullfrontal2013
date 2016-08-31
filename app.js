@@ -18,7 +18,7 @@ var data = {},
     sponsors = require('./data/sponsors'),
     workshops = require('./data/workshops'),
     sideview = require('./data/sideview'),
-    configFile = './data/config.json',
+    configFile = __dirname + '/data/config.json',
     config = {};
 
 function updateConfig(blocking) {
@@ -52,7 +52,6 @@ function updateConfig(blocking) {
 }
 
 // watch the config which sets the mode of the site and soldout state
-fs.watch('./data/config.json', updateConfig);
 updateConfig(true); // read synchonously on boot
 
 sessions = (function (sessionData) {
