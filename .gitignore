@@ -1,3 +1,4 @@
 .nodemonignore
 .sass-cache
 public/*.map
+node_modules
