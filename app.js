@@ -7,6 +7,8 @@ var http = require('http'),
     _ = require('lodash'),
     fs = require('fs'),
     app = express();
+var favicon = require('serve-favicon');
+var bodyParser = require('body-parser');
 
 require('datejs');
 
@@ -27,8 +29,6 @@ function updateConfig(blocking) {
     }
 
     config = JSON.parse(data);
-
-    console.log('updated config');
 
     app.set('mode', config.mode);
     app.set('soldout', config.soldout);
@@ -129,25 +129,22 @@ sessions.sessions.forEach(function (session) {
 _.assign(data, locations, sessions, sponsors, workshops);
 data.offline = true;
 
-app.configure('production', function () {
-  app.set('isproduction', true);
-});
+app.set('isproduction', process.NODE_ENV === 'production');
 
 // RS: run sass compile from command line to allow for devtools
 // sourcemap support: sass --watch --scss --sourcemap public/sass/fullfrontal.scss:public/fullfrontal.css
 // NOTE: requires sass 3.x - installed via gem install sass --pre as of July 6, 2013
 
-app.configure(function (){
-  app.set('port', process.env.PORT || 3000);
-  app.use(express.favicon(path.join(__dirname, 'public/favicon.ico')));
-  app.set('views', __dirname + '/views');
-  app.set('view engine' ,'hbs');
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
-});
+app.set('port', process.env.PORT || 8000);
+app.use(favicon(path.join(__dirname, 'public/favicon.ico')));
+app.set('views', __dirname + '/views');
+app.set('view engine' ,'hbs');
+// app.use(express.logger('dev'));
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json());
 
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('markdown', function (options) {
@@ -159,12 +156,11 @@ hbs.registerHelper('noorphan', function (context, options) {
   return new hbs.handlebars.SafeString(context.substr(0, i) + '&nbsp;' + context.substr(i + 1));
 });
 
-hbs.registerHelper('log', function (context) {
-  console.log(context);
-});
+// hbs.registerHelper('log', function (context) {
+//   console.log(context);
+// });
 
 hbs.registerHelper('link', function () {
-  console.log(this);
   var text = Object.keys(this)[0];
   var url = this[text];
   text = hbs.handlebars.Utils.escapeExpression(text);
@@ -174,11 +170,6 @@ hbs.registerHelper('link', function () {
 
   return new hbs.handlebars.SafeString(result);
 
-});
-
-
-app.configure('development', function (){
-  app.use(express.errorHandler());
 });
 
 app.get('/', function (req, res) {
@@ -228,6 +219,12 @@ app.get('/sponsorship', function (req, res) {
   res.render('sponsorship');
 });
 
-http.createServer(app).listen(app.get('port'), function (){
-  console.log("Express server listening on http://localhost:" + app.get('port'));
-});
+app.use(express.static(path.join(__dirname, 'public')));
+
+if (module.parent) {
+  module.exports = app;
+} else {
+  http.createServer(app).listen(app.get('port'), function (){
+    console.log("Express server listening on http://localhost:" + app.get('port'));
+  });
+}
